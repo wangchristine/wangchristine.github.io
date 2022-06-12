@@ -1,17 +1,15 @@
-name: ci
+name: Blog CI/CD
 
 on:
   push:
     branches:
-      - main
       - master
   pull_request:
     branches:
-      - main
       - master
 
 jobs:
-  ci:
+  build:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -42,3 +40,13 @@ jobs:
 
       - name: Run linter 👀
         run: npm run lint
+
+      - name: Generate
+        run: npm run generate
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          # 這裡的 GITHUB_TOKEN 不用另外設定
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
