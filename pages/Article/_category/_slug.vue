@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 .article-block {
-  background-color: #f3f4f6;
+  background-color: #f9f2e9;
   padding: 20px 40px;
 }
 </style>
