@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/", (function(a){a[0]="Backend";a[1]="Frontend";a[2]="Server";a[3]="Video";return {data:[{}],fetch:{"LayoutDefault:0":{categories:a}},mutations:[["setCategories",a]]}}(Array(4))));
