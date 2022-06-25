@@ -50,6 +50,10 @@ body {
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+h2 {
+  font-size: 20px;
+}
+
 .el-container {
   min-height: 100vh;
 }
