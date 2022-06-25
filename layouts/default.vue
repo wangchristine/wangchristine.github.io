@@ -11,7 +11,10 @@
           class="navigation-link"
         >
           <NuxtLink
-            :to="{ name: 'Article-category', params: { category: category } }"
+            :to="{
+              name: 'article-category',
+              params: { category: category.toLowerCase() },
+            }"
             >{{ category }}</NuxtLink
           >
         </nav>
@@ -25,20 +28,26 @@
 </template>
 
 <script>
-import categories from '@/config/category.json'
+import categories from '@/config/category.json';
 export default {
   name: 'LayoutDefault',
   data() {
     return {
       categories,
-    }
+    };
   },
-}
+  fetch() {
+    this.$store.dispatch('setCategories', categories);
+  },
+};
 </script>
 
 <style>
 body {
   margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 .el-container {

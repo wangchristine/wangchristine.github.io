@@ -46,4 +46,4 @@ export default {
   build: {
     transpile: [/^element-ui/],
   },
-}
+};
