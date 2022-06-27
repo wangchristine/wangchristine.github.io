@@ -13,9 +13,9 @@
           <NuxtLink
             :to="{
               name: 'article-category',
-              params: { category: category.toLowerCase() },
+              params: { category: category.routeName },
             }"
-            >{{ category }}</NuxtLink
+            >{{ category.name }}</NuxtLink
           >
         </nav>
       </div>

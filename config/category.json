@@ -1,6 +1,22 @@
 [
-  "Backend",
-  "Frontend",
-  "Server",
-  "Video"
+  {
+    "routeName": "backend",
+    "name": "Backend"
+  },
+  {
+    "routeName": "frontend",
+    "name": "Frontend"
+  },
+  {
+    "routeName": "server",
+    "name": "Server"
+  },
+  {
+    "routeName": "drama",
+    "name": "Drama"
+  },
+  {
+    "routeName": "video",
+    "name": "Video"
+  }
 ]

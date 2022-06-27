@@ -2,7 +2,7 @@
   <div class="content-block">
     <div class="main-block">
       <div class="category-block">
-        <h2>Category: {{ category }}</h2>
+        <h2>Category: {{ category.name }}</h2>
       </div>
       <div
         v-for="article in articles"
@@ -12,7 +12,7 @@
         <NuxtLink
           :to="{
             name: 'article-category-slug',
-            params: { category: category.toLowerCase(), slug: article.slug },
+            params: { category: category.routeName, slug: article.slug },
           }"
         >
           <div class="title">{{ article.title }}</div>
@@ -36,26 +36,36 @@ export default {
   validate({ params, store }) {
     if (
       !store.getters.getCategories
-        .map((category) => category.toLowerCase())
+        .map((category) => category.routeName)
         .includes(params.category.toLowerCase())
     ) {
       return false;
     }
+
     return true;
   },
   async asyncData({ params, $content, error }) {
-    // const slug =  || 'index';
     const articles = await $content()
-      .where({ category: params.category })
+      .where({ category: params.category.toLowerCase() })
       .sortBy('updatedAt', 'desc')
       .limit(10) // 記得做分頁
       .fetch();
     console.log(articles);
 
     return {
-      category: params.category,
       articles,
     };
+  },
+  data() {
+    return {
+      category: '',
+    };
+  },
+  mounted() {
+    this.category = this.$store.getters.getCategories.find(
+      (category) =>
+        category.routeName === this.$route.params.category.toLowerCase()
+    );
   },
 };
 </script>

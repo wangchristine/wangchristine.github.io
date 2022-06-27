@@ -15,7 +15,7 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/blog/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -45,5 +45,18 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [/^element-ui/],
+  },
+
+  generate: {
+    async routes() {
+      const { $content } = require('@nuxt/content');
+      const allArticles = await $content().only(['category', 'path']).fetch();
+
+      return allArticles.map((article) =>
+        article.path === '/index'
+          ? '/'
+          : '/article/' + article.category + article.path
+      );
+    },
   },
 };
