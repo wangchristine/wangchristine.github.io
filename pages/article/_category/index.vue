@@ -45,7 +45,7 @@ export default {
     return true;
   },
   async asyncData({ params, $content, error }) {
-    const articles = await $content()
+    const articles = await $content(params.category.toLowerCase())
       .where({ category: params.category.toLowerCase() })
       .sortBy('updatedAt', 'desc')
       .limit(10) // 記得做分頁

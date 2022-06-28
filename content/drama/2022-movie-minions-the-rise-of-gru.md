@@ -1,0 +1,21 @@
+---
+category: drama
+title: 《小小兵2：格魯的崛起》2022 年暑假歡樂登場！
+description: '《小小兵》電影續集《小小兵2：格魯的崛起》終於在 2022年暑假歡樂登場啦'
+---
+
+## 故事大綱
+
+《小小兵》電影續集《小小兵 2：格魯的崛起》終於在 2022 年暑假歡樂登場啦
+
+格魯在十二歲時是超級壞蛋組織「壞壞六人組」的狂熱粉絲，為了有資格加入他們，格魯策劃了一個非常邪惡的計劃。
+
+當「壞壞六人組」解僱他們的領袖「傳奇戰士」威酷魔王時，格魯參與面試希望加入他們。
+
+雖然事情進展得並不順利，但格魯為了證明自己有多壞，他故意偷走了「壞壞六人組」的寶石後被他們追殺。
+
+在逃跑過程中，格魯發現即使是壞蛋，也需要朋友的幫助。
+
+## 歡樂預告:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O8to1Xm1WbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -2,8 +2,8 @@
   <div class="content-block">
     <div class="article-block">
       <h1>{{ page.title }}</h1>
-      <h2>Last Modify Datetime: {{ page.updatedAt }}</h2>
-      <p>{{ page.description }}</p>
+      <h2>更新日期: {{ new Date(page.updatedAt).toLocaleDateString() }}</h2>
+      <!--      <p>{{ page.description }}</p>-->
       <nuxt-content :document="page" />
     </div>
     <side-bar />
@@ -18,7 +18,7 @@ export default {
   },
   async asyncData({ params, $content, error }) {
     // const slug =  || 'index';
-    const page = await $content(params.slug)
+    const page = await $content(params.category.toLowerCase(), params.slug)
       .where({ category: params.category })
       .fetch()
       .catch(() => {
