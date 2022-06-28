@@ -1,0 +1,18 @@
+/* markdown */
+.nuxt-content h2 {
+  margin: 1em 0;
+}
+
+.nuxt-content h2:not(:first-of-type) {
+  padding-top: 10px;
+}
+
+.nuxt-content :not(pre) > code[class*='language-'],
+.nuxt-content pre[class*='language-'] {
+  background: #efe2d9;
+}
+
+.nuxt-content code[class*='language-'],
+.nuxt-content pre[class*='language-'] {
+  font-size: 1.2em;
+}

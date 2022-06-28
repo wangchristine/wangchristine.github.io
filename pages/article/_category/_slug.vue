@@ -1,8 +1,12 @@
 <template>
   <div class="content-block">
     <div class="article-block">
-      <h1>{{ page.title }}</h1>
-      <h2>更新日期: {{ new Date(page.updatedAt).toLocaleDateString() }}</h2>
+      <div class="article-header">
+        <h1>{{ page.title }}</h1>
+        <div class="updateAt">
+          更新於 {{ new Date(page.updatedAt).toLocaleDateString() }}
+        </div>
+      </div>
       <!--      <p>{{ page.description }}</p>-->
       <nuxt-content :document="page" />
     </div>
@@ -43,5 +47,16 @@ export default {
   background-color: #f9f2e9;
   padding: 20px 40px;
   width: 1000px;
+}
+
+.article-header {
+  border-bottom: 1px solid #d7d7d7;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+}
+
+.updateAt {
+  color: #6e7780;
+  font-size: 14px;
 }
 </style>
