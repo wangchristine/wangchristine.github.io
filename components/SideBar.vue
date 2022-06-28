@@ -1,16 +1,23 @@
 <template>
   <div class="side-block">
-    <h1>image</h1>
-    <h1>Chris Wang</h1>
+    <MyProfile />
   </div>
 </template>
 
-<script></script>
+<script>
+import MyProfile from '@/components/MyProfile';
+export default {
+  name: 'SideBar',
+  components: {
+    MyProfile,
+  },
+};
+</script>
 
 <style scoped>
 .side-block {
   width: 400px;
   text-align: center;
-  margin-left: 40px;
+  margin: 0 0 40px 40px;
 }
 </style>
