@@ -1,11 +1,7 @@
 [
   {
-    "routeName": "backend",
-    "name": "Backend"
-  },
-  {
-    "routeName": "frontend",
-    "name": "Frontend"
+    "routeName": "coding",
+    "name": "Backend & Frontend"
   },
   {
     "routeName": "server",
