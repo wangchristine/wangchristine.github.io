@@ -6,7 +6,10 @@
       <p>Keep Learning, and Keep Coding.</p>
     </div>
     <div class="introduction">
-      <p>長期耕耘且涉略前端的後端工程師 • 期許自己每天多懂一點新知識 • 喜歡看劇、種植、小九兒</p>
+      <p>
+        長期耕耘且涉略前端的後端工程師 • 期許自己每天多懂一點新知識 •
+        喜歡看劇、種植、小九兒
+      </p>
     </div>
   </div>
 </template>
