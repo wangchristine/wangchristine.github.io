@@ -4,7 +4,8 @@
       <div class="article-header">
         <h1>{{ page.title }}</h1>
         <div class="timeAt">
-         建立於 {{ new Date(page.createdAt).toLocaleDateString() }} • 更新於 {{ new Date(page.updatedAt).toLocaleDateString() }}
+          建立於 {{ new Date(page.createdAt).toLocaleDateString() }} • 更新於
+          {{ new Date(page.updatedAt).toLocaleDateString() }}
         </div>
       </div>
       <!--      <p>{{ page.description }}</p>-->

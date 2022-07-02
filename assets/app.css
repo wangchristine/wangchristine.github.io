@@ -23,7 +23,8 @@
   overflow: auto;
 }
 
-.nuxt-content table th, .nuxt-content table td {
+.nuxt-content table th,
+.nuxt-content table td {
   padding: 6px 13px;
   border: 1px solid #c77a7a;
 }
