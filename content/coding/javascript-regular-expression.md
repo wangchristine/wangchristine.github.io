@@ -67,3 +67,13 @@ description: '每次要用正則表達式 Regular Expression 的時候，很容�
 | i | Case-insensitive search.
 | m | Multi-line search.
 | u | Use unicode.
+
+## 常用範例:
+
+1. 驗證為 youtube 連結
+* 條件1: 需為 `https://www.youtube.com/watch?` 或 `https://youtu.be/` 開頭，前方`www`可有可無
+* 條件2: 後方需要至少一字元的任何值 
+
+```
+/^https:\/\/(?:www\.)?(?:youtu\.be\/|youtube\.com\/watch\?).+$/g
+```

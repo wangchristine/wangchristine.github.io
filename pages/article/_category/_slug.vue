@@ -3,8 +3,8 @@
     <div class="article-block">
       <div class="article-header">
         <h1>{{ page.title }}</h1>
-        <div class="updateAt">
-          更新於 {{ new Date(page.updatedAt).toLocaleDateString() }}
+        <div class="timeAt">
+         建立於 {{ new Date(page.createdAt).toLocaleDateString() }} • 更新於 {{ new Date(page.updatedAt).toLocaleDateString() }}
         </div>
       </div>
       <!--      <p>{{ page.description }}</p>-->
@@ -55,7 +55,7 @@ export default {
   padding-bottom: 15px;
 }
 
-.updateAt {
+.timeAt {
   color: #6e7780;
   font-size: 14px;
 }
