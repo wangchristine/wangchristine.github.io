@@ -16,3 +16,18 @@
 .nuxt-content pre[class*='language-'] {
   font-size: 1.2em;
 }
+
+.nuxt-content table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.nuxt-content table th, .nuxt-content table td {
+  padding: 6px 13px;
+  border: 1px solid #c77a7a;
+}
+
+.nuxt-content b {
+  background-color: #c9989a;
+}

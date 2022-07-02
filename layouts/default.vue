@@ -100,5 +100,6 @@ h2 {
 .el-main {
   background-color: #fffbf0;
   color: #333;
+  letter-spacing: 0.5px;
 }
 </style>
