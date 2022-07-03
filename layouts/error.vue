@@ -19,7 +19,12 @@
 export default {
   name: 'LayoutError',
   layout: 'error',
-  props: ['error'],
+  props: {
+    error: {
+      type: Object,
+      default: () => {},
+    },
+  },
 };
 </script>
 
