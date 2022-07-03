@@ -23,7 +23,15 @@
     <el-main>
       <Nuxt />
     </el-main>
-    <el-footer>Copyright © 2022 Chris Wang</el-footer>
+    <el-footer>
+      Copyright © 2022 Chris Wang
+      <br />
+      本網站為個人使用，參考
+      <a href="https://www.facebook.com/TIPO.gov.tw/posts/1804286156280593/"
+        >經濟部智慧財產局</a
+      >，有使用到的網路圖片來源在
+      <NuxtLink :to="{ name: 'ImageOrigin' }">此連結</NuxtLink>
+    </el-footer>
   </el-container>
 </template>
 
@@ -94,7 +102,14 @@ h2 {
   background-color: #943d24;
   color: #fffbf0;
   text-align: center;
-  line-height: 60px;
+  line-height: 20px;
+  padding: 10px;
+}
+
+.el-footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #3e9bed;
 }
 
 .el-main {

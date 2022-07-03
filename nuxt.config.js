@@ -53,10 +53,12 @@ export default {
     fallback: true,
     async routes() {
       const { $content } = require('@nuxt/content');
-      const allArticles = await $content({deep: true}).only(['category', 'slug']).fetch();
+      const allArticles = await $content({ deep: true })
+        .only(['category', 'slug'])
+        .fetch();
 
-      return allArticles.map((article) =>
-        '/article/' + article.category + '/' + article.slug
+      return allArticles.map(
+        (article) => '/article/' + article.category + '/' + article.slug
       );
     },
   },
