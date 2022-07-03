@@ -50,7 +50,6 @@ export default {
       .sortBy('updatedAt', 'desc')
       .limit(10) // 記得做分頁
       .fetch();
-    console.log(articles);
 
     return {
       articles,
