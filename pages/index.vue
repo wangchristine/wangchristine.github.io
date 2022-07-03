@@ -94,6 +94,6 @@ export default {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 512px;
+  width: 480px;
 }
 </style>
