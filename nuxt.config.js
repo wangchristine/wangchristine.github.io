@@ -50,14 +50,13 @@ export default {
   },
 
   generate: {
+    fallback: true,
     async routes() {
       const { $content } = require('@nuxt/content');
-      const allArticles = await $content().only(['category', 'path']).fetch();
+      const allArticles = await $content({deep: true}).only(['category', 'slug']).fetch();
 
       return allArticles.map((article) =>
-        article.path === '/index'
-          ? '/'
-          : '/article/' + article.category + article.path
+        '/article/' + article.category + '/' + article.slug
       );
     },
   },
