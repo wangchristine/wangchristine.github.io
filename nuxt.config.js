@@ -7,7 +7,7 @@ export default {
   head: {
     title: 'Blog - Chris',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'zh-Hant',
     },
     meta: [
       { charset: 'utf-8' },
