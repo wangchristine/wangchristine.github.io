@@ -36,16 +36,12 @@
 </template>
 
 <script>
-import categories from '@/config/category.json';
 export default {
   name: 'LayoutDefault',
-  data() {
-    return {
-      categories,
-    };
-  },
-  fetch() {
-    this.$store.dispatch('setCategories', categories);
+  computed: {
+    categories() {
+      return this.$store.getters.getCategories;
+    },
   },
 };
 </script>

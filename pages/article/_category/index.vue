@@ -4,22 +4,40 @@
       <div class="category-block">
         <h2>Category: {{ category.name }}</h2>
       </div>
-      <div
-        v-for="article in articles"
-        :key="article.title"
-        class="articles-block"
-      >
-        <NuxtLink
-          :to="{
-            name: 'article-category-slug',
-            params: { category: category.routeName, slug: article.slug },
-          }"
+      <div class="articles-block">
+        <div
+          v-for="article in allArticlesByCategory"
+          :key="article.title"
+          class="article"
         >
-          <div class="title">{{ article.title }}</div>
-          <div class="description">
-            {{ article.description.slice(0, 80) }} ......
-          </div>
-        </NuxtLink>
+          <NuxtLink
+            :to="{
+              name: 'article-category-slug',
+              params: { category: category.routeName, slug: article.slug },
+            }"
+          >
+            <div class="title">{{ article.title }}</div>
+            <div class="description">
+              {{ article.description.slice(0, 80) }} ......
+            </div>
+          </NuxtLink>
+        </div>
+        <div class="paginate">
+          <NuxtLink
+            v-for="pageItem in Math.ceil(totalCountByCategory / perPage)"
+            :key="pageItem"
+            :to="{
+              name: 'article-category',
+              params: { category: category.routeName },
+              query: { page: pageItem },
+            }"
+            :class="{
+              'nuxt-link-exact-active nuxt-link-active':
+                page === 1 && pageItem === 1,
+            }"
+            >{{ pageItem }}</NuxtLink
+          >
+        </div>
       </div>
     </div>
     <side-bar />
@@ -44,21 +62,26 @@ export default {
 
     return true;
   },
-  async asyncData({ params, $content, error }) {
-    const articles = await $content(params.category.toLowerCase())
-      .where({ category: params.category.toLowerCase() })
-      .sortBy('updatedAt', 'desc')
-      .limit(10) // 記得做分頁
-      .fetch();
-
-    return {
-      articles,
-    };
-  },
   data() {
     return {
       category: '',
+      perPage: 10,
     };
+  },
+  computed: {
+    page() {
+      return this.$route.query.page || 1;
+    },
+    allArticlesByCategory() {
+      return this.$store.getters.getAllArticles
+        .filter((article) => article.category === this.category.routeName)
+        .slice((this.page - 1) * this.perPage, this.page * this.perPage);
+    },
+    totalCountByCategory() {
+      return this.$store.getters.getAllArticles.filter(
+        (article) => article.category === this.category.routeName
+      ).length;
+    },
   },
   mounted() {
     this.category = this.$store.getters.getCategories.find(
@@ -91,7 +114,7 @@ export default {
   margin-top: 20px;
 }
 
-.articles-block a {
+.articles-block .article a {
   padding: 10px;
   margin: 15px;
   display: block;
@@ -99,8 +122,25 @@ export default {
   border-bottom: solid 1px;
   color: #9f3448;
 }
-.articles-block > a > .title {
+.articles-block .article a > .title {
   margin-bottom: 20px;
   font-weight: bold;
+}
+
+.articles-block .paginate {
+  text-align: center;
+  padding: 10px;
+  margin: 15px;
+}
+
+.articles-block .paginate a {
+  padding: 10px;
+  margin: 5px;
+  text-decoration: none;
+  color: #9f3448;
+}
+
+.articles-block .paginate a.nuxt-link-exact-active {
+  background-color: #e7ccba;
 }
 </style>
