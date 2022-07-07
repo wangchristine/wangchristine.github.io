@@ -88,6 +88,10 @@ export default {
       (category) =>
         category.routeName === this.$route.params.category.toLowerCase()
     );
+
+    if (this.page > Math.ceil(this.totalCountByCategory / this.perPage)) {
+      this.$nuxt.error({ statusCode: 404, message: 'Page not found' });
+    }
   },
 };
 </script>
