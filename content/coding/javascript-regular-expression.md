@@ -2,6 +2,7 @@
 category: coding
 title: Javascript 正則表達式 Regular Expression 詳細範例用法
 description: '每次要用正則表達式 Regular Expression 的時候，很容易忘記它的規則，因為英文我看的比較習慣且解釋的很精確'
+isPopular: true
 createdAt: '2022-07-02'
 updatedAt: '2022-07-02'
 ---
