@@ -17,6 +17,10 @@
         </NuxtLink>
       </div>
     </div>
+    <div class="aquarium">
+      <img class="fish1" src="~/assets/fish.gif" alt="fish" />
+      <img class="fish2" src="~/assets/fish.gif" alt="fish" />
+    </div>
   </div>
 </template>
 
@@ -64,5 +68,74 @@ export default {
   text-decoration: none;
   padding: 5px;
   color: #9f3448;
+}
+
+.aquarium {
+  position: relative;
+  background-color: #a0bed5;
+  margin-top: 20px;
+  height: 200px;
+  background-image: url('~/assets/aquarium.jpg');
+  background-size: cover;
+}
+
+.fish1 {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+  animation: animationFish1 10s linear infinite;
+}
+
+@keyframes animationFish1 {
+  0% {
+    transform: translate(0, 0) rotateY(180deg);
+  }
+  20% {
+    transform: translate(30px, 100px) rotateY(180deg);
+  }
+  50% {
+    transform: translate(250px, 20px) rotateY(180deg);
+  }
+  51% {
+    transform: translate(250px, 20px) rotateY(0deg);
+  }
+  75% {
+    transform: translate(180px, 50px) rotateY(0deg);
+  }
+  100% {
+    transform: translate(0, 0) rotateY(0deg);
+  }
+}
+
+.fish2 {
+  position: absolute;
+  top: 100px;
+  left: 320px;
+  width: 50px;
+  height: 50px;
+  animation: animationFish2 8s linear infinite;
+}
+
+@keyframes animationFish2 {
+  0% {
+    transform: translate(0, 0) rotateY(0deg);
+  }
+  45% {
+    transform: translate(-200px, 20px) rotateY(0deg);
+  }
+  50% {
+    transform: translate(-200px, 20px) rotateY(0deg);
+  }
+  51% {
+    transform: translate(-200px, 20px) rotateY(180deg);
+  }
+  90% {
+    transform: translate(0, 0) rotateY(180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotateY(180deg);
+  }
 }
 </style>
