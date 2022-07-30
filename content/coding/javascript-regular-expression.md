@@ -4,7 +4,7 @@ title: Javascript 正則表達式 Regular Expression 詳細範例用法
 description: '每次要用正則表達式 Regular Expression 的時候，很容易忘記它的規則，因為英文我看的比較習慣且解釋的很精確'
 isPopular: true
 createdAt: '2022-07-02'
-updatedAt: '2022-07-02'
+updatedAt: '2022-07-30'
 ---
 
 每次要用正則表達式 Regular Expression 的時候，很容易忘記它的規則，因為英文我看的比較習慣且解釋的很精確，所以以下就用英文說明在 Javascript 中詳細範例用法：
@@ -44,6 +44,8 @@ updatedAt: '2022-07-02'
 | (?:abc) | Non-capturing group | /(?:https?):\\/\\/([^\r\n]+)/g => <b><span>https://</span>google.com/</b> <br /> Group 1: "google.com/"
 | x(?=abc) | Positive lookahead. Matches only if followed by condition and without including it in the result. | /x(?=abc)/g => <b>x</b>abc
 | x(?!abc) | Negative lookahead. Matches only if not followed by condition and without including it in the result. | /x(?!abc)/g => <b>x</b>def
+| (?<=abc)x | Positive lookbehind. Matches only if preceded by condition and without including it in the result. | /(?<=abc)x/g => abc<b>x</b>
+| (?<!abc)x | Negative lookbehind. Matches only if not preceded by condition and without including it in the result. | /(?<\!abc)x/g => def<b>x</b>
 
 ## 數量:
 
