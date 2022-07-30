@@ -6,11 +6,11 @@
           >Chris 主頁</NuxtLink
         >
         <nav
-          v-for="(category, key) in categories"
-          :key="key"
           class="navigation-link"
         >
           <NuxtLink
+            v-for="(category, key) in categories"
+            :key="key"
             :to="{
               name: 'article-category',
               params: { category: category.routeName },
@@ -83,12 +83,11 @@ h2 {
 }
 .navigation-link {
   display: inline-block;
-  margin-left: 30px;
 }
 
 .navigation-link a {
+  margin-left: 30px;
   text-decoration: none;
-  padding: 10px;
   font-weight: bold;
   color: #fffbf0;
   font-size: 18px;
