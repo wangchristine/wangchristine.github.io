@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "XXX",
+    "foods": [
+      {
+        "id": 1,
+        "name": "XX",
+        "image": ".jpg",
+        "star": 3.7,
+        "price": 100,
+        "createdAt": "2022-07-23",
+        "description": "great. great. great.great.great."
+      },
+      {
+        "id": 2,
+        "name": "OO",
+        "image": ".jpg",
+        "star": 4.2,
+        "price": null,
+        "createdAt": "2022-06-12",
+        "description": "soso"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "YYY",
+    "foods": [
+      {
+        "id": 3,
+        "name": "TTT",
+        "image": ".jpg",
+        "star": 2.5,
+        "price": null,
+        "createdAt": "2022-06-19",
+        "description": "not bad"
+      },
+      {
+        "id": 4,
+        "name": "HHH",
+        "image": ".jpg",
+        "star": 1,
+        "price": null,
+        "createdAt": "2022-06-19",
+        "description": "not bad"
+      }
+    ]
+  }
+]

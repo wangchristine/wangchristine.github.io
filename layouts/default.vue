@@ -5,9 +5,7 @@
         <NuxtLink :to="{ name: 'index' }" class="brand-title"
           >Chris 主頁</NuxtLink
         >
-        <nav
-          class="navigation-link"
-        >
+        <nav class="navigation-link">
           <NuxtLink
             v-for="(category, key) in categories"
             :key="key"
@@ -17,6 +15,7 @@
             }"
             >{{ category.name }}</NuxtLink
           >
+          <NuxtLink :to="{ name: 'food' }">Food</NuxtLink>
         </nav>
       </div>
     </el-header>
