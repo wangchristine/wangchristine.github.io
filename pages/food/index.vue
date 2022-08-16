@@ -4,13 +4,19 @@
       <div class="category-block">
         <h2>Category: Food</h2>
       </div>
+      <div class="search-block">
+        <p>星等為依據個人喜好跟主觀判斷所評分，僅供參考。</p>
+        <p>
+          1⭐: 不喜歡； 2⭐: 普通，以填飽肚子為主； 3⭐: 還不錯； 4⭐: 超好吃
+        </p>
+      </div>
       <el-skeleton :loading="isFoodsLoading" animated>
         <template slot="template">
           <div class="foods-block">
             <div v-for="(item, key) in 6" :key="key" class="food">
               <el-skeleton-item
                 variant="image"
-                style="width: 100%; height: 200px"
+                style="width: 100%; height: 135px"
               />
               <el-skeleton-item
                 variant="h3"
@@ -56,7 +62,11 @@
                 </el-rate>
                 <span class="star-number">{{ food.star }}</span>
               </div>
-              <img src="~/assets/avatar.png" :alt="food.name" />
+              <img
+                class="image"
+                :src="require(`~/assets/${food.image}`)"
+                :alt="food.name"
+              />
               <h3 class="name">
                 {{ food.name }}
                 <span v-if="food.price" class="price">${{ food.price }}</span>
@@ -114,6 +124,12 @@ export default {
   padding: 20px 40px;
 }
 
+.search-block {
+  background-color: #f9f2e9;
+  padding: 20px 40px;
+  margin-top: 20px;
+}
+
 .foods-block {
   display: flex;
   justify-content: space-around;
@@ -132,6 +148,10 @@ export default {
   box-shadow: 2px 2px 10px -1px rgb(0 0 0 / 30%);
   text-align: center;
   background-color: #f7eade;
+}
+
+.food .image {
+  width: 100%;
 }
 
 .food .name {
@@ -166,7 +186,7 @@ export default {
 
 .star-block {
   position: absolute;
-  top: 6px;
+  top: 2px;
   right: 10px;
 }
 
@@ -177,7 +197,7 @@ export default {
 
 .star-number {
   color: #ff8100;
-  font-size: 20px;
+  font-size: 22px;
   font-style: italic;
   font-weight: bold;
 }

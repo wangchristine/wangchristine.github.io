@@ -68,6 +68,8 @@ export default {
   text-decoration: none;
   padding: 5px;
   color: #9f3448;
+  border-bottom: dashed 1px;
+  margin-top: 10px;
 }
 
 .aquarium {
