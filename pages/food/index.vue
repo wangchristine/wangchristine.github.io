@@ -143,7 +143,7 @@ export default {
   position: relative;
   display: inline-block;
   flex-basis: 25%;
-  margin-top: 10px;
+  margin: 10px 0;
   padding: 20px;
   box-shadow: 2px 2px 10px -1px rgb(0 0 0 / 30%);
   text-align: center;
