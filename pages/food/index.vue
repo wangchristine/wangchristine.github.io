@@ -49,7 +49,7 @@
               margin-top: 20px;
             "
           >
-            <div v-for="(food, key) in allFoods" :key="key" class="food">
+            <div v-for="(food, key) in foods" :key="key" class="food">
               <div class="star-block">
                 <el-rate
                   class="star-rate"
@@ -76,11 +76,19 @@
               <p class="description">{{ food.description }}</p>
             </div>
           </div>
+          <!-- 這邊 style 同 <div class="paginate">，但不確定為何無法直接吃 class -->
+          <div style="text-align: center; padding: 15px 25px 25px 25px; background-color: #f9f2e9;">
+            <a href="#"
+               :class="{'paginate-active': currentPage === pageItem}"
+               style="display: inline-block; padding: 10px; margin: 5px; text-decoration: none; color: #9f3448;"
+               v-for="pageItem in Math.ceil(totalCountFoods / perPage)" :key="pageItem"
+               @click.prevent="setCurrentPage(pageItem)">{{ pageItem }}</a>
+          </div>
         </template>
       </el-skeleton>
     </div>
 
-    <side-bar />
+    <side-bar/>
   </div>
 </template>
 
@@ -94,16 +102,26 @@ export default {
   data() {
     return {
       isFoodsLoading: true,
+      perPage: 9,
+      currentPage: 1,
     };
   },
   computed: {
-    allFoods() {
-      return this.$store.getters.getFoods;
+    foods() {
+      return this.$store.getters.getFoods.slice((this.currentPage - 1) * this.perPage, this.currentPage * this.perPage);
+    },
+    totalCountFoods() {
+      return this.$store.getters.getFoods.length;
     },
   },
   mounted() {
     this.$store.dispatch('setFoods');
     this.isFoodsLoading = false;
+  },
+  methods: {
+    setCurrentPage(pageItem) {
+      this.currentPage = pageItem;
+    },
   },
 };
 </script>
@@ -174,6 +192,24 @@ export default {
 .food .description {
   margin: 0;
   line-break: anywhere;
+}
+
+.paginate {
+  text-align: center;
+  padding: 15px 25px 25px 25px;
+  background-color: #f9f2e9;
+}
+
+.paginate a {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  text-decoration: none;
+  color: #9f3448;
+}
+
+.paginate-active {
+  background-color: #e7ccba;
 }
 
 .el-skeleton.is-animated .el-skeleton__item {
