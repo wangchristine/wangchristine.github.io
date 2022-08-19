@@ -94,5 +94,43 @@
         "description": "味道很濃，但吃多了有點乾(可能要配湯/飲料?)"
       }
     ]
+  },
+  {
+    "id": 5,
+    "name": "周董燒肉",
+    "foods": [
+      {
+        "name": "繩黑糖嫩雞翅飯",
+        "image": "foods/20220719.jpg",
+        "star": 4.6,
+        "price": null,
+        "createdAt": "2022-07-19",
+        "description": "沒有吃出來黑糖味，雞翅有四根是怎樣XDD"
+      },
+      {
+        "name": "炭烤嫩豬腱飯",
+        "image": "foods/20220720.jpg",
+        "star": 4.0,
+        "price": null,
+        "createdAt": "2022-07-20",
+        "description": "豬腱還算清淡，沒有很重的油腥味。"
+      },
+      {
+        "name": "海南雞飯",
+        "image": "foods/20220721.jpg",
+        "star": 3.9,
+        "price": null,
+        "createdAt": "2022-07-21",
+        "description": "這次飯菜量剛好，吃完不會撐XD 它的醬汁味道有點甜辣，適合能接受微辣的人。"
+      },
+      {
+        "name": "火烤芥末豬菲力丼",
+        "image": "foods/20220722.jpg",
+        "star": 3.6,
+        "price": null,
+        "createdAt": "2022-07-22",
+        "description": "飯菜量剛好，肉有點乾，本來還怕有芥末，但其實吃不太出來，只有一點點的微辣。"
+      }
+    ]
   }
 ]
