@@ -45,3 +45,8 @@
 .nuxt-content .token.variable {
   color: #d98b00;
 }
+
+.nuxt-content a {
+  margin: 0 3px;
+  color: #9f3448;
+}
