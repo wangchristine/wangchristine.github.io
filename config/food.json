@@ -178,5 +178,51 @@
         "description": "肉還蠻不錯吃的，蛋是半熟的。"
       }
     ]
+  },
+  {
+    "id": 7,
+    "name": "哈古小館",
+    "foods": [
+      {
+        "name": "鯷魚蔥醬雞胸餐盒",
+        "image": "foods/20220801.jpg",
+        "star": 3.0,
+        "price": null,
+        "createdAt": "2022-08-01",
+        "description": "蔥醬味道重還不錯。吃到一根灑滿鹽巴的菇，應該是沒攪拌均勻，超鹹。"
+      },
+      {
+        "name": "巴薩米克豬餐盒",
+        "image": "foods/20220802.jpg",
+        "star": 3.1,
+        "price": null,
+        "createdAt": "2022-08-02",
+        "description": "肉的味道不錯。有一隻菜蟲在花椰菜上Orz。"
+      },
+      {
+        "name": "宮保雞丁餐盒",
+        "image": "foods/20220803.jpg",
+        "star": 1.0,
+        "price": null,
+        "createdAt": "2022-08-03",
+        "description": "應該是公司大量團訂的關係，這個便當菜都酸掉了，太糟糕了吧Orz。"
+      },
+      {
+        "name": "打拋豬餐盒",
+        "image": "foods/20220804.jpg",
+        "star": 1.0,
+        "price": null,
+        "createdAt": "2022-08-04",
+        "description": "有鑑於昨天吃的宮保雞丁餐盒有問題，再加上今天的花椰菜也是酸的，對這家店很失望。"
+      },
+      {
+        "name": "蕃茄紅醬雞肉蝴蝶麵",
+        "image": "foods/20220805.jpg",
+        "star": 1.8,
+        "price": null,
+        "createdAt": "2022-08-05",
+        "description": "幾乎沒有醬、吃起來乾巴巴的蝴蝶麵味道，肉吃起來軟軟爛爛的，個人不喜歡。"
+      }
+    ]
   }
 ]
