@@ -132,5 +132,51 @@
         "description": "飯菜量剛好，肉有點乾，本來還怕有芥末，但其實吃不太出來，只有一點點的微辣。"
       }
     ]
+  },
+  {
+    "id": 6,
+    "name": "Just kitchen",
+    "foods": [
+      {
+        "name": "好運叉燒飯",
+        "image": "foods/20220725.jpg",
+        "star": 2.8,
+        "price": null,
+        "createdAt": "2022-07-25",
+        "description": "這次菜和肉比起以前吃的還少很多，叉燒肉普普通通，有一小塊煮黑了。"
+      },
+      {
+        "name": "麻醬胡了雞絲麵",
+        "image": "foods/20220726.jpg",
+        "star": 2.5,
+        "price": null,
+        "createdAt": "2022-07-26",
+        "description": "醬油不要全放，不然味道會太鹹，整體味道普通，沒啥配菜還吃不飽。"
+      },
+      {
+        "name": "碎碎平安爛肉飯",
+        "image": "foods/20220727.jpg",
+        "star": 2.4,
+        "price": null,
+        "createdAt": "2022-07-27",
+        "description": "怕肚子餓而被強迫吃完的肥滷肉便當...。"
+      },
+      {
+        "name": "蒲燒鯛魚飯",
+        "image": "foods/20220728.jpg",
+        "star": 3.2,
+        "price": null,
+        "createdAt": "2022-07-28",
+        "description": "魚上面淋的醬味道不錯，但魚片的邊邊有一點煮黑了。"
+      },
+      {
+        "name": "機運大開雞排飯",
+        "image": "foods/20220729.jpg",
+        "star": 3.8,
+        "price": null,
+        "createdAt": "2022-07-29",
+        "description": "肉還蠻不錯吃的，蛋是半熟的。"
+      }
+    ]
   }
 ]
