@@ -3,7 +3,7 @@ category: coding
 title: PHP Laravel + RoadRunner 初體驗
 description: '最近準備接手一個用 RoadRunner 架設的專案，之前沒接觸過這工具，在接專案前就先自己架設一個新專案'
 createdAt: '2022-08-20'
-updatedAt: '2022-08-20'
+updatedAt: '2022-08-22'
 ---
 
 最近準備接手一個用 RoadRunner 架設的專案，之前沒接觸過這工具，在接專案前就先自己架設一個新專案體驗看看吧！
@@ -18,9 +18,12 @@ FROM php:8.1-cli
 COPY --from=roadrunner /usr/bin/rr /usr/local/bin/rr
 ```
 
-2. Laravel 
-   * Composer 裝這三個:
-      `nyholm/psr7`, `spiral/roadrunner`, `spiral/roadrunner-laravel`
+2. PHP
+   * Composer 裝這兩個:
+      `nyholm/psr7`, `spiral/roadrunner`
+3. Laravel 
+   * Composer 裝這兩個:
+      `spiral/roadrunner`, `spiral/roadrunner-laravel`
    * 產生套件設定檔:
      ```shell
      php ./artisan vendor:publish --provider='Spiral\RoadRunnerLaravel\ServiceProvider' --tag=config
