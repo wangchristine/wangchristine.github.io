@@ -10,6 +10,46 @@
         "price": null,
         "createdAt": "2021-02-01",
         "description": "還不錯，炸蝦造型可愛。"
+      },
+      {
+        "name": "香煎梅花豬肉飯",
+        "image": "foods/20220808.jpg",
+        "star": 3.8,
+        "price": null,
+        "createdAt": "2022-08-08",
+        "description": "下面那層還有一個煎蛋，肉還蠻好吃的，但有一些筋。"
+      },
+      {
+        "name": "醬燒排骨飯",
+        "image": "foods/20220809.jpg",
+        "star": 3.5,
+        "price": null,
+        "createdAt": "2022-08-09",
+        "description": "蠻喜歡配菜，豆腐和韭菜炒蛋好吃。"
+      },
+      {
+        "name": "酥炸雞腿飯",
+        "image": "foods/20220810.jpg",
+        "star": 3.5,
+        "price": null,
+        "createdAt": "2022-08-10",
+        "description": "雞腿不錯，配菜甜不辣、菜脯蛋個人討厭吃。"
+      },
+      {
+        "name": "梅干扣肉飯",
+        "image": "foods/20220811.jpg",
+        "star": 3.3,
+        "price": null,
+        "createdAt": "2022-08-11",
+        "description": "扣肉稍微有點硬，肥的地方不會太油，配菜蒸蛋、海帶好吃。"
+      },
+      {
+        "name": "香滷棒腿+宮保中卷雙拼",
+        "image": "foods/20220812.jpg",
+        "star": 4.2,
+        "price": null,
+        "createdAt": "2022-08-12",
+        "description": "滷雞腿味道很香，小辣中卷+炒花生好吃。"
       }
     ]
   },
@@ -222,6 +262,98 @@
         "price": null,
         "createdAt": "2022-08-05",
         "description": "幾乎沒有醬、吃起來乾巴巴的蝴蝶麵味道，肉吃起來軟軟爛爛的，個人不喜歡。"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "ㄚ嘉の店",
+    "foods": [
+      {
+        "name": "醬爆雞丁",
+        "image": "foods/20220815.jpg",
+        "star": 3.8,
+        "price": null,
+        "createdAt": "2022-08-15",
+        "description": "雞肉很香很好吃，份量稍微少。"
+      },
+      {
+        "name": "塔香豬肉片",
+        "image": "foods/20220816.jpg",
+        "star": 3.6,
+        "price": null,
+        "createdAt": "2022-08-16",
+        "description": "味道還不錯，豬肉有筋。"
+      },
+      {
+        "name": "宮保雞丁",
+        "image": "foods/20220817.jpg",
+        "star": 3.3,
+        "price": null,
+        "createdAt": "2022-08-17",
+        "description": "主菜應該有中辣，需要旁邊配菜解辣，而且吃不飽。"
+      },
+      {
+        "name": "黑胡椒豬柳",
+        "image": "foods/20220818.jpg",
+        "star": 3.6,
+        "price": null,
+        "createdAt": "2022-08-18",
+        "description": "豬柳味道不錯，份量少吃不飽。"
+      },
+      {
+        "name": "招牌白斬雞",
+        "image": "foods/20220819.jpg",
+        "star": 3.6,
+        "price": null,
+        "createdAt": "2022-08-19",
+        "description": "雞有點硬，菜飯也比較油，蓮藕還不錯吃。"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "甘擔廚房",
+    "foods": [
+      {
+        "name": "酥香豆酥魚片餐",
+        "image": "foods/20220822.jpg",
+        "star": 3.8,
+        "price": null,
+        "createdAt": "2022-08-22",
+        "description": "還蠻不錯吃的，魚片稍微有點乾。"
+      },
+      {
+        "name": "宮保雞丁餐",
+        "image": "foods/20220823.jpg",
+        "star": 1.9,
+        "price": null,
+        "createdAt": "2022-08-23",
+        "description": "便當盒雖然寫小辣但我覺得太辣了，連長豆都是滿滿的胡椒粉。"
+      },
+      {
+        "name": "日式照燒豬排餐",
+        "image": "foods/20220824.jpg",
+        "star": 2.6,
+        "price": null,
+        "createdAt": "2022-08-24",
+        "description": "整體普通，肉有點硬。"
+      },
+      {
+        "name": "三杯炒肉絲餐",
+        "image": "foods/20220825.jpg",
+        "star": 4.2,
+        "price": null,
+        "createdAt": "2022-08-25",
+        "description": "肉還蠻好吃的，烤馬鈴薯也很好吃。"
+      },
+      {
+        "name": "煙燻甘蔗雞腿餐",
+        "image": "foods/20220826.jpg",
+        "star": 3.5,
+        "price": null,
+        "createdAt": "2022-08-26",
+        "description": "肉蠻入味的，還不錯。"
       }
     ]
   }
