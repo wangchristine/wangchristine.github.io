@@ -11,12 +11,12 @@ updatedAt: '2022-08-22'
 ## 環境
 
 1. Docker: 主要要引入 RoadRunner 執行指令，PHP 的 image 版本和相關執行指令看個人專案去安裝。
-```dockerfile
-FROM ghcr.io/roadrunner-server/roadrunner:latest AS roadrunner
-FROM php:8.1-cli
-
-COPY --from=roadrunner /usr/bin/rr /usr/local/bin/rr
-```
+    ```dockerfile
+    FROM ghcr.io/roadrunner-server/roadrunner:latest AS roadrunner
+    FROM php:8.1-cli
+    
+    COPY --from=roadrunner /usr/bin/rr /usr/local/bin/rr
+    ```
 
 2. PHP
    * Composer 裝這兩個:
