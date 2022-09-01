@@ -48,6 +48,7 @@ export default {
   background-color: #f9f2e9;
   padding: 20px 40px;
   width: 1000px;
+  overflow-x: hidden;
 }
 
 .article-header {
