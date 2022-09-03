@@ -1,18 +1,18 @@
 [
   {
     "routeName": "coding",
-    "name": "Backend & Frontend"
+    "name": "後端 & 前端"
   },
   {
     "routeName": "server",
-    "name": "Server"
+    "name": "伺服器"
   },
   {
     "routeName": "drama",
-    "name": "Drama"
+    "name": "劇迷"
   },
   {
     "routeName": "experience",
-    "name": "Experience"
+    "name": "淺談"
   }
 ]

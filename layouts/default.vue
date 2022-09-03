@@ -15,7 +15,7 @@
             }"
             >{{ category.name }}</NuxtLink
           >
-          <NuxtLink :to="{ name: 'food' }">Food</NuxtLink>
+          <NuxtLink :to="{ name: 'food' }">食物</NuxtLink>
         </nav>
       </div>
     </el-header>
@@ -90,6 +90,7 @@ h2 {
   font-weight: bold;
   color: #fffbf0;
   font-size: 18px;
+  border-bottom: 2px #d5a47c solid;
 }
 
 .el-footer {

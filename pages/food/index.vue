@@ -2,7 +2,7 @@
   <div class="content-block">
     <div class="main-block">
       <div class="category-block">
-        <h2>Category: Food</h2>
+        <h2>Category: 食物</h2>
       </div>
       <div class="search-block">
         <p>星等為依據個人喜好跟主觀判斷所評分，僅供參考。</p>
