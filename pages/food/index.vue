@@ -166,6 +166,7 @@ export default {
   box-shadow: 2px 2px 10px -1px rgb(0 0 0 / 30%);
   text-align: center;
   background-color: #f7eade;
+  min-width: 180px;
 }
 
 .food .image {
@@ -237,4 +238,20 @@ export default {
   font-style: italic;
   font-weight: bold;
 }
+
+
+@media all and (max-width: 768px) {
+  .content-block {
+    flex-direction: column;
+  }
+
+  .main-block {
+    width: 100%;
+  }
+
+  .food {
+    flex-basis: 40%;
+  }
+}
+
 </style>

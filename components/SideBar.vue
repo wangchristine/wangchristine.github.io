@@ -140,4 +140,13 @@ export default {
     transform: translate(0, 0) rotateY(180deg);
   }
 }
+
+@media all and (max-width: 768px) {
+  .side-block {
+    width: 100%;
+    margin: 40px 0;
+  }
+}
+
+
 </style>

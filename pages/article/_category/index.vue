@@ -147,4 +147,15 @@ export default {
 .articles-block .paginate a.nuxt-link-exact-active {
   background-color: #e7ccba;
 }
+
+@media all and (max-width: 768px) {
+  .content-block {
+    flex-direction: column;
+  }
+
+  .main-block {
+    width: 100%;
+  }
+}
+
 </style>
