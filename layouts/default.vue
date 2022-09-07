@@ -2,6 +2,27 @@
   <el-container>
     <el-header>
       <div class="container">
+        <el-button class="burger" @click="openDrawer = true">☰</el-button>
+        <el-drawer
+          title="站內導覽"
+          :visible.sync="openDrawer"
+          direction="ltr"
+          size="60%"
+        >
+          <nav class="drawer-navigation-link">
+            <NuxtLink
+              v-for="(category, key) in categories"
+              :key="key"
+              :to="{
+                name: 'article-category',
+                params: { category: category.routeName },
+              }"
+              >{{ category.name }}</NuxtLink
+            >
+            <NuxtLink :to="{ name: 'food' }">食物</NuxtLink>
+          </nav>
+        </el-drawer>
+
         <NuxtLink :to="{ name: 'index' }" class="brand-title"
           >Chris 主頁</NuxtLink
         >
@@ -37,9 +58,19 @@
 <script>
 export default {
   name: 'LayoutDefault',
+  data() {
+    return {
+      openDrawer: false,
+    };
+  },
   computed: {
     categories() {
       return this.$store.getters.getCategories;
+    },
+  },
+  watch: {
+    $route() {
+      this.openDrawer = false;
     },
   },
 };
@@ -67,8 +98,34 @@ h2 {
 }
 
 .el-header .container {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.el-header .container .burger {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  margin-right: 30px;
+  background-color: #f9f2ea;
+  color: #884731;
+  font-weight: bold;
+}
+
+.drawer-navigation-link {
+  padding: 0 15px;
+}
+
+.drawer-navigation-link a {
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  color: #943d24;
+  border-bottom: 1px #d5a47c solid;
+  line-height: 50px;
+  margin-bottom: 10px;
 }
 
 .brand-title {
@@ -111,5 +168,20 @@ h2 {
   background-color: #fffbf0;
   color: #333;
   letter-spacing: 0.5px;
+}
+
+@media all and (max-width: 768px) {
+  .el-header .container .burger {
+    display: inline-block;
+  }
+  .brand-title {
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0 60px;
+  }
+  .navigation-link {
+    display: none;
+  }
 }
 </style>

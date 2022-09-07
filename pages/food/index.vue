@@ -88,12 +88,13 @@
       </el-skeleton>
     </div>
 
-    <side-bar/>
+    <side-bar />
   </div>
 </template>
 
 <script>
 import SideBar from '@/components/SideBar';
+
 export default {
   name: 'FoodIndex',
   components: {
@@ -239,7 +240,6 @@ export default {
   font-weight: bold;
 }
 
-
 @media all and (max-width: 768px) {
   .content-block {
     flex-direction: column;
@@ -253,5 +253,4 @@ export default {
     flex-basis: 40%;
   }
 }
-
 </style>

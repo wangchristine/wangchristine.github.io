@@ -1,5 +1,5 @@
 <template>
-  <img :src="require('@/assets/' + src)" :alt=alt>
+  <img :src="require('@/assets/' + src)" :alt="alt" />
 </template>
 
 <script>
@@ -8,12 +8,12 @@ export default {
   props: {
     src: {
       type: String,
-      required: true
+      required: true,
     },
     alt: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
 };
 </script>
