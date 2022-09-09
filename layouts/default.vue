@@ -183,5 +183,10 @@ h2 {
   .navigation-link {
     display: none;
   }
+  .el-footer {
+    line-height: 16px;
+    padding: 8px;
+    font-size: 14px;
+  }
 }
 </style>

@@ -61,4 +61,15 @@ export default {
   color: #6e7780;
   font-size: 14px;
 }
+
+@media all and (max-width: 768px) {
+  .content-block {
+    flex-direction: column;
+  }
+
+  .article-block {
+    padding: 20px;
+    width: auto;
+  }
+}
 </style>

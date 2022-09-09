@@ -96,4 +96,29 @@ export default {
   right: 0;
   width: 480px;
 }
+
+@media all and (max-width: 768px) {
+  .content-block {
+    flex-direction: column;
+  }
+
+  .side-block {
+    width: 100%;
+    margin: 0 0 40px 0;
+  }
+
+  .main-block {
+    width: auto;
+  }
+
+  .main-block .sketch {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 480px;
+    display: block;
+    margin: auto;
+  }
+}
 </style>

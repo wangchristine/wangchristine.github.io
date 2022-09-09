@@ -147,6 +147,4 @@ export default {
     margin: 40px 0;
   }
 }
-
-
 </style>

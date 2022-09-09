@@ -21,4 +21,4 @@ updatedAt: '2022-07-03'
 
 ## 歡樂預告:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/O8to1Xm1WbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<markdown-video src="https://www.youtube.com/embed/O8to1Xm1WbA" title="YouTube video player"></markdown-video>
