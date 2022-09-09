@@ -52,6 +52,9 @@
       >，有使用到的網路圖片來源在
       <NuxtLink :to="{ name: 'ImageOrigin' }">此連結</NuxtLink>
     </el-footer>
+    <button class="go-up">
+      <img src="~/assets/go-up.jpg" alt="Go Up" @click="goUp()" />
+    </button>
   </el-container>
 </template>
 
@@ -71,6 +74,11 @@ export default {
   watch: {
     $route() {
       this.openDrawer = false;
+    },
+  },
+  methods: {
+    goUp() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     },
   },
 };
@@ -170,6 +178,24 @@ h2 {
   letter-spacing: 0.5px;
 }
 
+.go-up {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  border-radius: 50%;
+  border: #c99d54 5px solid;
+  padding: 0;
+  width: 70px;
+  height: 70px;
+}
+
+.go-up img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
 @media all and (max-width: 768px) {
   .el-header .container .burger {
     display: inline-block;
@@ -187,6 +213,9 @@ h2 {
     line-height: 16px;
     padding: 8px;
     font-size: 14px;
+  }
+  .go-up {
+    display: block;
   }
 }
 </style>
