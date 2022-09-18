@@ -44,8 +44,12 @@ export const getters = {
   getCategories: (state) => {
     return state.categories;
   },
-  getFoods: (state) => {
-    return state.foods
+  getFoods: (state) => (storeId) => {
+    let foods = state.foods;
+    if (storeId !== null && storeId !== 'null') {
+      foods = foods.filter((store) => store.id === parseInt(storeId));
+    }
+    return foods
       .map((store) => {
         return store.foods.map((food) => {
           return { storeId: store.id, storeName: store.name, ...food };
@@ -53,12 +57,17 @@ export const getters = {
       })
       .flat()
       .sort((a, b) => {
-        const aCeatedAt = new Date(a.createdAt);
-        const bCeatedAt = new Date(b.createdAt);
+        const aCreatedAt = new Date(a.createdAt);
+        const bCreatedAt = new Date(b.createdAt);
 
-        if (aCeatedAt > bCeatedAt) return -1;
-        if (aCeatedAt < bCeatedAt) return 1;
+        if (aCreatedAt > bCreatedAt) return -1;
+        if (aCreatedAt < bCreatedAt) return 1;
         return 0;
       });
+  },
+  getStores: (state) => {
+    return state.foods.map((store) => {
+      return { id: store.id, name: store.name };
+    });
   },
 };

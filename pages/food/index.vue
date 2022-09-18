@@ -5,10 +5,21 @@
         <h2>Category: 食物</h2>
       </div>
       <div class="search-block">
-        <p>星等為依據個人喜好跟主觀判斷所評分，僅供參考。</p>
-        <p>
-          1⭐: 不喜歡； 2⭐: 普通，以填飽肚子為主； 3⭐: 還不錯； 4⭐: 超好吃
-        </p>
+        <div class="description">
+          <p>星等為依據個人喜好跟主觀判斷所評分，僅供參考。</p>
+          <p>
+            1⭐: 不喜歡； 2⭐: 普通，以填飽肚子為主； 3⭐: 還不錯； 4⭐: 超好吃
+          </p>
+        </div>
+        <div class="search">
+          <span>店家：</span>
+          <select name="store" @change="selectStore($event)">
+            <option value="null">-- 全部 --</option>
+            <option v-for="store in stores" :key="store.id" :value="store.id">
+              {{ store.name }}
+            </option>
+          </select>
+        </div>
       </div>
       <el-skeleton :loading="isFoodsLoading" animated>
         <template slot="template">
@@ -78,11 +89,14 @@
           </div>
           <!-- 這邊 style 同 <div class="paginate">，但不確定為何無法直接吃 class -->
           <div style="text-align: center; padding: 15px 25px 25px 25px; background-color: #f9f2e9;">
-            <a href="#"
-               :class="{'paginate-active': currentPage === pageItem}"
-               style="display: inline-block; padding: 10px; margin: 5px; text-decoration: none; color: #9f3448;"
-               v-for="pageItem in Math.ceil(totalCountFoods / perPage)" :key="pageItem"
-               @click.prevent="setCurrentPage(pageItem)">{{ pageItem }}</a>
+            <a v-for="pageItem in Math.ceil(totalCountFoods / perPage)" :key="pageItem" href="#"
+               :class="{ 'paginate-active': currentPage === pageItem }" style="
+                display: inline-block;
+                padding: 10px;
+                margin: 5px;
+                text-decoration: none;
+                color: #9f3448;
+              " @click.prevent="setCurrentPage(pageItem)">{{ pageItem }}</a>
           </div>
         </template>
       </el-skeleton>
@@ -105,14 +119,18 @@ export default {
       isFoodsLoading: true,
       perPage: 9,
       currentPage: 1,
+      storeId: null,
     };
   },
   computed: {
     foods() {
-      return this.$store.getters.getFoods.slice((this.currentPage - 1) * this.perPage, this.currentPage * this.perPage);
+      return this.$store.getters.getFoods(this.storeId).slice((this.currentPage - 1) * this.perPage, this.currentPage * this.perPage);
     },
     totalCountFoods() {
-      return this.$store.getters.getFoods.length;
+      return this.$store.getters.getFoods(this.storeId).length;
+    },
+    stores() {
+      return this.$store.getters.getStores;
     },
   },
   mounted() {
@@ -122,6 +140,10 @@ export default {
   methods: {
     setCurrentPage(pageItem) {
       this.currentPage = pageItem;
+    },
+    selectStore(event) {
+      this.currentPage = 1;
+      this.storeId = event.target.value;
     },
   },
 };
@@ -144,9 +166,27 @@ export default {
 }
 
 .search-block {
+  display: flex;
+  align-items: center;
   background-color: #f9f2e9;
   padding: 20px 40px;
   margin-top: 20px;
+}
+
+.search-block .description {
+  margin-right: 10px;
+}
+
+.search-block .search {
+  margin: auto;
+}
+
+.search-block select {
+  padding: 8px 10px;
+  border: #b1b0b0 1px solid;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
 }
 
 .foods-block {
@@ -247,6 +287,14 @@ export default {
 
   .main-block {
     width: 100%;
+  }
+
+  .search-block {
+    flex-direction: column;
+  }
+
+  .search-block .description {
+    margin-right: 0;
   }
 
   .food {
