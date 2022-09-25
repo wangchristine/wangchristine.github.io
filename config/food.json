@@ -50,6 +50,46 @@
         "price": null,
         "createdAt": "2022-08-12",
         "description": "滷雞腿味道很香，小辣中卷+炒花生好吃。"
+      },
+      {
+        "name": "香煎梅花豬肉飯",
+        "image": "foods/20220919.jpg",
+        "star": 3.2,
+        "price": null,
+        "createdAt": "2022-09-19",
+        "description": "下面那層飯超少，肉偏油。"
+      },
+      {
+        "name": "醬燒排骨飯",
+        "image": "foods/20220920.jpg",
+        "star": 3.3,
+        "price": null,
+        "createdAt": "2022-09-20",
+        "description": "肉有點硬，整體普通，蒸蛋好吃。"
+      },
+      {
+        "name": "霸王腿庫飯",
+        "image": "foods/20220921.jpg",
+        "star": 3.4,
+        "price": null,
+        "createdAt": "2022-09-21",
+        "description": "配菜普通，主菜腿庫帶皮好吃，只是有點肥。"
+      },
+      {
+        "name": "椒鹽排骨酥飯",
+        "image": "foods/20220922.jpg",
+        "star": 2.9,
+        "price": null,
+        "createdAt": "2022-09-22",
+        "description": "炸地瓜好吃，花椰菜有三隻菜蟲Orz"
+      },
+      {
+        "name": "香滷棒腿+宮保中卷雙拼",
+        "image": "foods/20220923.jpg",
+        "star": 3.6,
+        "price": null,
+        "createdAt": "2022-09-23",
+        "description": "中卷炒花生超好吃辣辣的，但非常油，雞腿還行。"
       }
     ]
   },
@@ -386,6 +426,52 @@
         "price": null,
         "createdAt": "2022-08-26",
         "description": "肉蠻入味的，還不錯。"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "強尼兄弟",
+    "foods": [
+      {
+        "name": "黑胡椒嫩煎雞胸",
+        "image": "foods/20220912.jpg",
+        "star": 3.2,
+        "price": null,
+        "createdAt": "2022-09-12",
+        "description": "肉還不錯，但茄子煮的不好吃，飯菜量少。"
+      },
+      {
+        "name": "香噴噴山豬肉",
+        "image": "foods/20220913.jpg",
+        "star": 3.6,
+        "price": null,
+        "createdAt": "2022-09-13",
+        "description": "肉有點硬，配菜好吃，整體量少。"
+      },
+      {
+        "name": "南洋叻沙棒腿",
+        "image": "foods/20220914.jpg",
+        "star": 3.4,
+        "price": null,
+        "createdAt": "2022-09-14",
+        "description": "肉滷到有點破碎，味道還行，量少。"
+      },
+      {
+        "name": "義式蒜香豬小里肌",
+        "image": "foods/20220915.jpg",
+        "star": 3.2,
+        "price": null,
+        "createdAt": "2022-09-15",
+        "description": "肉偏硬，整體普通。"
+      },
+      {
+        "name": "照燒風味雞胸",
+        "image": "foods/20220916.jpg",
+        "star": 2.9,
+        "price": null,
+        "createdAt": "2022-09-16",
+        "description": "白菜邊邊都黑掉了，芥蘭煮成那麼難吃也是很厲害。"
       }
     ]
   }
