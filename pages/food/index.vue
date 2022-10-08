@@ -73,11 +73,13 @@
                 </el-rate>
                 <span class="star-number">{{ food.star }}</span>
               </div>
-              <img
+              <el-image
                 class="image"
                 :src="require(`~/assets/${food.image}`)"
+                :preview-src-list="[require(`~/assets/${food.image}`)]"
                 :alt="food.name"
-              />
+              >
+              </el-image>
               <h3 class="name">
                 {{ food.name }}
                 <span v-if="food.price" class="price">${{ food.price }}</span>
@@ -88,15 +90,26 @@
             </div>
           </div>
           <!-- 這邊 style 同 <div class="paginate">，但不確定為何無法直接吃 class -->
-          <div style="text-align: center; padding: 15px 25px 25px 25px; background-color: #f9f2e9;">
-            <a v-for="pageItem in Math.ceil(totalCountFoods / perPage)" :key="pageItem" href="#"
-               :class="{ 'paginate-active': currentPage === pageItem }" style="
+          <div
+            style="
+              text-align: center;
+              padding: 15px 25px 25px 25px;
+              background-color: #f9f2e9;
+            ">
+            <a
+              v-for="pageItem in Math.ceil(totalCountFoods / perPage)"
+              :key="pageItem"
+              href="#"
+              :class="{ 'paginate-active': currentPage === pageItem }"
+              style="
                 display: inline-block;
                 padding: 10px;
                 margin: 5px;
                 text-decoration: none;
                 color: #9f3448;
-              " @click.prevent="setCurrentPage(pageItem)">{{ pageItem }}</a>
+              "
+              @click.prevent="setCurrentPage(pageItem)"
+              >{{ pageItem }}</a>
           </div>
         </template>
       </el-skeleton>
@@ -124,7 +137,12 @@ export default {
   },
   computed: {
     foods() {
-      return this.$store.getters.getFoods(this.storeId).slice((this.currentPage - 1) * this.perPage, this.currentPage * this.perPage);
+      return this.$store.getters
+        .getFoods(this.storeId)
+        .slice(
+          (this.currentPage - 1) * this.perPage,
+          this.currentPage * this.perPage
+        );
     },
     totalCountFoods() {
       return this.$store.getters.getFoods(this.storeId).length;
@@ -266,6 +284,7 @@ export default {
   position: absolute;
   top: 2px;
   right: 10px;
+  z-index: 1;
 }
 
 .star-rate {
