@@ -1,5 +1,5 @@
 ---
-category: experience
+category: casual
 title: 淺談企業 PM 和 SA 奇特的工作模式
 description: '我發現之前任職過公司內的 PM 和 SA 有一些奇特現象，台灣有些企業給職稱會亂給，而且工作的部分跟實際職位'
 createdAt: '2022-09-03'
