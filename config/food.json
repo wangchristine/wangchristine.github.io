@@ -90,6 +90,46 @@
         "price": null,
         "createdAt": "2022-09-23",
         "description": "中卷炒花生超好吃辣辣的，但非常油，雞腿還行。"
+      },
+      {
+        "name": "霸王腿庫飯",
+        "image": "foods/20221031.jpg",
+        "star": 3.6,
+        "price": null,
+        "createdAt": "2022-10-31",
+        "description": "整體不錯，腿庫好吃，只是菜有點油。"
+      },
+      {
+        "name": "韓式炸雞腿飯",
+        "image": "foods/20221101.jpg",
+        "star": 2.2,
+        "price": null,
+        "createdAt": "2022-11-01",
+        "description": "感覺是糖醋雞腿，炸的邊邊很硬沒很好吃，主菜的醬旁邊似乎有掛點的蒼蠅...。"
+      },
+      {
+        "name": "和風烤排骨飯",
+        "image": "foods/20221102.jpg",
+        "star": 3.1,
+        "price": null,
+        "createdAt": "2022-11-02",
+        "description": "它有上下層只是我把菜都放到下層，整體好吃但排骨有部分煮到黑。"
+      },
+      {
+        "name": "烤雞腿飯",
+        "image": "foods/20221103.jpg",
+        "star": 3.4,
+        "price": null,
+        "createdAt": "2022-11-03",
+        "description": "整體好吃，雞腿上面的醬搭配芝麻蠻香的，只是有一些雞皮煮黑了。"
+      },
+      {
+        "name": "蝦排+燒肉飯",
+        "image": "foods/20221104.jpg",
+        "star": 3.5,
+        "price": null,
+        "createdAt": "2022-11-04",
+        "description": "整體好吃，雖然蝦排裹粉有點厚XD"
       }
     ]
   },
@@ -586,6 +626,46 @@
         "price": null,
         "createdAt": "2022-10-07",
         "description": "看起來很普通的雞腿但雞皮意外的好吃。"
+      },
+      {
+        "name": "煙燻甘蔗雞腿餐",
+        "image": "foods/20221107.jpg",
+        "star": 3.5,
+        "price": null,
+        "createdAt": "2022-11-07",
+        "description": "雞腿味道很香，整體好吃。"
+      },
+      {
+        "name": "三杯炒肉絲餐",
+        "image": "foods/20221108.jpg",
+        "star": 4.2,
+        "price": null,
+        "createdAt": "2022-11-08",
+        "description": "整體好吃，主菜蠻有味道的。"
+      },
+      {
+        "name": "韓式香草豬肉餐",
+        "image": "foods/20221109.jpg",
+        "star": 4.1,
+        "price": null,
+        "createdAt": "2022-11-09",
+        "description": "整體好吃，主菜味道很香。"
+      },
+      {
+        "name": "宮保雞丁餐",
+        "image": "foods/20221110.jpg",
+        "star": 1.7,
+        "price": null,
+        "createdAt": "2022-11-10",
+        "description": "好不好吃已經不重要了，重點是自行沖過水還是辣到舌頭都麻了...。"
+      },
+      {
+        "name": "懷舊黑胡椒排骨餐",
+        "image": "foods/20221111.jpg",
+        "star": 2.5,
+        "price": null,
+        "createdAt": "2022-11-11",
+        "description": "還行，排骨肉吃起來有一點硬。"
       }
     ]
   },
