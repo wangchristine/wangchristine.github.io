@@ -79,6 +79,7 @@ export default {
   height: 200px;
   background-image: url('~/assets/aquarium.jpg');
   background-size: cover;
+  overflow: hidden;
 }
 
 .fish1 {
