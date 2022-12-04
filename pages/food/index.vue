@@ -232,6 +232,11 @@ export default {
   width: 100%;
 }
 
+.image >>> img {
+  object-fit: cover;
+  max-height: 135px;
+}
+
 .food .name {
   line-break: anywhere;
 }
