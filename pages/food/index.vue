@@ -96,20 +96,16 @@
               padding: 15px 25px 25px 25px;
               background-color: #f9f2e9;
             ">
-            <a
-              v-for="pageItem in Math.ceil(totalCountFoods / perPage)"
-              :key="pageItem"
-              href="#"
-              :class="{ 'paginate-active': currentPage === pageItem }"
-              style="
-                display: inline-block;
-                padding: 10px;
-                margin: 5px;
-                text-decoration: none;
-                color: #9f3448;
-              "
-              @click.prevent="setCurrentPage(pageItem)"
-              >{{ pageItem }}</a>
+            <el-pagination
+              class="food-pagination"
+              background
+              :page-size="9"
+              layout="prev, pager, next"
+              :current-page="currentPage"
+              :total="totalCountFoods"
+              @current-change="setCurrentPage"
+            >
+            </el-pagination>
           </div>
         </template>
       </el-skeleton>
@@ -232,7 +228,7 @@ export default {
   width: 100%;
 }
 
-.image >>> img {
+.image:deep img {
   object-fit: cover;
   max-height: 135px;
 }
@@ -265,16 +261,31 @@ export default {
   background-color: #f9f2e9;
 }
 
-.paginate a {
-  display: inline-block;
-  padding: 10px;
-  margin: 5px;
-  text-decoration: none;
-  color: #9f3448;
+.food-pagination:deep {
+  overflow-x: auto;
 }
 
-.paginate-active {
-  background-color: #e7ccba;
+.food-pagination:deep button {
+  padding: 10px;
+  margin: 5px;
+  color: #9f3448 !important;
+  background-color: transparent !important;
+  height: 40px;
+}
+
+.food-pagination:deep li {
+  padding: 10px;
+  margin: 5px;
+  color: #9f3448 !important;
+  font-size: 16px;
+  background-color: transparent !important;
+  font-weight: initial;
+  height: initial;
+  line-height: initial;
+}
+
+.food-pagination:deep li.active {
+  background-color: #e7ccba !important;
 }
 
 .el-skeleton.is-animated .el-skeleton__item {
