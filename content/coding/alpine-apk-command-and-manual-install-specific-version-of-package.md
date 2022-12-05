@@ -1,10 +1,10 @@
 ---
 category: coding
 title: 'Alpine Linux 包管理工具指令用法與手動安裝特定版本套件'
-description: 'Alpine 是一個輕量級的 Linux 發行版本，同時提供包管理工具 `apk`，以下介紹 `apk` 相關操作指令'
+description: 'Alpine 是一個輕量級的 Linux 發行版本，同時提供包管理工具 apk，以下介紹 apk 相關操作指令'
 isPopular: true
 createdAt: '2022-09-30'
-updatedAt: '2022-09-30'
+updatedAt: '2022-12-05'
 ---
 
 Alpine 是一個輕量級的 Linux 發行版本，同時提供包管理工具 `apk`，以下介紹 `apk` 相關操作指令，以 `curl` 套件為例:
