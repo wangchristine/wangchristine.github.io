@@ -65,7 +65,7 @@ export default {
   data() {
     return {
       category: '',
-      perPage: 10,
+      perPage: 9,
     };
   },
   computed: {
