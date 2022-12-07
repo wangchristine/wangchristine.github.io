@@ -61,6 +61,7 @@
             "
           >
             <div v-for="(food, key) in foods" :key="key" class="food">
+              <div class="star-number-bg"></div>
               <div class="star-block">
                 <el-rate
                   class="star-rate"
@@ -71,7 +72,7 @@
                   :score-template="food.star.toString()"
                 >
                 </el-rate>
-                <span class="star-number">{{ food.star }}</span>
+                <span class="star-number">{{ food.star.toFixed(1) }}</span>
               </div>
               <el-image
                 class="image"
@@ -294,6 +295,17 @@ export default {
   background-size: 400% 100%;
   -webkit-animation: el-skeleton-loading 1.4s ease infinite;
   animation: el-skeleton-loading 1.4s ease infinite;
+}
+
+.star-number-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55px;
+  height: 40px;
+  background-color: #fffcf5;
+  z-index: 1;
+  border-radius: 0 0 0 100%;
 }
 
 .star-block {
