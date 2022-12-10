@@ -17,15 +17,12 @@
                 name: 'article-category',
                 params: { category: category.routeName },
               }"
-              >{{ category.name }}</NuxtLink
-            >
+            >{{ category.name }}</NuxtLink>
             <NuxtLink :to="{ name: 'food' }">食物</NuxtLink>
           </nav>
         </el-drawer>
 
-        <NuxtLink :to="{ name: 'index' }" class="brand-title"
-          >Chris 主頁</NuxtLink
-        >
+        <NuxtLink :to="{ name: 'index' }" class="brand-title">Chris 主頁</NuxtLink>
         <nav class="navigation-link">
           <NuxtLink
             v-for="(category, key) in categories"
@@ -33,9 +30,7 @@
             :to="{
               name: 'article-category',
               params: { category: category.routeName },
-            }"
-            >{{ category.name }}</NuxtLink
-          >
+            }">{{ category.name }}</NuxtLink>
           <NuxtLink :to="{ name: 'food' }">食物</NuxtLink>
         </nav>
       </div>
@@ -47,14 +42,13 @@
       Copyright © 2022 Chris Wang
       <br />
       本網站為個人使用，參考
-      <a href="https://www.facebook.com/TIPO.gov.tw/posts/1804286156280593/"
-        >經濟部智慧財產局</a
-      >，有使用到的網路圖片來源在
+      <a href="https://www.facebook.com/TIPO.gov.tw/posts/1804286156280593/">經濟部智慧財產局</a>，有使用到的網路圖片來源在
       <NuxtLink :to="{ name: 'ImageOrigin' }">此連結</NuxtLink>
     </el-footer>
     <button class="go-up">
       <img src="~/assets/go-up.jpg" alt="Go Up" @click="goUp()" />
     </button>
+    <div id="fb-root"></div>
   </el-container>
 </template>
 
@@ -145,6 +139,7 @@ h2 {
   font-size: 18px;
   text-decoration: none;
 }
+
 .navigation-link {
   display: inline-block;
 }
@@ -200,20 +195,24 @@ h2 {
   .el-header .container .burger {
     display: inline-block;
   }
+
   .brand-title {
     display: block;
     text-align: center;
     padding: 0;
     margin: 0 60px;
   }
+
   .navigation-link {
     display: none;
   }
+
   .el-footer {
     line-height: 16px;
     padding: 8px;
     font-size: 14px;
   }
+
   .go-up {
     display: block;
   }

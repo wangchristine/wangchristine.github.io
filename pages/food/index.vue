@@ -76,8 +76,8 @@
               </div>
               <el-image
                 class="image"
-                :src="require(`~/assets/${food.image}`)"
-                :preview-src-list="[require(`~/assets/${food.image}`)]"
+                :src="require(`~/assets/foods/${food.id}.${food.extension}`)"
+                :preview-src-list="[require(`~/assets/foods/${food.id}.${food.extension}`)]"
                 :alt="food.name"
               >
               </el-image>
@@ -88,6 +88,7 @@
               <h4 class="store-name">{{ food.storeName }}</h4>
               <h4 class="created-at">{{ food.createdAt }}</h4>
               <p class="description">{{ food.description }}</p>
+              <button style="margin-top: 5px;" @click="openFoodComment(food.id)">F</button>
             </div>
           </div>
           <!-- 這邊 style 同 <div class="paginate">，但不確定為何無法直接吃 class -->
@@ -110,6 +111,24 @@
           </div>
         </template>
       </el-skeleton>
+      <el-dialog
+        ref="commentDialog"
+        title="留言"
+        :visible.sync="dialogVisible"
+        :modal="dialogModal"
+        style="display:none;"
+        @close="clickFoodId = '';"
+      >
+        <el-container>
+          <el-aside>
+            A
+          </el-aside>
+          <el-main>
+            <div class="fb-comments" :data-href="'https://wangchristine.github.io/food#' + clickFoodId"
+                 data-width="100%" data-numposts="5" data-lazy="true"></div>
+          </el-main>
+        </el-container>
+      </el-dialog>
     </div>
 
     <side-bar />
@@ -130,6 +149,9 @@ export default {
       perPage: 9,
       currentPage: 1,
       storeId: null,
+      dialogVisible: true,
+      dialogModal: false,
+      clickFoodId: "",
     };
   },
   computed: {
@@ -149,6 +171,8 @@ export default {
     },
   },
   mounted() {
+    this.dialogVisible = false;
+    this.dialogModal = true;
     this.$store.dispatch('setFoods');
     this.isFoodsLoading = false;
   },
@@ -160,6 +184,10 @@ export default {
       this.currentPage = 1;
       this.storeId = event.target.value;
     },
+    openFoodComment(foodId) {
+      this.dialogVisible = !this.dialogVisible;
+      this.clickFoodId = foodId;
+    }
   },
 };
 </script>

@@ -22,6 +22,13 @@ export default {
         async: true,
         crossorigin: 'anonymous',
       },
+      {
+        src: 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v15.0&appId=854289189355040&autoLogAppEvents=1',
+        async: true,
+        crossorigin: 'anonymous',
+        defer: true,
+        nonce: "b4KNDGyF",
+      },
     ],
   },
 
