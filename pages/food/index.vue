@@ -63,7 +63,7 @@
             <template v-for="(food, key) in foods">
               <FoodCard :food="food" :key="key">
                 <template #action>
-                  <button style="margin-top: 5px;" @click="openFoodComment(food)">F</button>
+                  <a class="comment-button" @click="openFoodComment(food)"><i class="el-icon-s-comment"></i></a>
                 </template>
               </FoodCard>
             </template>
@@ -232,6 +232,13 @@ export default {
   text-align: center;
   background-color: #f7eade;
   min-width: 180px;
+}
+
+.comment-button {
+  font-size: 32px;
+  color: #ff7d2d;
+  margin-top: 5px;
+  cursor: pointer;
 }
 
 .paginate {
