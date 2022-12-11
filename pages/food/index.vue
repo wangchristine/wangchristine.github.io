@@ -60,36 +60,13 @@
               margin-top: 20px;
             "
           >
-            <div v-for="(food, key) in foods" :key="key" class="food">
-              <div class="star-number-bg"></div>
-              <div class="star-block">
-                <el-rate
-                  class="star-rate"
-                  disabled
-                  :value="food.star"
-                  :colors="['#ff8100', '#ff8100', '#ff8100']"
-                  disabled-void-color="#bfb5b3"
-                  :score-template="food.star.toString()"
-                >
-                </el-rate>
-                <span class="star-number">{{ food.star.toFixed(1) }}</span>
-              </div>
-              <el-image
-                class="image"
-                :src="require(`~/assets/foods/${food.id}.${food.extension}`)"
-                :preview-src-list="[require(`~/assets/foods/${food.id}.${food.extension}`)]"
-                :alt="food.name"
-              >
-              </el-image>
-              <h3 class="name">
-                {{ food.name }}
-                <span v-if="food.price" class="price">${{ food.price }}</span>
-              </h3>
-              <h4 class="store-name">{{ food.storeName }}</h4>
-              <h4 class="created-at">{{ food.createdAt }}</h4>
-              <p class="description">{{ food.description }}</p>
-              <button style="margin-top: 5px;" @click="openFoodComment(food.id)">F</button>
-            </div>
+            <template v-for="(food, key) in foods">
+              <FoodCard :food="food" :key="key">
+                <template #action>
+                  <button style="margin-top: 5px;" @click="openFoodComment(food)">F</button>
+                </template>
+              </FoodCard>
+            </template>
           </div>
           <!-- 這邊 style 同 <div class="paginate">，但不確定為何無法直接吃 class -->
           <div
@@ -113,18 +90,20 @@
       </el-skeleton>
       <el-dialog
         ref="commentDialog"
+        class="comment-dialog"
         title="留言"
         :visible.sync="dialogVisible"
         :modal="dialogModal"
         style="display:none;"
-        @close="clickFoodId = '';"
+        @close="clickFood = {};"
       >
-        <el-container>
-          <el-aside>
-            A
+        <el-container style="min-height: 50vh;">
+          <el-aside style="padding-right: 20px;">
+            <FoodCard :food="clickFood">
+            </FoodCard>
           </el-aside>
           <el-main>
-            <div class="fb-comments" :data-href="'https://wangchristine.github.io/food#' + clickFoodId"
+            <div class="fb-comments" :data-href="'https://wangchristine.github.io/food#' + clickFood.id"
                  data-width="100%" data-numposts="5" data-lazy="true"></div>
           </el-main>
         </el-container>
@@ -137,11 +116,13 @@
 
 <script>
 import SideBar from '@/components/SideBar';
+import FoodCard from '@/components/FoodCard';
 
 export default {
   name: 'FoodIndex',
   components: {
     SideBar,
+    FoodCard,
   },
   data() {
     return {
@@ -151,7 +132,7 @@ export default {
       storeId: null,
       dialogVisible: true,
       dialogModal: false,
-      clickFoodId: "",
+      clickFood: {},
     };
   },
   computed: {
@@ -184,9 +165,9 @@ export default {
       this.currentPage = 1;
       this.storeId = event.target.value;
     },
-    openFoodComment(foodId) {
+    openFoodComment(food) {
       this.dialogVisible = !this.dialogVisible;
-      this.clickFoodId = foodId;
+      this.clickFood = food;
     }
   },
 };
@@ -253,37 +234,6 @@ export default {
   min-width: 180px;
 }
 
-.food .image {
-  width: 100%;
-}
-
-.image:deep img {
-  object-fit: cover;
-  max-height: 135px;
-}
-
-.food .name {
-  line-break: anywhere;
-}
-
-.food .price {
-  color: #9f3448;
-}
-
-.food .store-name {
-  margin: 0;
-}
-
-.food .created-at {
-  margin: 8px 0;
-  color: #b1908b;
-}
-
-.food .description {
-  margin: 0;
-  line-break: anywhere;
-}
-
 .paginate {
   text-align: center;
   padding: 15px 25px 25px 25px;
@@ -325,34 +275,12 @@ export default {
   animation: el-skeleton-loading 1.4s ease infinite;
 }
 
-.star-number-bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 55px;
-  height: 40px;
-  background-color: #fffcf5;
-  z-index: 1;
-  border-radius: 0 0 0 100%;
+.comment-dialog:deep .el-dialog__header {
+  background-color: #f9f2e9;
 }
 
-.star-block {
-  position: absolute;
-  top: 2px;
-  right: 10px;
-  z-index: 1;
-}
-
-.star-rate {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.star-number {
-  color: #ff8100;
-  font-size: 22px;
-  font-style: italic;
-  font-weight: bold;
+.comment-dialog:deep .el-dialog__body {
+  background-color: #fffbf0;
 }
 
 @media all and (max-width: 768px) {
