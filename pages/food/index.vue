@@ -103,7 +103,7 @@
             </FoodCard>
           </el-aside>
           <el-main>
-            <div class="fb-comments" :data-href="'https://wangchristine.github.io/food#' + clickFood.id"
+            <div class="fb-comments" :data-href="'https://wangchristine.github.io/food/' + clickFood.id"
                  data-width="100%" data-numposts="5" data-lazy="true"></div>
           </el-main>
         </el-container>
