@@ -95,16 +95,15 @@
         :visible.sync="dialogVisible"
         :modal="dialogModal"
         style="display:none;"
-        @close="clickFood = {};"
+        @close="closeFoodComment()"
       >
         <el-container style="min-height: 50vh;">
           <el-aside style="padding-right: 20px;">
             <FoodCard :food="clickFood">
             </FoodCard>
           </el-aside>
-          <el-main>
-            <div class="fb-comments" :data-href="'https://wangchristine.github.io/food/' + clickFood.id"
-                 data-width="100%" data-numposts="5" data-lazy="true"></div>
+          <el-main id="comment-main">
+            <!-- prepare for fb -->
           </el-main>
         </el-container>
       </el-dialog>
@@ -166,9 +165,29 @@ export default {
       this.storeId = event.target.value;
     },
     openFoodComment(food) {
-      this.dialogVisible = !this.dialogVisible;
       this.clickFood = food;
-    }
+      this.dialogVisible = !this.dialogVisible;
+
+      const fbComment = document.createElement('div');
+      fbComment.id = "comment-detail";
+      fbComment.className = "fb-comments";
+      fbComment.dataset.href = "https://wangchristine.github.io/food/?" + this.clickFood.id;
+      fbComment.dataset.width = "100%";
+      fbComment.dataset.num_posts = "5";
+      fbComment.dataset.lazy = "true";
+      const commentMain = document.getElementById('comment-main');
+      commentMain.appendChild(fbComment);
+
+      window.FB.XFBML.parse(commentMain);
+    },
+    closeFoodComment() {
+      this.clickFood = {};
+      const commentMain = document.getElementById('comment-main');
+      const commentDetail = document.getElementById('comment-detail');
+      if (commentDetail !== null) {
+        commentMain.removeChild(commentDetail);
+      }
+    },
   },
 };
 </script>

@@ -1,5 +1,6 @@
 <template>
   <el-container>
+    <div id="fb-root"></div>
     <el-header>
       <div class="container">
         <el-button class="burger" @click="openDrawer = true">☰</el-button>
@@ -48,7 +49,6 @@
     <button class="go-up">
       <img src="~/assets/go-up.jpg" alt="Go Up" @click="goUp()" />
     </button>
-    <div id="fb-root"></div>
   </el-container>
 </template>
 
