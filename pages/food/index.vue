@@ -63,6 +63,7 @@
             <template v-for="(food, key) in foods">
               <FoodCard :food="food" :key="key">
                 <template #action>
+                  <div style="height: 50px;"></div>
                   <a class="comment-button" @click="openFoodComment(food)"><i class="el-icon-s-comment"></i></a>
                 </template>
               </FoodCard>
@@ -98,7 +99,7 @@
         @close="closeFoodComment()"
       >
         <el-container style="min-height: 50vh;">
-          <el-aside style="padding-right: 20px;">
+          <el-aside>
             <FoodCard :food="clickFood">
             </FoodCard>
           </el-aside>
@@ -254,10 +255,23 @@ export default {
 }
 
 .comment-button {
+  display: inline-block;
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 20px);
   font-size: 32px;
   color: #ff7d2d;
   margin-top: 5px;
   cursor: pointer;
+  width: 38px;
+  height: 38px;
+  border: #ff7d2d 1px solid;
+  border-radius: 50%;
+}
+
+.comment-button:hover {
+  color: #f7eade;
+  background-color: #ff7d2d;
 }
 
 .paginate {
@@ -301,12 +315,21 @@ export default {
   animation: el-skeleton-loading 1.4s ease infinite;
 }
 
+.comment-dialog:deep .el-dialog {
+  min-width: 300px;
+  width: 55%;
+}
+
 .comment-dialog:deep .el-dialog__header {
   background-color: #f9f2e9;
 }
 
 .comment-dialog:deep .el-dialog__body {
   background-color: #fffbf0;
+}
+
+.comment-dialog:deep .el-dialog__body .el-aside {
+  padding-right: 20px;
 }
 
 @media all and (max-width: 768px) {
@@ -328,6 +351,22 @@ export default {
 
   .food {
     flex-basis: 40%;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .el-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comment-dialog:deep .el-dialog__body {
+    padding: 30px 10px;
+  }
+
+  .comment-dialog:deep .el-dialog__body .el-aside {
+    padding-right: 20px;
+    margin: 0 auto;
   }
 }
 </style>
