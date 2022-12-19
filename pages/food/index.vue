@@ -95,6 +95,7 @@
         title="留言"
         :visible.sync="dialogVisible"
         :modal="dialogModal"
+        top="10vh"
         style="display:none;"
         @close="closeFoodComment()"
       >

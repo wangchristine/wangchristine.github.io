@@ -103,7 +103,7 @@ export default {
 .star-block {
   position: absolute;
   top: 2px;
-  right: 10px;
+  right: 8px;
   z-index: 1;
 }
 

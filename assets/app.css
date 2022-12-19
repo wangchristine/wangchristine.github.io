@@ -10,13 +10,14 @@
 .nuxt-content p,
 .nuxt-content ul,
 .nuxt-content ol {
-  line-height: 30px;
+  line-height: 40px;
 }
 
 .nuxt-content :not(pre) > code,
 .nuxt-content pre[class*='language-'] {
   font-size: 16px;
   background: #efe2d9;
+  text-shadow: none;
 }
 
 .nuxt-content :not(pre) > code {

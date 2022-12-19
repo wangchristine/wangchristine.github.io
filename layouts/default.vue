@@ -81,9 +81,12 @@ export default {
 <style>
 body {
   margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, ui-sans-serif, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #464646;
+  letter-spacing: 1px;
 }
 
 h2 {
@@ -170,7 +173,7 @@ h2 {
 .el-main {
   background-color: #fffbf0;
   color: #333;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .go-up {

@@ -125,7 +125,9 @@ export default {
   text-decoration: none;
   border-bottom: solid 1px;
   color: #9f3448;
+  letter-spacing: 1px;
 }
+
 .articles-block .article a > .title {
   margin-bottom: 20px;
   font-weight: bold;

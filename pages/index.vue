@@ -67,6 +67,7 @@ export default {
 .main-block .title {
   font-size: 22px;
   font-weight: bold;
+  color: #464646;
   letter-spacing: 8px;
   margin: 10px 0;
 }
