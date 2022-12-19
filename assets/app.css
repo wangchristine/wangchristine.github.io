@@ -18,6 +18,7 @@
   font-size: 16px;
   background: #efe2d9;
   text-shadow: none;
+  letter-spacing: 0;
 }
 
 .nuxt-content :not(pre) > code {
