@@ -40,7 +40,7 @@ SWOOLE_OB_OUTPUT=false
 
 ## 小測試
 使用 serialize() 序列化作測試函數，分別用 FPM 和 Swoole 各做一百萬和五百萬次的測試，如下圖所示，Request 也分別用 1 和 3 來測試執行的時間：
-<markdown-img src="articles/php-laravel-swoole-first-experience-1.png" alt="Image"></markdown-img>
+<markdown-img src="articles/php-laravel-swoole-first-experience-1.png"></markdown-img>
 看到沒有! 由上圖資訊完全可以看出差異，不管是在 Request 數為 1 或 3 時，表現都比 FPM 速度來的優異，快了好幾倍! 可見 Swoole 的速度真的不是浪得虛名。這邊測試的環境皆為 1 CPU，兩者的 work_processes 皆為 1。
 
 ## 結語

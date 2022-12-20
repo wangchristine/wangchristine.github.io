@@ -186,6 +186,7 @@ h2 {
   padding: 0;
   width: 70px;
   height: 70px;
+  z-index: 999;
 }
 
 .go-up img {
