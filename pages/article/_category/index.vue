@@ -22,22 +22,10 @@
             </div>
           </NuxtLink>
         </div>
-        <div class="paginate">
-          <NuxtLink
-            v-for="pageItem in Math.ceil(totalCountByCategory / perPage)"
-            :key="pageItem"
-            :to="{
-              name: 'article-category',
-              params: { category: category.routeName },
-              query: { page: pageItem },
-            }"
-            :class="{
-              'nuxt-link-exact-active nuxt-link-active':
-                page === 1 && pageItem === 1,
-            }"
-            >{{ pageItem }}</NuxtLink
-          >
-        </div>
+
+        <ListPagination
+          :page-size="perPage" :current-page="page" :total-count="totalCountByCategory"
+          @currentChange="setCurrentPage" />
       </div>
     </div>
     <side-bar />
@@ -46,10 +34,13 @@
 
 <script>
 import SideBar from '@/components/SideBar';
+import ListPagination from '@/components/ListPagination';
+
 export default {
   name: 'CategoryIndex',
   components: {
     SideBar,
+    ListPagination,
   },
   validate({ params, store }) {
     if (
@@ -93,6 +84,15 @@ export default {
       this.$nuxt.error({ statusCode: 404, message: 'Page not found' });
     }
   },
+  methods: {
+    setCurrentPage(pageItem) {
+      this.$router.push({
+        name: 'article-category',
+        params: { category: this.category.routeName },
+        query: { page: pageItem },
+      });
+    }
+  },
 };
 </script>
 
@@ -131,23 +131,6 @@ export default {
 .articles-block .article a > .title {
   margin-bottom: 20px;
   font-weight: bold;
-}
-
-.articles-block .paginate {
-  text-align: center;
-  padding: 10px;
-  margin: 15px;
-}
-
-.articles-block .paginate a {
-  padding: 10px;
-  margin: 5px;
-  text-decoration: none;
-  color: #9f3448;
-}
-
-.articles-block .paginate a.nuxt-link-exact-active {
-  background-color: #e7ccba;
 }
 
 @media all and (max-width: 768px) {

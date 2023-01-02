@@ -69,24 +69,10 @@
               </FoodCard>
             </template>
           </div>
-          <!-- 這邊 style 同 <div class="paginate">，但不確定為何無法直接吃 class -->
-          <div
-            style="
-              text-align: center;
-              padding: 15px 25px 25px 25px;
-              background-color: #f9f2e9;
-            ">
-            <el-pagination
-              class="food-pagination"
-              background
-              :page-size="9"
-              layout="prev, pager, next"
-              :current-page="currentPage"
-              :total="totalCountFoods"
-              @current-change="setCurrentPage"
-            >
-            </el-pagination>
-          </div>
+
+          <ListPagination
+            :page-size="perPage" :current-page="currentPage" :total-count="totalCountFoods"
+            @currentChange="setCurrentPage" />
         </template>
       </el-skeleton>
       <el-dialog
@@ -118,12 +104,14 @@
 <script>
 import SideBar from '@/components/SideBar';
 import FoodCard from '@/components/FoodCard';
+import ListPagination from '@/components/ListPagination';
 
 export default {
   name: 'FoodIndex',
   components: {
     SideBar,
     FoodCard,
+    ListPagination,
   },
   data() {
     return {
@@ -273,39 +261,6 @@ export default {
 .comment-button:hover {
   color: #f7eade;
   background-color: #ff7d2d;
-}
-
-.paginate {
-  text-align: center;
-  padding: 15px 25px 25px 25px;
-  background-color: #f9f2e9;
-}
-
-.food-pagination:deep {
-  overflow-x: auto;
-}
-
-.food-pagination:deep button {
-  padding: 10px;
-  margin: 5px;
-  color: #9f3448 !important;
-  background-color: transparent !important;
-  height: 40px;
-}
-
-.food-pagination:deep li {
-  padding: 10px;
-  margin: 5px;
-  color: #9f3448 !important;
-  font-size: 16px;
-  background-color: transparent !important;
-  font-weight: initial;
-  height: initial;
-  line-height: initial;
-}
-
-.food-pagination:deep li.active {
-  background-color: #e7ccba !important;
 }
 
 .el-skeleton.is-animated .el-skeleton__item {
