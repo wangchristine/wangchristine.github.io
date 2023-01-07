@@ -34,6 +34,18 @@ export default {
       page,
     };
   },
+  head() {
+    return {
+      title: this.page.title + " - Chris",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.page.description
+        }
+      ]
+    }
+  },
 };
 </script>
 
