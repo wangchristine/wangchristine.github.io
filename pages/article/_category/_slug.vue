@@ -17,6 +17,7 @@
 
 <script>
 import SideBar from '@/components/SideBar';
+
 export default {
   components: {
     SideBar,
@@ -42,7 +43,17 @@ export default {
           hid: 'description',
           name: 'description',
           content: this.page.description
-        }
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.page.title + " - Chris",
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.page.description
+        },
       ]
     }
   },
