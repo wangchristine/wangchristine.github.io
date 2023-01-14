@@ -28,6 +28,7 @@ export default {
 <style scoped>
 .img-block {
   width: fit-content;
+  margin: 0 auto;
 }
 
 img {
