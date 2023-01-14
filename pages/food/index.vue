@@ -90,7 +90,7 @@
             <FoodCard :food="clickFood">
             </FoodCard>
           </el-aside>
-          <el-main id="comment-main">
+          <el-main id="comment-main" v-loading="commentLoading" element-loading-background="inherit">
             <!-- prepare for fb -->
           </el-main>
         </el-container>
@@ -122,6 +122,7 @@ export default {
       dialogVisible: true,
       dialogModal: false,
       clickFood: {},
+      commentLoading: true,
     };
   },
   computed: {
@@ -157,6 +158,7 @@ export default {
     openFoodComment(food) {
       this.clickFood = food;
       this.dialogVisible = !this.dialogVisible;
+      this.commentLoading = true;
 
       const fbComment = document.createElement('div');
       fbComment.id = "comment-detail";
@@ -168,7 +170,10 @@ export default {
       const commentMain = document.getElementById('comment-main');
       commentMain.appendChild(fbComment);
 
-      window.FB.XFBML.parse(commentMain);
+      window.FB.XFBML.parse(commentMain, () => {
+        this.commentLoading = false;
+      });
+
     },
     closeFoodComment() {
       this.clickFood = {};
