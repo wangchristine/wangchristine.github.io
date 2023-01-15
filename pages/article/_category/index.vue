@@ -59,6 +59,18 @@ export default {
       perPage: 9,
     };
   },
+  head() {
+    return {
+      title: (this.category.name ?? "Blog") + " - Chris",
+      meta: [
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: (this.category.name ?? "Blog") + " - Chris",
+        },
+      ]
+    }
+  },
   computed: {
     page() {
       return this.$route.query.page || 1;

@@ -125,6 +125,19 @@ export default {
       commentLoading: true,
     };
   },
+
+  head() {
+    return {
+      title: "食物 - Chris",
+      meta: [
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: "食物 - Chris",
+        },
+      ]
+    }
+  },
   computed: {
     foods() {
       return this.$store.getters
