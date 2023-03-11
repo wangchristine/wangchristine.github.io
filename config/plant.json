@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "name": "玫瑰",
+    "images": [
+      {
+        "id": "1-1",
+        "extension": "png",
+        "origin": "https://ezgo.coa.gov.tw/Flower/TW/Seasonflowers_rose"
+      }
+    ],
+    "properties": [
+      {
+        "key": "科",
+        "value": "薔薇科"
+      },
+      {
+        "key": "開花期",
+        "value": "5 ~ 11月"
+      },
+      {
+        "key": "花語",
+        "value": "愛、熱情"
+      },
+      {
+        "key": "品種",
+        "value": "單生和叢生花"
+      }
+    ]
+  }
+]

@@ -19,6 +19,7 @@
                 params: { category: category.routeName },
               }"
             >{{ category.name }}</NuxtLink>
+            <NuxtLink :to="{ name: 'plant' }">花草小徑</NuxtLink>
             <NuxtLink :to="{ name: 'food' }">食物</NuxtLink>
           </nav>
         </el-drawer>
@@ -32,6 +33,7 @@
               name: 'article-category',
               params: { category: category.routeName },
             }">{{ category.name }}</NuxtLink>
+          <NuxtLink :to="{ name: 'plant' }">花草小徑</NuxtLink>
           <NuxtLink :to="{ name: 'food' }">食物</NuxtLink>
         </nav>
       </div>

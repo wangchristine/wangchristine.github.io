@@ -16,7 +16,9 @@
     <el-image
       class="image"
       :src="require(`~/assets/foods/${food.id}.${food.extension}`)"
-      :preview-src-list="[require(`~/assets/foods/${food.id}.${food.extension}`)]"
+      :preview-src-list="[
+        require(`~/assets/foods/${food.id}.${food.extension}`),
+      ]"
       :alt="food.name"
     >
     </el-image>
@@ -37,24 +39,14 @@ export default {
   props: {
     food: {
       type: Object,
-      default: () => {
-      },
+      default: () => {},
     },
   },
-}
+};
 </script>
 
 <style scoped>
 .food {
-  position: relative;
-  display: inline-block;
-  flex-basis: 25%;
-  margin: 10px 0;
-  padding: 20px;
-  box-shadow: 2px 2px 10px -1px rgb(0 0 0 / 30%);
-  text-align: center;
-  background-color: #f7eade;
-  min-width: 180px;
   font-size: 16px;
 }
 

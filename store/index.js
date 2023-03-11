@@ -1,10 +1,12 @@
 import categories from '@/config/category.json';
 import foods from '@/config/food.json';
+import plants from '@/config/plant.json';
 
 export const state = () => ({
   categories: [],
   allArticles: [],
   foods: [],
+  plants: [],
 });
 
 export const actions = {
@@ -23,6 +25,9 @@ export const actions = {
   setFoods({ commit }) {
     commit('setFoods', foods);
   },
+  setPlants({ commit }) {
+    commit('setPlants', plants);
+  },
 };
 
 export const mutations = {
@@ -34,6 +39,9 @@ export const mutations = {
   },
   setFoods(state, foods) {
     state.foods = foods;
+  },
+  setPlants(state, plants) {
+    state.plants = plants;
   },
 };
 
@@ -68,6 +76,15 @@ export const getters = {
   getStores: (state) => {
     return state.foods.map((store) => {
       return { id: store.id, name: store.name };
+    });
+  },
+  getPlants: (state) => () => {
+    const plants = state.plants;
+
+    return plants.flat().sort((a, b) => {
+      if (a.id > b.id) return -1;
+      if (a.id < b.id) return -1;
+      return 0;
     });
   },
 };
