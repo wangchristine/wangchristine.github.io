@@ -4,6 +4,12 @@
       <div class="category-block">
         <h2>Category: 花草小徑</h2>
       </div>
+      <div class="search-block">
+        <div class="description">
+          <p>搜尋(包含植物名和其屬性)：</p>
+          <input type="text" v-model="searchText" @input="changeSearchText">
+        </div>
+      </div>
       <el-skeleton :loading="isPlantsLoading" animated>
         <template slot="template">
           <div class="plants-block">
@@ -39,9 +45,11 @@
             <template v-for="(plant, key) in plants">
               <PlantCard :plant="plant" :key="key"></PlantCard>
             </template>
+            <h4 v-if="totalCountPlants === 0">查無結果，換個關鍵字吧！</h4>
           </div>
 
           <ListPagination
+            v-if="totalCountPlants !== 0"
             :page-size="perPage"
             :current-page="currentPage"
             :total-count="totalCountPlants"
@@ -72,6 +80,7 @@ export default {
       isPlantsLoading: true,
       perPage: 6,
       currentPage: 1,
+      searchText: "",
     };
   },
 
@@ -90,14 +99,14 @@ export default {
   computed: {
     plants() {
       return this.$store.getters
-        .getPlants()
+        .getPlants(this.searchText)
         .slice(
           (this.currentPage - 1) * this.perPage,
           this.currentPage * this.perPage
         );
     },
     totalCountPlants() {
-      return this.$store.getters.getPlants().length;
+      return this.$store.getters.getPlants(this.searchText).length;
     },
   },
   mounted() {
@@ -107,6 +116,9 @@ export default {
   methods: {
     setCurrentPage(pageItem) {
       this.currentPage = pageItem;
+    },
+    changeSearchText() {
+      this.currentPage = 1;
     },
   },
 };
@@ -128,6 +140,25 @@ export default {
   padding: 20px 40px;
 }
 
+.search-block {
+  display: flex;
+  align-items: center;
+  background-color: #f9f2e9;
+  padding: 20px 40px;
+  margin-top: 20px;
+}
+
+.search-block .description {
+  margin-right: 10px;
+}
+
+.search-block input {
+  padding: 8px 10px;
+  border: #b1b0b0 1px solid;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
 
 .plants-block {
   display: flex;

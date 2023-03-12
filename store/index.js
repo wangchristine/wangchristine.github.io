@@ -78,8 +78,15 @@ export const getters = {
       return { id: store.id, name: store.name };
     });
   },
-  getPlants: (state) => () => {
-    const plants = state.plants;
+  getPlants: (state) => (searchText) => {
+    let plants = state.plants;
+    if (searchText !== "") {
+      plants = plants.filter((plant) => {
+        return plant.name.includes(searchText) || plant.properties.filter((property) => {
+          return property.key.includes(searchText) || property.value.includes(searchText);
+        }).length !== 0
+      });
+    }
 
     return plants.flat().sort((a, b) => {
       if (a.id > b.id) return -1;
