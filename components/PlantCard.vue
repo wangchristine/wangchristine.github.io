@@ -1,7 +1,7 @@
 <template>
   <div v-if="Object.keys(plant).length !== 0" class="plant">
     <div class="carousel-block">
-      <el-carousel trigger="click" height="200px" class="carousel">
+      <el-carousel trigger="click" height="200px" :interval="5000" class="carousel">
         <el-carousel-item v-for="image in plant.images" :key="image.id">
           <el-image
             class="image"
@@ -20,7 +20,7 @@
         {{ plant.name }}
       </h2>
       <table class="property">
-        <tr v-for="property in plant.properties" :key="property.key">
+        <tr v-for="(property, key) in plant.properties" :key="property.key" :class="[{'last-odd': (plant.properties.length % 2 === 1 && key + 1 === plant.properties.length)}]">
           <th>{{ property.key }}</th>
           <td>{{ property.value }}</td>
         </tr>
@@ -96,6 +96,10 @@ export default {
 
 .property tr {
   flex-basis: 50%;
+}
+
+.property .last-odd {
+  flex-basis: 100%;
 }
 
 .property th {

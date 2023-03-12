@@ -5,7 +5,7 @@
     "images": [
       {
         "id": "1-1",
-        "extension": "png",
+        "extension": "jpg",
         "origin": "https://ezgo.coa.gov.tw/Flower/TW/Seasonflowers_rose"
       }
     ],
@@ -25,6 +25,115 @@
       {
         "key": "品種",
         "value": "單生和叢生花"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "大理花",
+    "images": [
+      {
+        "id": "2-1",
+        "extension": "jpg",
+        "origin": "https://www.green.com.tw/2022/02/12/dahlia_si_jhao/"
+      },
+      {
+        "id": "2-2",
+        "extension": "jpg",
+        "origin": "https://jojoke2831.pixnet.net/blog/post/309317606-%E9%9B%8D%E5%AE%B9%E8%8F%AF%E8%B2%B4%E7%9A%84%E3%80%8A%E5%A4%A7%E7%90%86%E8%8A%B1%E3%80%8B"
+      }
+    ],
+    "properties": [
+      {
+        "key": "科",
+        "value": "菊科"
+      },
+      {
+        "key": "開花期",
+        "value": "5 ~ 11月"
+      },
+      {
+        "key": "花語",
+        "value": "華麗、優雅"
+      },
+      {
+        "key": "分類",
+        "value": "球根植物"
+      },
+      {
+        "key": "描述",
+        "value": "花色多、花形大，分為球狀型、半仙人掌型、睡蓮型...等"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "菊花",
+    "images": [
+      {
+        "id": "3-1",
+        "extension": "jpg",
+        "origin": "https://www.ntdtv.com/b5/2022/10/17/a103553598.html"
+      },
+      {
+        "id": "3-2",
+        "extension": "jpg",
+        "origin": "https://book.tndais.gov.tw/Magazine/mag32-5.htm"
+      }
+    ],
+    "properties": [
+      {
+        "key": "科",
+        "value": "菊科"
+      },
+      {
+        "key": "開花期",
+        "value": "9 ~ 11月"
+      },
+      {
+        "key": "花語",
+        "value": "高潔"
+      },
+      {
+        "key": "原產地",
+        "value": "中國"
+      },
+      {
+        "key": "形狀",
+        "value": "有球型、管狀花、匙瓣型...等"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "洋桔梗",
+    "images": [
+      {
+        "id": "4-1",
+        "extension": "jpg",
+        "origin": "https://www.hhbky.com/zh-mo/yanghua/huahuixinqing/152467.html"
+      }
+    ],
+    "properties": [
+      {
+        "key": "科",
+        "value": "龍膽科"
+      },
+      {
+        "key": "開花期",
+        "value": "6 ~ 8月"
+      },
+      {
+        "key": "花語",
+        "value": "希望"
+      },
+      {
+        "key": "花瓣",
+        "value": "分單瓣(5 瓣)、重瓣"
+      },
+      {
+        "key": "葉",
+        "value": "對生"
       }
     ]
   }
