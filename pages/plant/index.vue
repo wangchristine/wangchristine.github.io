@@ -7,7 +7,7 @@
       <div class="search-block">
         <div class="description">
           <p>搜尋(包含植物名和其屬性)：</p>
-          <input type="text" v-model="searchText" @input="changeSearchText">
+          <input type="text" placeholder="請輸入..." v-model="searchText" @input="changeSearchText">
         </div>
       </div>
       <el-skeleton :loading="isPlantsLoading" animated>

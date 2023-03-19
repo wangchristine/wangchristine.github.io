@@ -33,9 +33,9 @@ export default {
   },
   computed: {
     articlesByPopular() {
-      return this.$store.getters.getAllArticles.filter(
-        (article) => article.isPopular === true
-      );
+      return this.$store.getters
+        .getArticles()
+        .filter((article) => article.isPopular === true);
     },
   },
 };

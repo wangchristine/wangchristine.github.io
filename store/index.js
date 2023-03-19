@@ -4,7 +4,7 @@ import plants from '@/config/plant.json';
 
 export const state = () => ({
   categories: [],
-  allArticles: [],
+  articles: [],
   foods: [],
   plants: [],
 });
@@ -13,11 +13,11 @@ export const actions = {
   async nuxtServerInit({ commit }, { $content }) {
     commit('setCategories', categories);
 
-    const allArticles = await $content({ deep: true })
+    const articles = await $content({ deep: true })
       .sortBy('updatedAt', 'desc')
       .fetch();
 
-    commit('setAllArticles', allArticles);
+    commit('setArticles', articles);
   },
   setCategories({ commit }, categories) {
     commit('setCategories', categories);
@@ -31,8 +31,8 @@ export const actions = {
 };
 
 export const mutations = {
-  setAllArticles(state, allArticles) {
-    state.allArticles = allArticles;
+  setArticles(state, articles) {
+    state.articles = articles;
   },
   setCategories(state, categories) {
     state.categories = categories;
@@ -46,8 +46,10 @@ export const mutations = {
 };
 
 export const getters = {
-  getAllArticles: (state) => {
-    return state.allArticles;
+  getArticles: (state) => (searchText) => {
+    return state.articles.filter((article) => {
+      return article.title.toLowerCase().includes(searchText ? searchText.toLowerCase() : searchText);
+    });
   },
   getCategories: (state) => {
     return state.categories;

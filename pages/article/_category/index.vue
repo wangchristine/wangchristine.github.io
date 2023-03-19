@@ -4,9 +4,15 @@
       <div class="category-block">
         <h2>Category: {{ category.name }}</h2>
       </div>
+      <div class="search-block">
+        <div class="description">
+          <p>搜尋文章標題：</p>
+          <input type="text" placeholder="請輸入..." v-model="searchText" @input="changeSearchText" />
+        </div>
+      </div>
       <div class="articles-block">
         <div
-          v-for="article in allArticlesByCategory"
+          v-for="article in articlesByCategory"
           :key="article.title"
           class="article"
         >
@@ -22,10 +28,15 @@
             </div>
           </NuxtLink>
         </div>
+        <h4 v-if="totalCountByCategory === 0">查無結果，換個關鍵字吧！</h4>
 
         <ListPagination
-          :page-size="perPage" :current-page="page" :total-count="totalCountByCategory"
-          @currentChange="setCurrentPage" />
+          v-if="totalCountByCategory !== 0"
+          :page-size="perPage"
+          :current-page="page"
+          :total-count="totalCountByCategory"
+          @currentChange="setCurrentPage"
+        />
       </div>
     </div>
     <side-bar />
@@ -57,33 +68,36 @@ export default {
     return {
       category: '',
       perPage: 9,
+      searchText: '',
     };
   },
   head() {
     return {
-      title: (this.category.name ?? "Blog") + " - Chris",
+      title: (this.category.name ?? 'Blog') + ' - Chris',
       meta: [
         {
           hid: 'og:title',
           property: 'og:title',
-          content: (this.category.name ?? "Blog") + " - Chris",
+          content: (this.category.name ?? 'Blog') + ' - Chris',
         },
-      ]
-    }
+      ],
+    };
   },
   computed: {
     page() {
-      return this.$route.query.page || 1;
+      return parseInt(this.$route.query.page) || 1;
     },
-    allArticlesByCategory() {
-      return this.$store.getters.getAllArticles
+    articlesByCategory() {
+      return this.$store.getters
+        .getArticles(this.searchText)
         .filter((article) => article.category === this.category.routeName)
         .slice((this.page - 1) * this.perPage, this.page * this.perPage);
     },
     totalCountByCategory() {
-      return this.$store.getters.getAllArticles.filter(
-        (article) => article.category === this.category.routeName
-      ).length;
+      return this.$store.getters
+        .getArticles(this.searchText)
+        .filter((article) => article.category === this.category.routeName)
+        .length;
     },
   },
   mounted() {
@@ -103,7 +117,14 @@ export default {
         params: { category: this.category.routeName },
         query: { page: pageItem },
       });
-    }
+    },
+    changeSearchText() {
+      this.$router.push({
+        name: 'article-category',
+        params: { category: this.category.routeName },
+        query: { page: 1 },
+      });
+    },
   },
 };
 </script>
@@ -122,6 +143,26 @@ export default {
 .category-block {
   background-color: #f9f2e9;
   padding: 20px 40px;
+}
+
+.search-block {
+  display: flex;
+  align-items: center;
+  background-color: #f9f2e9;
+  padding: 20px 40px;
+  margin-top: 20px;
+}
+
+.search-block .description {
+  margin-right: 10px;
+}
+
+.search-block input {
+  padding: 8px 10px;
+  border: #b1b0b0 1px solid;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
 }
 
 .articles-block {
