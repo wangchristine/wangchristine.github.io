@@ -49,7 +49,7 @@
       <Nuxt />
     </el-main>
     <el-footer>
-      Copyright © 2022 Chris Wang
+      Copyright © 2022-{{ new Date().getFullYear() }} Chris Wang
       <br />
       本網站為個人使用，參考
       <a href="https://www.facebook.com/TIPO.gov.tw/posts/1804286156280593/">
