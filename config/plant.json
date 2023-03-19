@@ -136,5 +136,138 @@
         "value": "對生"
       }
     ]
+  },
+  {
+    "id": 5,
+    "name": "繡球花",
+    "images": [
+      {
+        "id": "5-1",
+        "extension": "jpg",
+        "origin": "https://www.letsgojp.com/archives/382584/"
+      },
+      {
+        "id": "5-2",
+        "extension": "jpg",
+        "origin": "https://playeateasy.com/%e5%85%a8%e6%b8%af%e7%b9%a1%e7%90%83%e8%8a%b1%e7%9b%9b%e6%94%be%ef%bd%9c3%e5%a4%a7%e8%b3%9e%e7%b9%a1%e7%90%83%e8%8a%b1%e7%86%b1%e9%bb%9e-%e8%8a%b1%e5%8d%89%e5%b1%95%e5%9b%9e%e6%ad%b8%e5%af%a6%e9%ab%94/"
+      }
+    ],
+    "properties": [
+      {
+        "key": "科",
+        "value": "繡球花科"
+      },
+      {
+        "key": "開花期",
+        "value": "5 ~ 7月"
+      },
+      {
+        "key": "花語",
+        "value": "執著的愛"
+      },
+      {
+        "key": "別名",
+        "value": "紫陽花"
+      },
+      {
+        "key": "花色",
+        "value": "弱酸呈藍色系、鹼呈紅色系"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "康乃馨",
+    "images": [
+      {
+        "id": "6-1",
+        "extension": "jpg",
+        "origin": "https://www.newsmarket.com.tw/blog/169018/"
+      }
+    ],
+    "properties": [
+      {
+        "key": "科",
+        "value": "石竹科"
+      },
+      {
+        "key": "開花期",
+        "value": "4 ~ 6月"
+      },
+      {
+        "key": "花語",
+        "value": "熱愛著你、母愛"
+      },
+      {
+        "key": "葉形",
+        "value": "披針形"
+      },
+      {
+        "key": "花形",
+        "value": "花瓣邊緣有常見的鋸齒狀、也有較不明顯鋸齒狀的花型"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "非洲菊",
+    "images": [
+      {
+        "id": "7-1",
+        "extension": "jpg",
+        "origin": "https://www.picturethisai.com/zh-tw/wiki/Gerbera_jamesonii.html"
+      }
+    ],
+    "properties": [
+      {
+        "key": "科",
+        "value": "菊科"
+      },
+      {
+        "key": "開花期",
+        "value": "3 ~ 5月、9 ~ 11月"
+      },
+      {
+        "key": "花語",
+        "value": "充滿著光"
+      },
+      {
+        "key": "花形",
+        "value": "外型像是個小太陽，花心有黑和淺色兩種"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "百合",
+    "images": [
+      {
+        "id": "8-1",
+        "extension": "jpg",
+        "origin": "https://travel.ettoday.net/article/497005.htm"
+      }
+    ],
+    "properties": [
+      {
+        "key": "科",
+        "value": "百合科"
+      },
+      {
+        "key": "開花期",
+        "value": "5 ~ 8月"
+      },
+      {
+        "key": "花語",
+        "value": "純潔"
+      },
+      {
+        "key": "分類",
+        "value": "球根植物、單子葉植物"
+      },
+      {
+        "key": "葉脈",
+        "value": "平行脈"
+      }
+    ]
   }
 ]
