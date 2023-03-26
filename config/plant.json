@@ -269,5 +269,96 @@
         "value": "平行脈"
       }
     ]
+  },
+  {
+    "id": 9,
+    "name": "海芋",
+    "images": [
+      {
+        "id": "9-1",
+        "extension": "jpg",
+        "origin": "https://www.facebook.com/%E6%B5%B7%E8%8A%8B%E7%B9%A1%E7%90%83%E7%AB%B9%E5%AD%90%E6%B9%96-103906685488694/photos/pcb.129309546281741/129309276281768/"
+      }
+    ],
+    "properties": [
+      {
+        "key": "科",
+        "value": "天南星科"
+      },
+      {
+        "key": "開花期",
+        "value": "6 ~ 7月"
+      },
+      {
+        "key": "花語",
+        "value": "少女的賢淑"
+      },
+      {
+        "key": "類型",
+        "value": "濕地型花色有白、粉紅、綠色，球根的陸生型花色較多但花朵偏小"
+      },
+      {
+        "key": "描述",
+        "value": "看起來像花瓣的部分其實是佛焰苞，花為中央的棒狀部位"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "嘉德麗雅蘭",
+    "images": [
+      {
+        "id": "10-1",
+        "extension": "jpg",
+        "origin": "https://orchis.com.tw/product_d.php?lang=tw&tb=1&id=3874"
+      }
+    ],
+    "properties": [
+      {
+        "key": "科",
+        "value": "蘭科"
+      },
+      {
+        "key": "開花期",
+        "value": "3 ~ 4月"
+      },
+      {
+        "key": "花語",
+        "value": "優美的貴婦"
+      },
+      {
+        "key": "美譽",
+        "value": "洋蘭中的女王"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "蝴蝶蘭",
+    "images": [
+      {
+        "id": "11-1",
+        "extension": "jpg",
+        "origin": "https://zh.wikipedia.org/wiki/%E8%9D%B4%E8%9D%B6%E8%98%AD%E5%B1%AC"
+      }
+    ],
+    "properties": [
+      {
+        "key": "科",
+        "value": "蘭科"
+      },
+      {
+        "key": "開花期",
+        "value": "4 ~ 6月"
+      },
+      {
+        "key": "花語",
+        "value": "我愛你"
+      },
+      {
+        "key": "花朵",
+        "value": "從大輪到小輪都有，花色有很多種"
+      }
+    ]
   }
 ]
