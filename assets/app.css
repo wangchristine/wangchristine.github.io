@@ -51,6 +51,9 @@
 }
 
 .nuxt-content a {
-  margin: 0 3px;
   color: #9f3448;
+}
+
+.nuxt-content p a {
+  margin: 0 3px;
 }

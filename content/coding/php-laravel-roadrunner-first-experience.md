@@ -91,7 +91,9 @@ http:
 
 ## 小測試
 使用 `serialize()` 序列化作測試函數，分別用 FPM 和 RoadRunner 各做一百萬和五百萬次的測試，如下圖所示，Request 也分別用 1 和 3 來測試執行的時間：
+
 <markdown-img src="articles/php-laravel-roadrunner-first-experience-1.png"></markdown-img>
+
 由上圖可發現，在一百萬次的 FPM 和 RoadRunner 表現效果差不多，Request 數為 3 時開始有些微的時間差距；在五百萬次的 FPM 和 RoadRunner 表現效果越來越明顯，再加上Request 數為 3 時，我把 RoadRunner 的 worker 提高成 2 個，速度就比 FPM 快一些。這邊測試的環境皆為 1 CPU，兩者的 work_processes 皆為 1。 
 
 ## 結語
