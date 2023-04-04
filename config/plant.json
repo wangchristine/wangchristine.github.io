@@ -327,6 +327,10 @@
         "value": "優美的貴婦"
       },
       {
+        "key": "種類",
+        "value": "附生蘭"
+      },
+      {
         "key": "美譽",
         "value": "洋蘭中的女王"
       }
@@ -356,8 +360,82 @@
         "value": "我愛你"
       },
       {
+        "key": "種類",
+        "value": "附生蘭"
+      },
+      {
         "key": "花朵",
         "value": "從大輪到小輪都有，花色有很多種"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "大花蕙蘭",
+    "images": [
+      {
+        "id": "12-1",
+        "extension": "jpg",
+        "origin": "https://kmweb.coa.gov.tw/subject/subject.php?id=29026"
+      }
+    ],
+    "properties": [
+      {
+        "key": "科",
+        "value": "蘭科"
+      },
+      {
+        "key": "開花期",
+        "value": "11 ~ 3月"
+      },
+      {
+        "key": "花語",
+        "value": "高貴雍容、坦誠的心"
+      },
+      {
+        "key": "又名",
+        "value": "虎頭蘭、東亞蘭"
+      },
+      {
+        "key": "種類",
+        "value": "附生蘭"
+      },
+      {
+        "key": "描述",
+        "value": "唇瓣有三片，兩旁皆呈直立狀，另一片向前端下垂且似虎斑花紋而得名"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "萬代蘭",
+    "images": [
+      {
+        "id": "13-1",
+        "extension": "jpg",
+        "origin": "https://orchid-story.blogspot.com/2015/05/vanda-coerulea.html"
+      }
+    ],
+    "properties": [
+      {
+        "key": "科",
+        "value": "蘭科"
+      },
+      {
+        "key": "開花期",
+        "value": "6 ~ 7月"
+      },
+      {
+        "key": "花語",
+        "value": "優雅"
+      },
+      {
+        "key": "種類",
+        "value": "附生蘭"
+      },
+      {
+        "key": "描述",
+        "value": "花瓣呈水平開展、有著斑點紋路的特色，將其粗長根部暴露於空氣中生長，常見於藍紫色"
       }
     ]
   }
