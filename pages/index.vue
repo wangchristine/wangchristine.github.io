@@ -6,14 +6,15 @@
     <div class="main-block">
       <div class="title">作者介紹</div>
       <div class="introduction">
-        多年後端工程師實務經驗，在前端領域也有涉略，熟悉各項前後端周邊工具，目前也正在廣度的學習各項領域的知識。
+        多年後端工程師實務經驗和前端程式開發，熟悉各項前後端周邊生態圈工具，目前也正在廣度的學習各項領域的知識。
+        認為「學如逆水行舟，不進則退。」「知道的越多，才知懂得就越少。」
         <br />
         擅長項目為前後端系統開發、分析、與 user 溝通，系統雲/地端架設。
         <br />
         喜歡看劇、種植、小九兒。
       </div>
 
-      <div class="title">友情連結</div>
+      <div class="title">相關連結</div>
       <div class="introduction">
         <span>個人 GitHub 🍌</span>
         <br />
@@ -110,6 +111,7 @@ export default {
 
   .main-block {
     width: auto;
+    padding: 20px 20px;
   }
 
   .main-block .sketch {
