@@ -1400,6 +1400,24 @@
         "price": null,
         "createdAt": "2023-06-02",
         "description": "雞腿滷的蠻香蠻有味道的，配菜都好吃。"
+      },
+      {
+        "id": "20230724",
+        "name": "黃金雞丁餐",
+        "extension": "jpg",
+        "star": 2.5,
+        "price": null,
+        "createdAt": "2023-07-24",
+        "description": "又是一個超辣的便當!! 雞丁上面的醬融合多種味道(辣、酸、甜)，個人不喜歡，肉的話還行。"
+      },
+      {
+        "id": "20230726",
+        "name": "檸香雞腿餐",
+        "extension": "jpg",
+        "star": 4.0,
+        "price": null,
+        "createdAt": "2023-07-26",
+        "description": "雞腿上灑上香草類碎片有著淡淡的香氣，咬下去時肉香伴隨香草直撲味蕾，肉質很有彈性。"
       }
     ]
   },
