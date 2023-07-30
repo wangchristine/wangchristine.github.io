@@ -22,7 +22,10 @@
               params: { category: category.routeName, slug: article.slug },
             }"
           >
-            <div class="title">{{ article.title }}</div>
+            <div class="title">
+              {{ article.title }}
+              <span class="updated-at">更新於 {{ new Date(article.updatedAt).toLocaleDateString() }}</span>
+            </div>
             <div class="description">
               {{ article.description.slice(0, 80) }} ......
             </div>
@@ -186,6 +189,12 @@ export default {
   font-weight: bold;
 }
 
+.articles-block .article a > .title > .updated-at {
+  float: right;
+  font-weight: normal;
+  color: #a57269;
+}
+
 @media all and (max-width: 768px) {
   .content-block {
     flex-direction: column;
@@ -193,6 +202,10 @@ export default {
 
   .main-block {
     width: 100%;
+  }
+
+  .articles-block {
+    padding: 10px 10px;
   }
 }
 </style>
