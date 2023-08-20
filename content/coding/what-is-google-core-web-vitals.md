@@ -2,7 +2,6 @@
 category: coding
 title: 網站體驗核心指標(Core Web Vitals) 是什麼呢
 description: '網站體驗核心指標(Core Web Vitals) 包含 Google 最在意的幾個核心的網頁性能指標，像是'
-isPopular: true
 createdAt: '2023-01-04'
 updatedAt: '2023-01-04'
 ---

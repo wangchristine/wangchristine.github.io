@@ -1,11 +1,11 @@
 <template>
   <div class="side-block">
     <MyProfile />
-    <div class="popular">
-      <div class="title">熱門文章 📌</div>
+    <div class="latest-block">
+      <div class="title">近期文章</div>
       <div class="list">
         <NuxtLink
-          v-for="article in articlesByPopular"
+          v-for="article in articlesByLatestFive"
           :key="article.title"
           class="article"
           :to="{
@@ -13,6 +13,7 @@
             params: { category: article.category, slug: article.slug },
           }"
         >
+          <span>[{{ new Date(article.updatedAt).toLocaleDateString() }}]</span>
           {{ article.title }}
         </NuxtLink>
       </div>
@@ -32,10 +33,10 @@ export default {
     MyProfile,
   },
   computed: {
-    articlesByPopular() {
+    articlesByLatestFive() {
       return this.$store.getters
         .getArticles('')
-        .filter((article) => article.isPopular === true);
+        .slice(0, 5);
     },
   },
 };
@@ -48,28 +49,33 @@ export default {
   margin: 0 0 40px 40px;
 }
 
-.popular {
+.latest-block {
   background-color: #f9f2e9;
   padding: 20px;
   margin-top: 20px;
 }
-.popular .title {
+.latest-block .title {
   font-size: 18px;
   border-bottom: 1px solid #9b9b9b;
   padding: 5px;
 }
 
-.popular .list {
+.latest-block .list {
   margin-top: 10px;
 }
 
-.popular .article {
+.latest-block .article {
   display: block;
   text-decoration: none;
   padding: 5px;
   color: #9f3448;
   border-bottom: dashed 1px;
   margin-top: 10px;
+  text-align: left;
+}
+
+.latest-block .article span {
+  color: #a57269;
 }
 
 .aquarium {
