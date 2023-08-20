@@ -192,6 +192,7 @@ h2 {
   background-color: #fffbf0;
   color: #333;
   letter-spacing: 1px;
+  overflow: initial;
 }
 
 .go-up {
