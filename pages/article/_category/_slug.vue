@@ -1,14 +1,12 @@
 <template>
   <div class="content-block">
     <div class="anchor-block">
-      <div class="anchor-link">
-        目錄
-        <ul>
-          <li v-for="(toc, key) in page.toc" :key="key" :class="'depth-' + toc.depth">
-            <a @click="anchorByToc(toc.id)">{{ toc.text }}</a>
-          </li>
-        </ul>
-      </div>
+      目錄
+      <ul>
+        <li v-for="(toc, key) in page.toc" :key="key" :class="'depth-' + toc.depth">
+          <a @click="anchorByToc(toc.id)">{{ toc.text }}</a>
+        </li>
+      </ul>
     </div>
     <div class="article-block">
       <div class="article-header">
@@ -90,30 +88,32 @@ export default {
   position: sticky;
   top: 20px;
   height: 100%;
-}
 
-.anchor-block .anchor-link {
   background-color: #f9f2e9;
   padding: 20px;
 }
 
-.anchor-block .anchor-link ul {
+.anchor-block ul {
   list-style: none;
   padding: 0;
   text-align: left;
   margin: 10px 0;
+  max-height: 50vh;
+  overflow-y: scroll;
 }
 
-.anchor-block .anchor-link ul li.depth-2 {
+.anchor-block ul li.depth-2 {
+  font-size: 15px;
   font-weight: bold;
   margin-top: 10px;
 }
 
-.anchor-block .anchor-link ul li.depth-3 {
+.anchor-block ul li.depth-3 {
+  font-size: 15px;
   padding-left: 20px;
 }
 
-.anchor-block .anchor-link ul li a {
+.anchor-block ul li a {
   text-decoration: none;
   color: #464646;
   cursor: pointer;
