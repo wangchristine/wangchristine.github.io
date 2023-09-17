@@ -13,19 +13,19 @@ updatedAt: '2023-03-21'
 
 我覺得王鶴棣非常適合演這個角色，導演真會選角，從王鶴棣的眼神、動作都很適合霸氣總裁但溫柔的東方青蒼，甚至在交換身體需要演小蘭花的動作表情時，還有在劇情後段當小蘭花恢復成息蘭神女、眼巴巴的希望小蘭花還記得他的時，情感和心境轉換都是不同層次的，我非常喜歡這種專情的人！最喜歡的一幕是東方青蒼為小蘭花製造花瓣雨，然後躲在樹後面摘掉手上的幽玉戒來感受小蘭花的喜悅，哇這邊看到心都融化了XD
 
-<markdown-img src="articles/review-of-love-between-fairy-and-devil-1.jpg" origin-link="https://www.niusnews.com/=P0kgw3ml6"></markdown-img>
+<markdown-img src="articles/review-of-love-between-fairy-and-devil-1.jpg" name="月下之吻" origin-link="https://www.niusnews.com/=P0kgw3ml6"></markdown-img>
 
 ## 小蘭花(虞書欣 飾)
 水雲天司命殿仙女小蘭花，平日工作都是在整理命簿，偶然發現自己傾心的長珩仙君的命簿有異、命數將盡，便不顧師父司命的叮囑：擅動命簿者會灰飛煙滅。弱小的她前去拯救長珩時誤入昊天塔，後與東方青蒼上演一場甜寵、生離死別、終將再聚的仙月虐戀。
 
 看了這部劇後覺得虞書欣的演技還真不錯欸，演的很自然不做作，之前我只有看過她上綜藝。她很好地詮釋小蘭花的天真浪漫、不顧一切的愛、古靈精怪的模樣，在加上本身臉型就有點嘟嘟臉，完全展現小蘭花的可愛！
 
-<markdown-img src="articles/review-of-love-between-fairy-and-devil-2.jpg" origin-link="https://today.line.me/tw/v2/article/NvJQmkk"></markdown-img>
+<markdown-img src="articles/review-of-love-between-fairy-and-devil-2.jpg" name="小蘭花" origin-link="https://today.line.me/tw/v2/article/NvJQmkk"></markdown-img>
 
 ## 長珩(張凌赫 飾)
 水雲天戰神，為遵從哥哥雲中君的守(守)護(舊)蒼(古)生(板)、與息蘭神女的婚約，五百年前不得不將小蘭花與他的初遇記憶全部抹去，也在後來小蘭花獲得仙考魁首後親自除名，親手將兩人的緣分斬斷，不得不說長珩真的是這部劇裡我覺得最可惜的角色了，他跟小蘭花明明是雙方互相暗戀著，卻因為水雲天戰神這個沉重的責任與包袱讓他每次都選擇水雲天而不是小蘭花。不過換做是現代，又有幾個人可以做到勇敢而不是默默的暗戀呢?
 
-<markdown-img src="articles/review-of-love-between-fairy-and-devil-3.jpg" origin-link="https://www.youtube.com/watch?v=2Eo27OPnYxo"></markdown-img>
+<markdown-img src="articles/review-of-love-between-fairy-and-devil-3.jpg" name="長珩和東方青蒼" origin-link="https://www.youtube.com/watch?v=2Eo27OPnYxo"></markdown-img>
 
 ## 容昊(徐海喬 飾)
 在凡間頻死之際因赤地女子動凡心而將他帶至仙界當徒弟。仙月大戰後為保住赤地女子一絲元神不得不和太歲做交易、成為了海市主不停的製造祟氣。在劇情後段因不忍師父受祟氣折磨，決定用另一種方式與師父永永遠遠地在一起...。

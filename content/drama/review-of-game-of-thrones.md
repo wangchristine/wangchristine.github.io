@@ -10,19 +10,19 @@ updatedAt: '2022-12-27'
 
 首先，來個我最喜愛的兩位角色同框的英氣風發照片：
 
-<markdown-img src="articles/review-of-game-of-thrones-1.jpg" origin-link="https://www.harpersbazaar.com/tw/culture/drama/g28464453/got-gwendoline-emmy-2019/"></markdown-img>
+<markdown-img src="articles/review-of-game-of-thrones-1.jpg" name="艾莉亞和布蕾妮" origin-link="https://www.harpersbazaar.com/tw/culture/drama/g28464453/got-gwendoline-emmy-2019/"></markdown-img>
 
 這兩位分別就是艾莉亞·史塔克（Arya Stark）和塔斯的布蕾妮（Brienne of Tarth）啦~
 
 ## 艾莉亞
 首先我先來說艾莉亞，自從父親艾德·史塔克（奈德 Ned）被斬首後就開始了四處流浪的生活，後來加入賈昆·赫加爾（Jaqen H'ghar）成為了一名無面者。在這過程中經歷了一連串的試煉和折磨後，最終成為了頂級刺客！這位機靈、勇敢、自立更生、灑脫的小女孩，在這擁有封建制度的維斯特洛大陸上，不願當貴族小姐而自由地活出了屬於自己的人生。
 
-<markdown-img src="articles/review-of-game-of-thrones-2.jpg" origin-link="http://k.sina.com.cn/article_1895372587_70f9172b001001f3w.html#/"></markdown-img>
+<markdown-img src="articles/review-of-game-of-thrones-2.jpg" name="艾莉亞" origin-link="http://k.sina.com.cn/article_1895372587_70f9172b001001f3w.html#/"></markdown-img>
 
 ## 布蕾妮
 塔斯的布蕾妮一開始作為藍禮·拜拉席恩（Renly Baratheon）的仰慕者與彩虹護衛，在他被殺後轉為凱特琳·徒利（Catelyn Tully）效力並授命保護其兩個女兒 - 艾莉亞與珊莎·史塔克（Sansa Stark）。在護送詹姆·蘭尼斯特（Jaime Lannister）的過程中，兩人從敵意到敬意，再到互相鼓勵、互相拯救，最後可能是基於這段漫長的旅程相知相惜所以還滾個床單XD。布蕾妮的魅力在於內在的率真、義氣、忠心、騎士精神，而不是世俗眼光中的一副好看皮囊或是高貴的出身可以比擬的。
 
-<markdown-img src="articles/review-of-game-of-thrones-3.jpg" origin-link="https://i.pinimg.com/736x/3a/83/a1/3a83a1d6ed00acbdceab0aaf72ef6993--lady-brienne-game-of.jpg"></markdown-img>
+<markdown-img src="articles/review-of-game-of-thrones-3.jpg" name="布蕾妮" origin-link="https://i.pinimg.com/736x/3a/83/a1/3a83a1d6ed00acbdceab0aaf72ef6993--lady-brienne-game-of.jpg"></markdown-img>
 
 當我八季全看完後還蠻開心這兩位最喜愛的角色都活了下來且都過的還不錯~ 在這發便當發的那麼勤的劇，每一集都很替她倆懸著一顆心吶XD
 
@@ -63,4 +63,4 @@ updatedAt: '2022-12-27'
 最後來個經典名言收尾吧：
 "Valar morghulis"(凡人皆有一死)
 
-<markdown-img src="articles/review-of-game-of-thrones-4.jpg" origin-link="https://www.newton.com.tw/wiki/Valar%20Morghulis/14501435"></markdown-img>
+<markdown-img src="articles/review-of-game-of-thrones-4.jpg" name="凡人皆有一死" origin-link="https://www.newton.com.tw/wiki/Valar%20Morghulis/14501435"></markdown-img>

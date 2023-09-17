@@ -13,7 +13,7 @@ updatedAt: '2023-04-03'
 preg_replace("/\xc2\xa0/", "", $firstChild->data);
 ```
 
-1. Unicode 編碼 `U+00A0`
+2. Unicode 編碼 `U+00A0`
 ```php
 preg_replace("/\x{00a0}/u", "", $firstChild->data);
 ```

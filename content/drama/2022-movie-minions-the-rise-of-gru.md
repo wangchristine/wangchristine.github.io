@@ -18,6 +18,6 @@ updatedAt: '2022-07-03'
 
 在逃跑過程中，格魯發現即使是壞蛋，也需要朋友的幫助。
 
-## 歡樂預告:
+## 歡樂預告
 
 <markdown-video src="https://www.youtube.com/embed/O8to1Xm1WbA" title="YouTube video player"></markdown-video>

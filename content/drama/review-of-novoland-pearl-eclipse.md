@@ -10,7 +10,7 @@ updatedAt: '2023-01-14'
 
 首先當我看到方海市（楊冪 飾）長大後的第一個造型，恩還真不適合大冪冪><，覺得這造型有點顯老阿，不過好在後面其他的造型都還蠻順眼，其中黃泉營參軍那套我覺得超棒，完全凸顯方海市巾幗不讓鬚眉、又颯爽英姿的樣子：
 
-<markdown-img src="articles/review-of-novoland-pearl-eclipse-1.jpg" origin-link="https://popdaily.com/my/article/236742"></markdown-img>
+<markdown-img src="articles/review-of-novoland-pearl-eclipse-1.jpg" name="方海市" origin-link="https://popdaily.com/my/article/236742"></markdown-img>
 
 ## 方海市
 劇情與人物個性的部分，首先我覺得方海市的人物刻劃非常好，不是那種傻白甜或完全默默付出之類的，我非常喜歡她的個性。方海市是一個敢愛敢恨的漁民之女，她為了報仇可以去刺殺皇帝、在發現她喜歡上師父時她敢於表白、在師父一而再再而三忽略她的喜歡依然可以為他挺身而出、在師父還沒能確定自己是否能接受她時她很清楚的表達：「我對師父不一樣，所以師父萬萬不可再往前走，哪怕半步。不管是出於從小看我長大的情誼也好，對我關愛的拳拳之心也罷，都不可以。若師父再走半步，只怕海市會說出不該說的話，做出不該做的事情。」
@@ -30,4 +30,4 @@ updatedAt: '2023-01-14'
 
 最後來個方海市用腳射箭必殺絕招吧！超颯！
 
-<markdown-img src="articles/review-of-novoland-pearl-eclipse-2.gif" origin-link="https://www.sohu.com/a/501312942_121030231"></markdown-img>
+<markdown-img src="articles/review-of-novoland-pearl-eclipse-2.gif" name="方海市" origin-link="https://www.sohu.com/a/501312942_121030231"></markdown-img>

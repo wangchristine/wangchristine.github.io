@@ -8,7 +8,7 @@ updatedAt: '2022-07-30'
 
 每次要用正則表達式 Regular Expression 的時候，很容易忘記它的規則，因為英文我看的比較習慣且解釋的很精確，所以以下就用英文說明在 Javascript 中詳細範例用法：
 
-## 文字:
+## 文字
 
 | 用法 | 說明 | 範例
 | -------- | -------- | --------
@@ -21,21 +21,21 @@ updatedAt: '2022-07-30'
 | [^abc] | Match any character that is not in the set. | not a, b, or c
 | [a-z] | Matches a character having a character code between the two specified characters inclusive. | character between a & z
 
-## 位置:
+## 位置
 
 | 用法 | 說明 | 範例
 | -------- | -------- | --------
 | ^abc$ | Matches start / end of the string. |
 | \b \B | Word, not-word boundary | /s\b/g => she ha<b>s</b> many sister<b>s</b>
 
-## 跳脫字元:
+## 跳脫字元
 
 | 用法 | 說明 | 範例
 | -------- | -------- | --------
 | \ | Escaped special characters, including: +*?^$\\.[]{}()&#124;/ <br /> Within a character set, only \, -, and ] need to be escaped. | \\. \\* \\\
 | \t \n \r | Tab, linefeed, carriage return |
 
-## 群組:
+## 群組
 
 | 用法 | 說明 | 範例
 | -------- | -------- | --------
@@ -46,7 +46,7 @@ updatedAt: '2022-07-30'
 | (?<=abc)x | Positive lookbehind. Matches only if preceded by condition and without including it in the result. | /(?<=abc)x/g => abc<b>x</b>
 | (?<!abc)x | Negative lookbehind. Matches only if not preceded by condition and without including it in the result. | /(?<\!abc)x/g => def<b>x</b>
 
-## 數量:
+## 數量
 
 | 用法 | 說明 | 範例
 | -------- | -------- | --------
@@ -57,7 +57,7 @@ updatedAt: '2022-07-30'
 
 <br />
 
-## Flags:
+## Flags
 
 最後來介紹 flags，語法:
 ```
@@ -72,7 +72,7 @@ updatedAt: '2022-07-30'
 | m | Multi-line search.
 | u | Use unicode.
 
-## 常用範例:
+## 常用範例
 
 1. 驗證為 youtube 連結
 * 條件1: 需為 `https://www.youtube.com/watch?` 或 `https://youtu.be/` 開頭，前方`www`可有可無

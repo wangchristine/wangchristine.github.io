@@ -8,7 +8,7 @@ updatedAt: '2023-01-04'
 
 網站體驗核心指標(Core Web Vitals) 包含 Google 最在意的幾個核心的網頁性能指標，像是 LCP、FID、CLS 等，這幾個核心的性能指標對於網站的 SEO 關鍵字排名的影響非常大，也同時反應出使用者的用戶體驗，以下就專門針對這三個指標來說明：
 
-<markdown-img src="articles/what-is-google-core-web-vitals-1.png" origin-link="https://web.dev/vitals/"></markdown-img>
+<markdown-img src="articles/what-is-google-core-web-vitals-1.png" name="Core Web Vitals" origin-link="https://web.dev/vitals/"></markdown-img>
 
 ## 最大內容繪製 LCP (Largest Contentful Paint)
 

@@ -51,26 +51,25 @@ export default {
 
 .latest-block {
   background-color: #f9f2e9;
-  padding: 20px;
   margin-top: 20px;
 }
 .latest-block .title {
   font-size: 18px;
-  border-bottom: 1px solid #9b9b9b;
-  padding: 5px;
+  padding: 6px 10px;
+  background-color: #983a2a;
+  color: #fff;
 }
 
 .latest-block .list {
-  margin-top: 10px;
+  padding: 20px;
 }
 
 .latest-block .article {
   display: block;
   text-decoration: none;
-  padding: 5px;
+  padding: 6px;
   color: #9f3448;
   border-bottom: dashed 1px;
-  margin-top: 10px;
   text-align: left;
 }
 

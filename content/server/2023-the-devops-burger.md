@@ -12,4 +12,4 @@ updatedAt: '2023-09-03'
 
 ## DevOps Burger
 
-<markdown-img src="articles/2023-the-devops-burger-1.jpg" origin-link="https://twitter.com/milan_milanovic/status/1684444624830464000?s=46&t=0_kUq0C4bowzgAjwNfu-Uw&fbclid=IwAR0Q7gxwDLUhE5AWfwvfKnXAl1iuHevhhxQOdNjjkuDLQY02N0OkJx9TJDo"></markdown-img>
+<markdown-img src="articles/2023-the-devops-burger-1.jpg" name="DevOps Burger" origin-link="https://twitter.com/milan_milanovic/status/1684444624830464000?s=46&t=0_kUq0C4bowzgAjwNfu-Uw&fbclid=IwAR0Q7gxwDLUhE5AWfwvfKnXAl1iuHevhhxQOdNjjkuDLQY02N0OkJx9TJDo"></markdown-img>

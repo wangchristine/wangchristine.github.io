@@ -8,7 +8,7 @@ updatedAt: '2022-07-05'
 
 以下介紹使用 PHP Docker image 安裝 PHP 擴展的方式，以及可以使用此方法安裝的擴展：
 
-## docker-php-ext-install:
+## docker-php-ext-install
 
 安裝並自動調用 docker-php-ext-enable 來啟動 PHP 擴展
 
@@ -79,6 +79,6 @@ updatedAt: '2022-07-05'
 | xsl
 | zip
 
-## docker-php-ext-enable:
+## docker-php-ext-enable
 
 使用 pecl 安裝 PHP 擴展時默認是沒有啟動這個擴展，此指令則是自動幫我們來啟動 PHP 擴展，而不需手動去 php.ini 裡啟動。

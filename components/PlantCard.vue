@@ -31,7 +31,7 @@
           :key="image.id"
           class="origin-link"
         >
-          <a :href="image.origin" target="_blank">原圖網址{{ key + 1 }}</a>
+          <a :href="image.origin" target="_blank">來源{{ key + 1 }}</a>
         </span>
       </div>
     </div>

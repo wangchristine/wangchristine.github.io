@@ -1,6 +1,6 @@
 <template>
   <div class="content-block">
-    <div class="anchor-block">
+    <div :class="['anchor-block', {'anchor-block-hidden': page.toc.length === 0}]">
       目錄
       <ul>
         <li v-for="(toc, key) in page.toc" :key="key" :class="'depth-' + toc.depth">
@@ -82,15 +82,13 @@ export default {
 }
 
 .anchor-block {
-  width: 250px;
+  width: 220px;
   text-align: center;
-  margin: 0 20px 40px 0;
   position: sticky;
   top: 20px;
   height: 100%;
-
   background-color: #f9f2e9;
-  padding: 20px;
+  padding: 20px 10px;
 }
 
 .anchor-block ul {
@@ -99,13 +97,13 @@ export default {
   text-align: left;
   margin: 10px 0;
   max-height: 50vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .anchor-block ul li.depth-2 {
   font-size: 15px;
   font-weight: bold;
-  margin-top: 10px;
+  padding: 5px 10px;
 }
 
 .anchor-block ul li.depth-3 {
@@ -119,10 +117,15 @@ export default {
   cursor: pointer;
 }
 
+.anchor-block-hidden {
+  visibility: hidden;
+}
+
 .article-block {
   background-color: #f9f2e9;
   padding: 20px 40px 40px 40px;
-  width: 1000px;
+  margin: 0 20px;
+  width: 840px;
   overflow-x: hidden;
   box-shadow: 0 1rem 3rem rgb(83 88 93 / 25%);
 }
@@ -139,9 +142,8 @@ export default {
 }
 
 .side-block {
-  width: 250px;
+  width: 240px;
   text-align: center;
-  margin: 0 0 40px 20px;
 }
 
 @media all and (max-width: 1024px) {
@@ -157,6 +159,7 @@ export default {
 
   .article-block {
     padding: 20px;
+    margin: 0;
     width: auto;
   }
 
