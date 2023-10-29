@@ -539,6 +539,24 @@
         "price": null,
         "createdAt": "2023-09-14",
         "description": "整體好吃，除了河粉上面金針菇很鹹。這次配菜都蠻喜歡的，尤其是蓮藕加皇帝豆，而且裡面還有一塊似乎是山藥。"
+      },
+      {
+        "id": "20230922",
+        "name": "客家粄條+淡水阿給",
+        "extension": "jpg",
+        "star": 3.8,
+        "price": null,
+        "createdAt": "2023-09-22",
+        "description": "乾粄條炒的很入味又不死鹹還不錯，阿給就沒什麼特別的就是豆腐夾冬粉。"
+      },
+      {
+        "id": "20231024",
+        "name": "星州炒米粉",
+        "extension": "jpg",
+        "star": 3.8,
+        "price": null,
+        "createdAt": "2023-10-24",
+        "description": "米粉炒的蠻乾爽口不膩，聞起來味道重感覺有加一些咖哩(?)"
       }
     ]
   },
@@ -890,6 +908,42 @@
         "price": null,
         "createdAt": "2023-08-07",
         "description": "去骨雞腿有一點點點辣，香腸很鹹，綠色青菜也很鹹，整體普通。"
+      },
+      {
+        "id": "20231016",
+        "name": "糖醋雞+蝦捲餐",
+        "extension": "jpg",
+        "star": 3.8,
+        "price": null,
+        "createdAt": "2023-10-16",
+        "description": "糖醋雞不像一般的糖醋雞，外皮不軟爛且看起來沒淋糖醋醬(還是店家忘了?)，但味道還不錯對不愛糖醋的人很剛好。"
+      },
+      {
+        "id": "20231017",
+        "name": "脆皮雞腿+春捲餐",
+        "extension": "jpg",
+        "star": 4.5,
+        "price": null,
+        "createdAt": "2023-10-17",
+        "description": "春捲內餡味道比較重但意外的好吃! 雞腿很大根很滿足~"
+      },
+      {
+        "id": "20231018",
+        "name": "日式豬排+蘿蔔絲捲餐",
+        "extension": "jpg",
+        "star": 3.7,
+        "price": null,
+        "createdAt": "2023-10-18",
+        "description": "豬排蠻厚一塊的好吃，蘿蔔絲捲內餡超少，味道又像麻糬丸子類，個人不太喜歡。"
+      },
+      {
+        "id": "20231019",
+        "name": "照燒雞腿排餐",
+        "extension": "jpg",
+        "star": 3.5,
+        "price": null,
+        "createdAt": "2023-10-19",
+        "description": "雞腿上面的醬雖然很有味道但蠻死鹹的，飯上面的那個應該是植物肉雞塊(?)"
       }
     ]
   },
@@ -1472,6 +1526,15 @@
         "price": null,
         "createdAt": "2023-07-26",
         "description": "雞腿上灑上香草類碎片有著淡淡的香氣，咬下去時肉香伴隨香草直撲味蕾，肉質很有彈性。"
+      },
+      {
+        "id": "20231005",
+        "name": "起司手工肉餅餐",
+        "extension": "jpg",
+        "star": 3.8,
+        "price": null,
+        "createdAt": "2023-10-05",
+        "description": "肉餅吃起來蠻結實的，只是也把骨頭也包進去了，起司味道不重只有一點點。"
       }
     ]
   },
@@ -1988,6 +2051,15 @@
         "price": null,
         "createdAt": "2023-08-02",
         "description": "除了另外裝的外，便當下面也都是炒麵，味道乾巴巴沒什麼佐醬。"
+      },
+      {
+        "id": "20231025",
+        "name": "酥炸豬排日式炒麵",
+        "extension": "jpg",
+        "star": 3.7,
+        "price": null,
+        "createdAt": "2023-10-25",
+        "description": "豬排還不錯吃起來不油膩，炒麵蠻普通的很乾。"
       }
     ]
   }
