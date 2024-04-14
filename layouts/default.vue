@@ -1,32 +1,66 @@
+<script setup>
+
+import { useAppStore } from '@/store/app';
+
+const appStore = useAppStore();
+const route = useRoute();
+
+const openDrawer = ref(false);
+
+const categories = computed(() => appStore.categories)
+
+watch(() => route.path, () => {
+  openDrawer.value = false;
+});
+
+const goUp = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
 <template>
   <el-container>
-    <div id="fb-root"></div>
+    <div id="fb-root" />
     <el-header>
       <div class="container">
-        <el-button class="burger" @click="openDrawer = true">☰</el-button>
-        <el-drawer
-          title="站內導覽"
-          :visible.sync="openDrawer"
-          direction="ltr"
-          size="60%"
+        <el-button
+          class="burger"
+          @click="openDrawer = true"
         >
-          <nav class="drawer-navigation-link">
-            <NuxtLink
-              v-for="(category, key) in categories"
-              :key="key"
-              :to="{
-                name: 'article-category',
-                params: { category: category.routeName },
-              }"
-            >
-              {{ category.name }}
-            </NuxtLink>
-            <NuxtLink :to="{ name: 'plant' }">花草小徑</NuxtLink>
-            <NuxtLink :to="{ name: 'food' }">食物</NuxtLink>
-          </nav>
-        </el-drawer>
+          ☰
+        </el-button>
+        <client-only>
+          <el-drawer
+            v-model="openDrawer"
+            title="站內導覽"
+            direction="ltr"
+            size="60%"
+          >
+            <nav class="drawer-navigation-link">
+              <NuxtLink
+                v-for="(category, key) in categories"
+                :key="key"
+                :to="{
+                  name: 'article-category',
+                  params: { category: category.routeName },
+                }"
+              >
+                {{ category.name }}
+              </NuxtLink>
+              <NuxtLink :to="{ name: 'plant' }">
+                花草小徑
+              </NuxtLink>
+              <NuxtLink :to="{ name: 'food' }">
+                食物
+              </NuxtLink>
+            </nav>
+          </el-drawer>
+        </client-only>
 
-        <NuxtLink :to="{ name: 'index' }" class="brand-title">
+        <NuxtLink
+          :to="{ name: 'index' }"
+          class="brand-title"
+        >
           Chris 主頁
         </NuxtLink>
         <nav class="navigation-link">
@@ -40,55 +74,39 @@
           >
             {{ category.name }}
           </NuxtLink>
-          <NuxtLink :to="{ name: 'plant' }">花草小徑</NuxtLink>
-          <NuxtLink :to="{ name: 'food' }">食物</NuxtLink>
+          <NuxtLink :to="{ name: 'plant' }">
+            花草小徑
+          </NuxtLink>
+          <NuxtLink :to="{ name: 'food' }">
+            食物
+          </NuxtLink>
         </nav>
       </div>
     </el-header>
     <el-main>
-      <Nuxt />
+      <slot />
     </el-main>
     <el-footer>
       Copyright © 2022-{{ new Date().getFullYear() }} Chris Wang
-      <br />
+      <br>
       本網站為個人使用，參考
       <a href="https://www.facebook.com/TIPO.gov.tw/posts/1804286156280593/">
         經濟部智慧財產局
       </a>
       ，有使用到的網路圖片來源在
-      <NuxtLink :to="{ name: 'ImageOrigin' }">此連結</NuxtLink>
+      <NuxtLink :to="{ name: 'image-origin' }">
+        此連結
+      </NuxtLink>
     </el-footer>
     <button class="go-up">
-      <img src="~/assets/go-up.jpg" alt="Go Up" @click="goUp()" />
+      <img
+        src="~/assets/go-up.jpg"
+        alt="Go Up"
+        @click="goUp()"
+      >
     </button>
   </el-container>
 </template>
-
-<script>
-export default {
-  name: 'LayoutDefault',
-  data() {
-    return {
-      openDrawer: false,
-    };
-  },
-  computed: {
-    categories() {
-      return this.$store.getters.getCategories;
-    },
-  },
-  watch: {
-    $route() {
-      this.openDrawer = false;
-    },
-  },
-  methods: {
-    goUp() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    },
-  },
-};
-</script>
 
 <style>
 body {
@@ -212,6 +230,12 @@ h2 {
   border-radius: 50%;
   width: 60px;
   height: 60px;
+}
+
+.shadow-block {
+  background-color: #f9f2e9;
+  overflow-x: hidden;
+  box-shadow: 0 0.5rem 1.5rem rgb(83 88 93 / 25%);
 }
 
 @media all and (max-width: 768px) {

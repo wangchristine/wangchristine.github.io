@@ -17,7 +17,7 @@ updatedAt: '2022-09-01'
 2. Laravel
    * Composer 裝這個: `swooletw/laravel-swoole`
    * 產生套件設定檔(`swoole_http.php` and `swoole_websocket.php`):
-    ```
+    ```sh
     php artisan vendor:publish --tag=laravel-swoole
     ```
 

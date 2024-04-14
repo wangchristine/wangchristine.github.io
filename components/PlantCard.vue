@@ -1,16 +1,43 @@
+<script setup>
+const props = defineProps({
+  plant: {
+    type: Object,
+    default: () => {},
+  },
+});
+
+const getImageUrl = name => {
+  const assets = import.meta.glob('@/assets/plants/*', { eager: true, import: 'default' });
+  return assets[`/assets/plants/${name}`];
+};
+</script>
+
 <template>
-  <div v-if="Object.keys(plant).length !== 0" class="plant">
+  <div
+    v-if="Object.keys(plant).length !== 0"
+    class="plant"
+  >
     <div class="carousel-block">
-      <el-carousel trigger="click" height="200px" :interval="5000" class="carousel">
-        <el-carousel-item v-for="image in plant.images" :key="image.id">
+      <el-carousel
+        trigger="click"
+        height="200px"
+        :interval="5000"
+        class="carousel"
+      >
+        <el-carousel-item
+          v-for="image in plant.images"
+          :key="image.id"
+        >
           <el-image
             class="image"
-            :src="require(`~/assets/plants/${image.id}.${image.extension}`)"
+            :src="getImageUrl(image.id + '.' + image.extension)"
             :preview-src-list="[
-              require(`~/assets/plants/${image.id}.${image.extension}`),
+              getImageUrl(image.id + '.' + image.extension),
             ]"
             :alt="plant.name"
-          ></el-image>
+            :preview-teleported="true"
+            :hide-on-click-modal="true"
+          />
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -20,7 +47,11 @@
         {{ plant.name }}
       </h2>
       <table class="property">
-        <tr v-for="(property, key) in plant.properties" :key="property.key" :class="[{'last-odd': (plant.properties.length % 2 === 1 && key + 1 === plant.properties.length)}]">
+        <tr
+          v-for="(property, key) in plant.properties"
+          :key="property.key"
+          :class="[{'last-odd': (plant.properties.length % 2 === 1 && key + 1 === plant.properties.length)}]"
+        >
           <th>{{ property.key }}</th>
           <td>{{ property.value }}</td>
         </tr>
@@ -31,24 +62,15 @@
           :key="image.id"
           class="origin-link"
         >
-          <a :href="image.origin" target="_blank">來源{{ key + 1 }}</a>
+          <a
+            :href="image.origin"
+            target="_blank"
+          >來源{{ key + 1 }}</a>
         </span>
       </div>
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'PlantCard',
-  props: {
-    plant: {
-      type: Object,
-      default: () => {},
-    },
-  },
-};
-</script>
 
 <style scoped>
 .plant {
@@ -70,7 +92,7 @@ export default {
   height: 100%;
 }
 
-.carousel .image:deep img {
+:deep(.carousel .image img) {
   object-fit: cover;
   max-height: 200px;
 }

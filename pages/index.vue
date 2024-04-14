@@ -1,49 +1,47 @@
+<script setup></script>
+
 <template>
   <div class="content-block">
     <div class="side-block">
       <MyProfile />
     </div>
-    <div class="main-block">
-      <div class="title">作者介紹</div>
+    <div class="main-block shadow-block">
+      <div class="title">
+        作者介紹
+      </div>
       <div class="introduction">
         多年後端工程師實務經驗和前端程式開發，熟悉各項前後端周邊生態圈工具，目前也正在廣度的學習各項領域的知識。
         認為「學如逆水行舟，不進則退。」「知道的越多，才知懂得就越少。」
-        <br />
+        <br>
         擅長項目為前後端系統開發、分析、與 user 溝通，系統雲/地端架設、DevOps。
-        <br />
+        <br>
         喜歡看劇、種植、小九兒。
       </div>
 
-      <div class="title">相關連結</div>
+      <div class="title">
+        相關連結
+      </div>
       <div class="introduction">
         <span>個人 GitHub 🍌</span>
-        <br />
-        <a href="https://github.com/wangchristine"
-          ><img src="~/assets/github.png" alt="GitHub"
-        /></a>
-        <br />
+        <br>
+        <a href="https://github.com/wangchristine"><img
+          src="~/assets/github.png"
+          alt="GitHub"
+        ></a>
+        <br>
         <span>好用工具 🍌</span>
-        <br />
+        <br>
         <a href="https://wangchristine.github.io/dev-tools">Dev Tools</a>
       </div>
 
-      <img src="~/assets/minion-sketch.png" class="sketch" alt="Sketch" />
+      <img
+        src="~/assets/minion-sketch.png"
+        class="sketch"
+        alt="Sketch"
+      >
     </div>
   </div>
 </template>
-
-<script>
-import MyProfile from '@/components/MyProfile';
-export default {
-  name: 'IndexPage',
-  components: {
-    MyProfile,
-  },
-  mounted() {
-    // console.log(this);
-  },
-};
-</script>
 
 <style scoped>
 .content-block {
@@ -61,7 +59,6 @@ export default {
 .main-block {
   position: relative;
   width: 1000px;
-  background-color: #f9f2e9;
   padding: 20px 30px;
 }
 

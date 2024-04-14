@@ -1,10 +1,92 @@
+<script setup>
+import { useAppStore } from '@/store/app';
+import foodData from '@/config/food.json';
+
+const isFoodsLoading = ref(true);
+const perPage = ref(9);
+const currentPage = ref(1);
+const storeId = ref(null);
+const dialogVisible = ref(true);
+const dialogModal = ref(false);
+const clickFood = ref({});
+const commentLoading = ref(true);
+
+const appStore = useAppStore();
+
+appStore.setFoods(foodData);
+
+const foods = computed(() => {
+  return appStore.getFoods(storeId.value).slice(
+    (currentPage.value - 1) * perPage.value,
+    currentPage.value * perPage.value
+  );
+});
+const totalCountFoods = computed(() => {
+  return appStore.getFoods(storeId.value).length;
+});
+const stores = computed(() => {
+  return appStore.getStores();
+});
+
+useSeoMeta({
+  title: () => '食物 - Chris',
+  description: () => '吃吃喝喝小紀錄',
+  ogTitle: () => '食物 - Chris',
+  ogDescription: () => '吃吃喝喝小紀錄',
+});
+
+onMounted(() => {
+  dialogVisible.value = false;
+  dialogModal.value = true;
+  isFoodsLoading.value = false;
+});
+
+const setCurrentPage = (pageItem) => {
+  currentPage.value = pageItem;
+};
+
+const selectStore = (event) => {
+  currentPage.value = 1;
+  storeId.value = event.target.value;
+};
+
+const openFoodComment = (food) => {
+  clickFood.value = food;
+  dialogVisible.value = !dialogVisible.value;
+  commentLoading.value = true;
+
+  const fbComment = document.createElement('div');
+  fbComment.id = "comment-detail";
+  fbComment.className = "fb-comments";
+  fbComment.dataset.href = "https://wangchristine.github.io/food/?" + clickFood.value.id;
+  fbComment.dataset.width = "100%";
+  fbComment.dataset.num_posts = "5";
+  fbComment.dataset.lazy = "true";
+  const commentMain = document.getElementById('comment-main');
+  commentMain.appendChild(fbComment);
+
+  window.FB.XFBML.parse(commentMain, () => {
+    commentLoading.value = false;
+  });
+};
+
+const closeFoodComment = () => {
+  clickFood.value = {};
+  const commentMain = document.getElementById('comment-main');
+  const commentDetail = document.getElementById('comment-detail');
+  if (commentDetail !== null) {
+    commentMain.removeChild(commentDetail);
+  }
+};
+</script>
+
 <template>
   <div class="content-block">
     <div class="main-block">
-      <div class="category-block">
+      <div class="category-block shadow-block">
         <h2>Category: 食物</h2>
       </div>
-      <div class="search-block">
+      <div class="search-block shadow-block">
         <div class="description">
           <p>星等為依據個人喜好跟主觀判斷所評分，僅供參考。</p>
           <p>
@@ -13,84 +95,95 @@
         </div>
         <div class="search">
           <span>店家：</span>
-          <select name="store" @change="selectStore($event)">
-            <option value="null">-- 全部 --</option>
-            <option v-for="store in stores" :key="store.id" :value="store.id">
+          <select
+            name="store"
+            @change="selectStore($event)"
+          >
+            <option value="null">
+              -- 全部 --
+            </option>
+            <option
+              v-for="store in stores"
+              :key="store.id"
+              :value="store.id"
+            >
               {{ store.name }}
             </option>
           </select>
         </div>
       </div>
-      <el-skeleton :loading="isFoodsLoading" animated>
-        <template slot="template">
-          <div class="foods-block">
-            <div v-for="(item, key) in 6" :key="key" class="food">
-              <el-skeleton-item
-                variant="image"
-                style="width: 100%; height: 135px"
-              />
-              <el-skeleton-item
-                variant="h3"
-                style="width: 70%; height: 24px; margin: 1em 0"
-              />
-              <el-skeleton-item
-                variant="text"
-                style="width: 60%; height: 20px"
-              />
-              <el-skeleton-item
-                variant="text"
-                style="width: 60%; height: 20px; margin: 8px 0"
-              />
-              <el-skeleton-item
-                variant="text"
-                style="width: 100%; height: 40px"
-              />
-            </div>
+      <el-skeleton
+        :loading="isFoodsLoading"
+        animated
+        :count="6"
+        class="foods-block"
+        style="width: auto;"
+      >
+        <template v-slot:template>
+          <div class="food">
+            <el-skeleton-item
+              variant="image"
+              style="width: 100%; height: 135px"
+            />
+            <el-skeleton-item
+              variant="h3"
+              style="width: 70%; height: 24px; margin: 1em 0"
+            />
+            <el-skeleton-item
+              variant="text"
+              style="width: 60%; height: 20px"
+            />
+            <el-skeleton-item
+              variant="text"
+              style="width: 60%; height: 20px; margin: 8px 0"
+            />
+            <el-skeleton-item
+              variant="text"
+              style="width: 100%; height: 40px"
+            />
           </div>
         </template>
-        <template slot="default">
-          <!-- 這邊 style 同 <div class="foods-block">，但不確定為何無法直接吃 class -->
-          <div
-            style="
-              display: flex;
-              justify-content: space-around;
-              flex-wrap: wrap;
-              background-color: #f9f2e9;
-              padding: 20px;
-              margin-top: 20px;
-            "
-          >
+        <template v-slot:default>
+          <div class="foods-block shadow-block">
             <template v-for="(food, key) in foods">
-              <FoodCard :food="food" :key="key">
+              <FoodCard :food="food">
                 <template #action>
-                  <div style="height: 50px;"></div>
-                  <a class="comment-button" @click="openFoodComment(food)"><i class="el-icon-s-comment"></i></a>
+                  <div style="height: 50px;" />
+                  <a
+                    class="comment-button"
+                    @click="openFoodComment(food)"
+                  ><el-icon><Comment /></el-icon></a>
                 </template>
               </FoodCard>
             </template>
-          </div>
 
-          <ListPagination
-            :page-size="perPage" :current-page="currentPage" :total-count="totalCountFoods"
-            @currentChange="setCurrentPage" />
+            <ListPagination
+              :page-size="perPage"
+              :current-page="currentPage"
+              :total-count="totalCountFoods"
+              @currentChange="setCurrentPage"
+            />
+          </div>
         </template>
       </el-skeleton>
       <el-dialog
         ref="commentDialog"
+        v-model="dialogVisible"
         class="comment-dialog"
         title="留言"
-        :visible.sync="dialogVisible"
         :modal="dialogModal"
         top="10vh"
-        style="display:none;"
         @close="closeFoodComment()"
       >
         <el-container style="min-height: 50vh;">
           <el-aside>
-            <FoodCard :food="clickFood">
-            </FoodCard>
+            <FoodCard :food="clickFood" />
           </el-aside>
-          <el-main id="comment-main" v-loading="commentLoading" element-loading-background="inherit">
+          <el-main
+            id="comment-main"
+            v-loading="commentLoading"
+            element-loading-background="inherit"
+          >
             <!-- prepare for fb -->
           </el-main>
         </el-container>
@@ -100,105 +193,6 @@
     <side-bar />
   </div>
 </template>
-
-<script>
-import SideBar from '@/components/SideBar';
-import FoodCard from '@/components/FoodCard';
-import ListPagination from '@/components/ListPagination';
-
-export default {
-  name: 'FoodIndex',
-  components: {
-    SideBar,
-    FoodCard,
-    ListPagination,
-  },
-  data() {
-    return {
-      isFoodsLoading: true,
-      perPage: 9,
-      currentPage: 1,
-      storeId: null,
-      dialogVisible: true,
-      dialogModal: false,
-      clickFood: {},
-      commentLoading: true,
-    };
-  },
-
-  head() {
-    return {
-      title: "食物 - Chris",
-      meta: [
-        {
-          hid: 'og:title',
-          property: 'og:title',
-          content: "食物 - Chris",
-        },
-      ]
-    }
-  },
-  computed: {
-    foods() {
-      return this.$store.getters
-        .getFoods(this.storeId)
-        .slice(
-          (this.currentPage - 1) * this.perPage,
-          this.currentPage * this.perPage
-        );
-    },
-    totalCountFoods() {
-      return this.$store.getters.getFoods(this.storeId).length;
-    },
-    stores() {
-      return this.$store.getters.getStores;
-    },
-  },
-  mounted() {
-    this.dialogVisible = false;
-    this.dialogModal = true;
-    this.$store.dispatch('setFoods');
-    this.isFoodsLoading = false;
-  },
-  methods: {
-    setCurrentPage(pageItem) {
-      this.currentPage = pageItem;
-    },
-    selectStore(event) {
-      this.currentPage = 1;
-      this.storeId = event.target.value;
-    },
-    openFoodComment(food) {
-      this.clickFood = food;
-      this.dialogVisible = !this.dialogVisible;
-      this.commentLoading = true;
-
-      const fbComment = document.createElement('div');
-      fbComment.id = "comment-detail";
-      fbComment.className = "fb-comments";
-      fbComment.dataset.href = "https://wangchristine.github.io/food/?" + this.clickFood.id;
-      fbComment.dataset.width = "100%";
-      fbComment.dataset.num_posts = "5";
-      fbComment.dataset.lazy = "true";
-      const commentMain = document.getElementById('comment-main');
-      commentMain.appendChild(fbComment);
-
-      window.FB.XFBML.parse(commentMain, () => {
-        this.commentLoading = false;
-      });
-
-    },
-    closeFoodComment() {
-      this.clickFood = {};
-      const commentMain = document.getElementById('comment-main');
-      const commentDetail = document.getElementById('comment-detail');
-      if (commentDetail !== null) {
-        commentMain.removeChild(commentDetail);
-      }
-    },
-  },
-};
-</script>
 
 <style scoped>
 .content-block {
@@ -289,20 +283,13 @@ export default {
   animation: el-skeleton-loading 1.4s ease infinite;
 }
 
-.comment-dialog:deep .el-dialog {
+:deep(.el-overlay-dialog .comment-dialog) {
   min-width: 300px;
   width: 55%;
-}
-
-.comment-dialog:deep .el-dialog__header {
-  background-color: #f9f2e9;
-}
-
-.comment-dialog:deep .el-dialog__body {
   background-color: #fffbf0;
 }
 
-.comment-dialog:deep .el-dialog__body .el-aside {
+:deep(.comment-dialog .el-dialog__body .el-aside) {
   padding-right: 20px;
 }
 
@@ -334,13 +321,9 @@ export default {
     align-items: center;
   }
 
-  .comment-dialog:deep .el-dialog__body {
-    padding: 30px 10px;
-  }
-
-  .comment-dialog:deep .el-dialog__body .el-aside {
-    padding-right: 20px;
-    margin: 0 auto;
+  :deep(.comment-dialog .el-dialog__body .el-aside) {
+    padding: 0 10px;
+    margin: 0;
   }
 }
 </style>

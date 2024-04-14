@@ -1,3 +1,17 @@
+<script setup>
+const props = defineProps({
+  src: {
+    type: String,
+    required: true,
+  },
+  title: {
+    type: String,
+    required: true,
+  },
+});
+
+</script>
+
 <template>
   <div class="video">
     <iframe
@@ -6,25 +20,9 @@
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
-    ></iframe>
+    />
   </div>
 </template>
-
-<script>
-export default {
-  name: 'MarkdownVideo',
-  props: {
-    src: {
-      type: String,
-      required: true,
-    },
-    title: {
-      type: String,
-      required: true,
-    },
-  },
-};
-</script>
 
 <style scoped>
 .video {

@@ -16,7 +16,7 @@ Repository: 只專注於操作 Model
 
 ## 安裝套件
 在 command line 中下以下指令安裝
-```
+```sh
 $ composer require chhw/commander
 ```
 * 使用 Laravel 框架基本上這樣就安裝完畢了，除非是 5.5 以下版本還要另外設定，就到官方套件查看說明。
@@ -28,15 +28,16 @@ $ composer require chhw/commander
 ## Service
 
 在 command line 中下以下指令即可創建 `Service`
-```bash
-    $ php artisan make:service UserService
+```sh
+$ php artisan make:service UserService
 ```
+
 ## Repository
 
 在 command line 中下以下其中一個指令即可創建 `Repository`
 ```bash
-    $ php artisan make:repository UserRepository
-    $ php artisan make:repository UserRepository --model=User
+$ php artisan make:repository UserRepository
+$ php artisan make:repository UserRepository --model=User
 ```
 這兩個指令差別在於，下第二條指令可以在你已經有 `Model`，會在創建 `Repository` 時綁定所指定的 `Model` (推薦使用)。
 
