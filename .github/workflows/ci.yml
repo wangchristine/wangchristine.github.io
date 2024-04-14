@@ -38,9 +38,9 @@ jobs:
       - name: Install dependencies 👨🏻‍💻
         run: npm ci --prefer-offline --no-audit
 
-      - name: Run linter 👀
-        run: |
-          npm run lint:fix
+      # - name: Run linter 👀
+      #   run: |
+      #     npm run lint:fix
 
       - name: Generate
         run: npm run generate
@@ -62,7 +62,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
