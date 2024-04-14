@@ -1,60 +1,104 @@
+<script setup>
+import { useAppStore } from '@/store/app';
+import plantData from '@/config/plant.json';
+
+const isPlantsLoading = ref(true);
+const perPage = ref(6);
+const currentPage = ref(1);
+const searchText = ref("");
+
+const appStore = useAppStore();
+
+appStore.setPlants(plantData);
+
+const plants = computed(() => {
+  return appStore.getPlants(searchText.value)
+    .slice(
+      (currentPage.value - 1) * perPage.value,
+      currentPage.value * perPage.value
+    );
+});
+const totalCountPlants = computed(() => appStore.getPlants(searchText.value).length);
+
+useSeoMeta({
+  title: () => '花草小徑 - Chris',
+  description: () => '花草特性小筆記',
+  ogTitle: () => '花草小徑 - Chris',
+  ogDescription: () => '花草特性小筆記',
+});
+
+onMounted(() => {
+  isPlantsLoading.value = false;
+});
+
+const setCurrentPage = (pageItem) => {
+  currentPage.value = pageItem;
+};
+
+const changeSearchText = () => {
+  currentPage.value = 1;
+};
+</script>
+
 <template>
   <div class="content-block">
     <div class="main-block">
-      <div class="category-block">
+      <div class="category-block shadow-block">
         <h2>Category: 花草小徑</h2>
       </div>
-      <div class="search-block">
+      <div class="search-block shadow-block">
         <div class="description">
           <p>搜尋(包含植物名和其屬性)：</p>
-          <input type="text" placeholder="請輸入..." v-model="searchText" @input="changeSearchText">
+          <input
+            v-model="searchText"
+            type="text"
+            placeholder="請輸入..."
+            @input="changeSearchText"
+          >
         </div>
       </div>
-      <el-skeleton :loading="isPlantsLoading" animated>
-        <template slot="template">
-          <div class="plants-block">
-            <div v-for="(item, key) in 6" :key="key" class="plant">
+      <el-skeleton
+        :loading="isPlantsLoading"
+        animated
+        :count="6"
+        class="plants-block"
+        style="width: auto;"
+      >
+        <template v-slot:template>
+          <div class="plant">
+            <el-skeleton-item
+              variant="image"
+              style="flex-basis: 40%; display: flex; height: 200px"
+            />
+            <div style="flex-basis: 60%; margin-left: 10px">
               <el-skeleton-item
-                variant="image"
-                style="flex-basis: 40%; display: flex; height: 200px"
+                variant="p"
+                style="width: 40%; height: 24px; margin: 1em 0"
               />
-              <div style="flex-basis: 60%; margin-left: 10px">
-                <el-skeleton-item
-                  variant="h2"
-                  style="width: 40%; height: 24px; margin: 1em 0"
-                />
-                <el-skeleton-item
-                  variant="rect"
-                  style="width: 100%; height: 100px"
-                />
-              </div>
+              <el-skeleton-item
+                variant="rect"
+                style="width: 100%; height: 100px"
+              />
             </div>
           </div>
         </template>
-        <template slot="default">
-          <!-- 這邊 style 同 <div class="plants-block">，但不確定為何無法直接吃 class -->
-          <div
-            style="
-              display: flex;
-              flex-direction: column;
-              background-color: #f9f2e9;
-              padding: 20px;
-              margin-top: 20px;
-            "
-          >
+        <template v-slot:default>
+          <div class="plants-block shadow-block">
             <template v-for="(plant, key) in plants">
-              <PlantCard :plant="plant" :key="key"></PlantCard>
+              <PlantCard :plant="plant" />
             </template>
-            <h4 v-if="totalCountPlants === 0">查無結果，換個關鍵字吧！</h4>
-          </div>
+            <h4 v-if="totalCountPlants === 0" class="no-result">
+              查無結果，換個關鍵字吧！
+            </h4>
 
-          <ListPagination
-            v-if="totalCountPlants !== 0"
-            :page-size="perPage"
-            :current-page="currentPage"
-            :total-count="totalCountPlants"
-            @currentChange="setCurrentPage"
-          />
+            <ListPagination
+              v-if="totalCountPlants !== 0"
+              :page-size="perPage"
+              :current-page="currentPage"
+              :total-count="totalCountPlants"
+              @currentChange="setCurrentPage"
+            />
+          </div>
         </template>
       </el-skeleton>
     </div>
@@ -62,67 +106,6 @@
     <side-bar />
   </div>
 </template>
-
-<script>
-import SideBar from '@/components/SideBar';
-import PlantCard from '@/components/PlantCard';
-import ListPagination from '@/components/ListPagination';
-
-export default {
-  name: 'PlantIndex',
-  components: {
-    SideBar,
-    PlantCard,
-    ListPagination,
-  },
-  data() {
-    return {
-      isPlantsLoading: true,
-      perPage: 6,
-      currentPage: 1,
-      searchText: "",
-    };
-  },
-
-  head() {
-    return {
-      title: '花草小徑 - Chris',
-      meta: [
-        {
-          hid: 'og:title',
-          property: 'og:title',
-          content: '花草小徑 - Chris',
-        },
-      ],
-    };
-  },
-  computed: {
-    plants() {
-      return this.$store.getters
-        .getPlants(this.searchText)
-        .slice(
-          (this.currentPage - 1) * this.perPage,
-          this.currentPage * this.perPage
-        );
-    },
-    totalCountPlants() {
-      return this.$store.getters.getPlants(this.searchText).length;
-    },
-  },
-  mounted() {
-    this.$store.dispatch('setPlants');
-    this.isPlantsLoading = false;
-  },
-  methods: {
-    setCurrentPage(pageItem) {
-      this.currentPage = pageItem;
-    },
-    changeSearchText() {
-      this.currentPage = 1;
-    },
-  },
-};
-</script>
 
 <style scoped>
 .content-block {
@@ -164,18 +147,19 @@ export default {
   display: flex;
   flex-direction: column;
   background-color: #f9f2e9;
-  padding: 20px;
   margin-top: 20px;
+}
+
+.plants-block .no-result {
+  padding: 0 20px;
 }
 
 .plant {
   position: relative;
   display: flex;
-  margin: 10px 0;
   padding: 20px;
-  box-shadow: 2px 2px 10px -1px rgb(0 0 0 / 30%);
-  background-color: #f7eade;
   min-width: 180px;
+  border-bottom: 1px solid rgb(0 0 0 / 30%);
 }
 
 .el-skeleton.is-animated .el-skeleton__item {

@@ -8,35 +8,35 @@ updatedAt: '2022-12-05'
 
 Alpine 是一個輕量級的 Linux 發行版本，同時提供包管理工具 `apk`，以下介紹 `apk` 相關操作指令，以 `curl` 套件為例:
 ## 更新鏡像源
-```
+```sh
 apk update
 ```
 
 ## 升級系統已安裝套件包
-```
+```sh
 apk upgrade
 ```
 
 ## 搜尋可用套件
 1. 使用指令查找:
-```
+```sh
 apk search curl
 ```
 2. 或是從官網查找在 Alpine 不同版本下有支援的套件與版本:
    [https://pkgs.alpinelinux.org/packages](https://pkgs.alpinelinux.org/packages)
 
 ## 安裝套件
-```
+```sh
 apk add curl
 ```
 
 ## 刪除套件
-```
+```sh
 apk del curl
 ```
 
 ## 列出所有已安裝套件與版本
-```
+```sh
 apk list -I
 ```
 
@@ -52,14 +52,14 @@ apk list -I
 
 3. 指令安裝套件
 ```bash
-    wget https://curl.se/download/curl-7.85.0.tar.gz && \
-    tar -xvf curl-7.85.0.tar.gz && cd curl-7.85.0 && \
-    ./configure --with-openssl && make && make install; \
-    cd ../ && rm -rf curl-7.85.0*; \
+wget https://curl.se/download/curl-7.85.0.tar.gz && \
+tar -xvf curl-7.85.0.tar.gz && cd curl-7.85.0 && \
+./configure --with-openssl && make && make install; \
+cd ../ && rm -rf curl-7.85.0*; \
 ```
 
 4. 驗證安裝版本為 `7.85.0`
-```
+```sh
 curl --version
 ```
 這樣就完成了安裝特定版本了。

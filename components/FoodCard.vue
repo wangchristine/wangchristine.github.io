@@ -1,49 +1,63 @@
+<script setup>
+const props = defineProps({
+  food: {
+    type: Object,
+    default: () => {},
+  },
+});
+
+const getImageUrl = name => {
+  const assets = import.meta.glob('@/assets/foods/*', { eager: true, import: 'default' });
+  return assets[`/assets/foods/${name}`];
+};
+</script>
+
 <template>
-  <div v-if="Object.keys(food).length !== 0" class="food">
-    <div class="star-number-bg"></div>
+  <div
+    v-if="Object.keys(food).length !== 0"
+    class="food"
+  >
+    <div class="star-number-bg" />
     <div class="star-block">
       <el-rate
+        v-model="food.star"
         class="star-rate"
         disabled
-        :value="food.star"
         :colors="['#ff8100', '#ff8100', '#ff8100']"
         disabled-void-color="#bfb5b3"
         :score-template="food.star.toString()"
-      >
-      </el-rate>
+      />
       <span class="star-number">{{ food.star.toFixed(1) }}</span>
     </div>
     <el-image
       class="image"
-      :src="require(`~/assets/foods/${food.id}.${food.extension}`)"
+      :src="getImageUrl(food.id + '.' + food.extension)"
       :preview-src-list="[
-        require(`~/assets/foods/${food.id}.${food.extension}`),
+        getImageUrl(food.id + '.' + food.extension),
       ]"
       :alt="food.name"
-    >
-    </el-image>
+      :preview-teleported="true"
+      :hide-on-click-modal="true"
+    />
     <h3 class="name">
       {{ food.name }}
-      <span v-if="food.price" class="price">${{ food.price }}</span>
+      <span
+        v-if="food.price"
+        class="price"
+      >${{ food.price }}</span>
     </h3>
-    <h4 class="store-name">{{ food.storeName }}</h4>
-    <h4 class="created-at">{{ food.createdAt }}</h4>
-    <p class="description">{{ food.description }}</p>
-    <slot name="action"></slot>
+    <h4 class="store-name">
+      {{ food.storeName }}
+    </h4>
+    <h4 class="created-at">
+      {{ food.createdAt }}
+    </h4>
+    <p class="description">
+      {{ food.description }}
+    </p>
+    <slot name="action" />
   </div>
 </template>
-
-<script>
-export default {
-  name: 'FoodCard',
-  props: {
-    food: {
-      type: Object,
-      default: () => {},
-    },
-  },
-};
-</script>
 
 <style scoped>
 .food {
@@ -52,9 +66,10 @@ export default {
 
 .food .image {
   width: 100%;
+  margin-top: 2px;
 }
 
-.image:deep img {
+:deep(.image img) {
   object-fit: cover;
   max-height: 135px;
 }

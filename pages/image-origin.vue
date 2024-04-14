@@ -1,7 +1,11 @@
+<script setup></script>
+
 <template>
-  <div class="content-block">
+  <div class="content-block shadow-block">
     <div class="main-block">
-      <div class="title">圖片來源</div>
+      <div class="title">
+        圖片來源
+      </div>
       <div class="detail">
         有經過工具原圖壓縮圖片檔案大小再放置網頁上。
         <ol>
@@ -56,12 +60,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'ImageOrigin',
-};
-</script>
 
 <style scoped>
 .content-block {

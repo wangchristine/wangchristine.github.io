@@ -1,17 +1,21 @@
+<script setup>
+const articlesByLatestFive = await queryContent().sort({ updatedAt: -1 }).limit(5).find();
+
+</script>
+
 <template>
   <div class="side-block">
     <MyProfile />
-    <div class="latest-block">
-      <div class="title">近期文章</div>
+    <div class="latest-block shadow-block">
+      <div class="title">
+        近期文章
+      </div>
       <div class="list">
         <NuxtLink
           v-for="article in articlesByLatestFive"
           :key="article.title"
           class="article"
-          :to="{
-            name: 'article-category-slug',
-            params: { category: article.category, slug: article.slug },
-          }"
+          :to="article._path"
         >
           <span>[{{ new Date(article.updatedAt).toLocaleDateString() }}]</span>
           {{ article.title }}
@@ -19,28 +23,19 @@
       </div>
     </div>
     <div class="aquarium">
-      <img class="fish1" src="~/assets/fish.gif" alt="fish" />
-      <img class="fish2" src="~/assets/fish.gif" alt="fish" />
+      <img
+        class="fish1"
+        src="~/assets/fish.gif"
+        alt="fish"
+      >
+      <img
+        class="fish2"
+        src="~/assets/fish.gif"
+        alt="fish"
+      >
     </div>
   </div>
 </template>
-
-<script>
-import MyProfile from '@/components/MyProfile';
-export default {
-  name: 'SideBar',
-  components: {
-    MyProfile,
-  },
-  computed: {
-    articlesByLatestFive() {
-      return this.$store.getters
-        .getArticles('')
-        .slice(0, 5);
-    },
-  },
-};
-</script>
 
 <style scoped>
 .side-block {
@@ -50,26 +45,25 @@ export default {
 }
 
 .latest-block {
-  background-color: #f9f2e9;
   margin-top: 20px;
 }
 .latest-block .title {
   font-size: 18px;
-  padding: 6px 10px;
+  padding: 8px 10px;
   background-color: #983a2a;
   color: #fff;
 }
 
 .latest-block .list {
-  padding: 20px;
+  padding: 12px 20px 20px 20px;
 }
 
 .latest-block .article {
   display: block;
   text-decoration: none;
-  padding: 6px;
-  color: #9f3448;
-  border-bottom: dashed 1px;
+  padding: 8px;
+  color: #333;
+  border-bottom: solid 1px #943d24;
   text-align: left;
 }
 

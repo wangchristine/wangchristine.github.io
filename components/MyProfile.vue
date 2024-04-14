@@ -1,11 +1,18 @@
+<script setup>
+</script>
+
 <template>
   <div>
-    <div class="profile">
-      <img src="~/assets/avatar.png" class="avatar" alt="My Avatar" />
+    <div class="profile shadow-block">
+      <img
+        src="~/assets/avatar.png"
+        class="avatar"
+        alt="My Avatar"
+      >
       <h1>Chris Wang</h1>
       <p>Keep Learning, and Keep Coding.</p>
     </div>
-    <div class="introduction">
+    <div class="introduction shadow-block">
       <p>
         草木園丁兼全端工程師 • 期許自己每天多懂一點新知識 • 莫欺少年窮
       </p>
@@ -13,20 +20,12 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'MyProfile',
-};
-</script>
-
 <style scoped>
 .profile {
-  background-color: #f9f2e9;
   padding: 20px;
 }
 
 .introduction {
-  background-color: #f9f2e9;
   padding: 20px;
   margin-top: 20px;
 }

@@ -13,17 +13,24 @@
   line-height: 40px;
 }
 
-.nuxt-content :not(pre) > code,
-.nuxt-content pre[class*='language-'] {
+.nuxt-content :not(pre) > code {
   font-size: 16px;
-  background: #efe2d9;
-  text-shadow: none;
+  background: #ecd9cc;
   letter-spacing: 0;
+  padding: 4px 6px;
+  border-radius: 6px;
+  color: #943d24;
 }
 
-.nuxt-content :not(pre) > code {
-  padding: 4px;
-  color: #c1622b;
+.nuxt-content pre {
+  margin: 0.5em 0;
+  overflow: auto;
+  letter-spacing: 0;
+  padding: 1em;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #1e293b;
+  color: #fff;
 }
 
 .nuxt-content table {
@@ -35,11 +42,11 @@
 .nuxt-content table th,
 .nuxt-content table td {
   padding: 6px 13px;
-  border: 1px solid #c77a7a;
+  border: 1px solid #943d24;
 }
 
 .nuxt-content b {
-  background-color: #c9989a;
+  background-color: #c89fa1;
 }
 
 .nuxt-content .token.operator {
@@ -50,8 +57,14 @@
   color: #d98b00;
 }
 
-.nuxt-content a {
-  color: #9f3448;
+.nuxt-content :is(h1,h2,h3,h4,h5,h6) > a {
+  color: #464646;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.nuxt-content :not(h1,h2,h3,h4,h5,h6) a {
+  color: #943d24;
 }
 
 .nuxt-content p a {

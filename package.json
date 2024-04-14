@@ -1,36 +1,29 @@
 {
   "name": "wangchristine.github.io",
-  "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore . --ignore-pattern \"*.md\"",
-    "lint:prettier": "prettier --check .",
-    "lint": "npm run lint:js && npm run lint:prettier",
-    "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix"
-  },
-  "dependencies": {
-    "@nuxt/content": "^1.15.1",
-    "core-js": "^3.29.1",
-    "element-ui": "^2.15.13",
-    "nuxt": "^2.16.3",
-    "vue": "^2.7.14",
-    "vue-gtag": "^1.16.1",
-    "vue-server-renderer": "^2.7.14",
-    "vue-template-compiler": "^2.7.14",
-    "webpack": "^4.46.0"
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.21.3",
-    "@nuxtjs/eslint-config": "^8.0.0",
-    "@nuxtjs/eslint-module": "^3.1.0",
-    "eslint": "^8.36.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-nuxt": "^3.2.0",
-    "eslint-plugin-vue": "^8.7.1",
-    "prettier": "^2.8.6"
+    "@nuxt/eslint-config": "^0.3.5",
+    "@pinia/nuxt": "^0.5.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.24.1",
+    "nuxt": "^3.10.0",
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@nuxt/content": "^2.12.0",
+    "element-plus": "^2.5.5",
+    "pinia": "^2.1.7",
+    "vue-gtag": "^2.0.1"
   }
 }

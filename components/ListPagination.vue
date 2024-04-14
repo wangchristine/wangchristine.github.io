@@ -1,3 +1,28 @@
+<script setup>
+
+const props = defineProps({
+  pageSize: {
+    type: Number,
+    required: true,
+  },
+  currentPage: {
+    type: Number,
+    required: true,
+  },
+  totalCount: {
+    type: Number,
+    required: true,
+  },
+});
+
+const emit = defineEmits(['currentChange']);
+
+const currentChange = (pageItem) => {
+  emit('currentChange', pageItem);
+};
+
+</script>
+
 <template>
   <div class="paginate">
     <el-pagination
@@ -8,48 +33,22 @@
       :current-page="currentPage"
       :total="totalCount"
       @current-change="currentChange"
-    >
-    </el-pagination>
+    />
   </div>
 </template>
-
-<script>
-export default {
-  name: "ListPagination",
-  props: {
-    pageSize: {
-      type: Number,
-      required: true,
-    },
-    currentPage: {
-      type: Number,
-      required: true,
-    },
-    totalCount: {
-      type: Number,
-      required: true,
-    }
-  },
-  methods: {
-    currentChange(pageItem) {
-      this.$emit("currentChange", pageItem);
-    },
-  },
-}
-</script>
 
 <style scoped>
 .paginate {
   text-align: center;
-  padding: 15px 25px 25px 25px;
+  padding: 25px;
   background-color: #f9f2e9;
 }
 
-.list-pagination:deep {
-  overflow-x: auto;
+.list-pagination {
+  justify-content: center;
 }
 
-.list-pagination:deep button {
+:deep(.list-pagination button) {
   padding: 10px;
   margin: 5px;
   color: #9f3448 !important;
@@ -57,7 +56,7 @@ export default {
   height: 40px;
 }
 
-.list-pagination:deep li {
+:deep(.list-pagination li) {
   padding: 10px;
   margin: 5px;
   color: #9f3448 !important;
@@ -68,7 +67,7 @@ export default {
   line-height: initial;
 }
 
-.list-pagination:deep li.active {
+:deep(.list-pagination li.is-active) {
   background-color: #e7ccba !important;
 }
 </style>
