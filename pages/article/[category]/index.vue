@@ -25,7 +25,7 @@ const category = computed(() => {
 });
 const page = computed(() => parseInt(route.query.page) || 1);
 
-const { data: articlesByCategory } = await useAsyncData('article', () => 
+const { data: articlesByCategory } = await useAsyncData('article-' + category.value.routeName, () => 
   queryContent('article', category.value.routeName).sort({ updatedAt: -1 }).find()
 );
 const articles = computed(() => articlesByCategory.value?.slice((page.value - 1) * perPage.value, page.value * perPage.value));
