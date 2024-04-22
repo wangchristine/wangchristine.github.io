@@ -54,4 +54,9 @@ export default defineNuxtConfig({
       langs: ['json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'mdc', 'md', 'yaml', 'php', 'docker'],
     },
   },
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
+    },
+  },
 })
