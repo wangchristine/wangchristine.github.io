@@ -1,3 +1,6 @@
+import { glob } from 'glob';
+import path from 'path';
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: true,
@@ -56,7 +59,25 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
+      crawlLinks: true,
       routes: ['/sitemap.xml']
     },
+  },
+  hooks: {
+    async 'nitro:config'(nitroConfig) {
+      const contentDirectory = path.join(__dirname, 'content');
+      const allFiles = glob.sync(`${contentDirectory}/**/*.md`, { nodir: true });
+      // console.log(allFiles);
+
+      const contentPath = allFiles.map(fileName => {
+        const relativePath = path.relative(path.join(contentDirectory, 'content'), fileName);
+        return relativePath.replace(/^\.\./g, '').replace(/\\/g, '/').replace(/\.md$/, '');
+      });
+
+      for (const path of contentPath) {
+        nitroConfig.prerender.routes.push(path);
+      }
+
+    }
   },
 })
