@@ -23,6 +23,7 @@
   "dependencies": {
     "@nuxt/content": "^2.12.0",
     "element-plus": "^2.5.5",
+    "glob": "^10.3.12",
     "pinia": "^2.1.7",
     "sitemap": "^7.1.1",
     "vue-gtag": "^2.0.1"
