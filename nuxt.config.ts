@@ -64,6 +64,21 @@ export default defineNuxtConfig({
     },
   },
   hooks: {
+    'pages:extend'(pages) {
+
+      pages.push({
+        name: 'article-category-page',
+        path: '/article/:category/:page(\\d+)',
+        file: '~/pages/article/[category]/[page]/index.vue'
+      })
+
+      pages.push({
+        name: 'article-category-slug',
+        path: '/article/:category/:slug',
+        file: '~/pages/article/[category]/[slug].vue'
+      })
+
+    },
     async 'nitro:config'(nitroConfig) {
       const contentDirectory = path.join(__dirname, 'content');
       const allFiles = glob.sync(`${contentDirectory}/**/*.md`, { nodir: true });
@@ -77,6 +92,20 @@ export default defineNuxtConfig({
       for (const path of contentPath) {
         nitroConfig.prerender.routes.push(path);
       }
+
+      const group = contentPath.reduce((acc, path) => {
+        const category = path.split('/')[2];
+        acc[category] = (acc[category] || 0) + 1;
+        return acc;
+      }, {});
+
+      Object.entries(group).forEach(([name, count]) => {
+        const pages = Math.ceil(count / 9);
+        
+        for(let i = 2; i <= pages; i++) {
+            nitroConfig.prerender.routes.push('/article/' + name + '/' + i);
+        }
+      })
 
     }
   },

@@ -41,8 +41,8 @@ const goUp = () => {
                 v-for="(category, key) in categories"
                 :key="key"
                 :to="{
-                  name: 'article-category',
-                  params: { category: category.routeName },
+                  name: 'article-category-page',
+                  params: { category: category.routeName, page: 1 },
                 }"
               >
                 {{ category.name }}
@@ -68,8 +68,8 @@ const goUp = () => {
             v-for="(category, key) in categories"
             :key="key"
             :to="{
-              name: 'article-category',
-              params: { category: category.routeName },
+              name: 'article-category-page',
+              params: { category: category.routeName, page: 1 },
             }"
           >
             {{ category.name }}
