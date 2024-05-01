@@ -61,7 +61,7 @@ const changeSearchText = () => {
         :loading="isPlantsLoading"
         animated
         :count="6"
-        class="plants-block"
+        class="plants-block shadow-block detail-block"
         style="width: auto;"
       >
         <template v-slot:template>
@@ -84,12 +84,14 @@ const changeSearchText = () => {
         </template>
         <template v-slot:default>
           <div class="plants-block shadow-block">
-            <template v-for="(plant, key) in plants">
-              <PlantCard :plant="plant" />
-            </template>
-            <h4 v-if="totalCountPlants === 0" class="no-result">
-              查無結果，換個關鍵字吧！
-            </h4>
+            <div class="detail-block">
+              <template v-for="(plant, key) in plants">
+                <PlantCard :plant="plant" />
+              </template>
+              <h4 v-if="totalCountPlants === 0" class="no-result">
+                查無結果，換個關鍵字吧！
+              </h4>
+            </div>
 
             <ListPagination
               v-if="totalCountPlants !== 0"
@@ -144,10 +146,12 @@ const changeSearchText = () => {
 }
 
 .plants-block {
+  margin-top: 20px;
+}
+
+.detail-block {
   display: flex;
   flex-direction: column;
-  background-color: #f9f2e9;
-  margin-top: 20px;
 }
 
 .plants-block .no-result {
