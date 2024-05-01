@@ -1571,6 +1571,42 @@
         "price": null,
         "createdAt": "2023-12-06",
         "description": "不只雞有麻油，連飯也淋上香氣四溢的麻油，因為飯裡面也有好幾個小的薑塊所以味道很重，非常好吃~。"
+      },
+      {
+        "id": "20240219",
+        "name": "鮭魚炒飯+柳葉魚",
+        "extension": "jpg",
+        "star": 4.0,
+        "price": null,
+        "createdAt": "2024-02-19",
+        "description": "炒飯有點濕黏感味道還不錯，柳葉魚的話感覺炸不久就拿起來了，顏色偏白沒有酥炸感。"
+      },
+      {
+        "id": "20240220",
+        "name": "韓式雞丁",
+        "extension": "jpg",
+        "star": 3.9,
+        "price": null,
+        "createdAt": "2024-02-20",
+        "description": "一點點點辣，整體還不錯。"
+      },
+      {
+        "id": "20240221",
+        "name": "起司手工肉餅+玉米筍",
+        "extension": "jpg",
+        "star": 4.0,
+        "price": null,
+        "createdAt": "2024-02-21",
+        "description": "還不錯，份量很足。"
+      },
+      {
+        "id": "20240222",
+        "name": "地中海香料烤魚+川耳",
+        "extension": "jpg",
+        "star": 4.1,
+        "price": null,
+        "createdAt": "2024-02-22",
+        "description": "好吃，沒什麼魚刺。"
       }
     ]
   },
