@@ -57,23 +57,25 @@ const setCurrentPage = (pageItem) => {
         <h2>Category: {{ category.name }}</h2>
       </div>
       <div class="articles-block shadow-block">
-        <ContentNavigation>
-          <div
-            v-for="article in articles"
-            :key="article._path"
-            class="article"
-          >
-            <NuxtLink :to="article._path">
-              <div class="title">
-                {{ article.title }}
-                <span class="updated-at">更新於 {{ new Date(article.updatedAt).toLocaleDateString() }}</span>
-              </div>
-              <div class="description">
-                {{ article.description.slice(0, 80) }} ......
-              </div>
-            </NuxtLink>
-          </div>
-        </ContentNavigation>
+        <div class="detail-block">
+          <ContentNavigation>
+            <div
+              v-for="article in articles"
+              :key="article._path"
+              class="article"
+            >
+              <NuxtLink :to="article._path">
+                <div class="title">
+                  {{ article.title }}
+                  <span class="updated-at">更新於 {{ new Date(article.updatedAt).toLocaleDateString() }}</span>
+                </div>
+                <div class="description">
+                  {{ article.description.slice(0, 80) }} ......
+                </div>
+              </NuxtLink>
+            </div>
+          </ContentNavigation>
+        </div>
 
         <ListPagination
           v-if="articlesByCategory && articlesByCategory.length !== 0"

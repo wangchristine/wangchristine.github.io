@@ -116,7 +116,7 @@ const closeFoodComment = () => {
         :loading="isFoodsLoading"
         animated
         :count="6"
-        class="foods-block"
+        class="foods-block shadow-block detail-block"
         style="width: auto;"
       >
         <template v-slot:template>
@@ -145,17 +145,19 @@ const closeFoodComment = () => {
         </template>
         <template v-slot:default>
           <div class="foods-block shadow-block">
-            <template v-for="(food, key) in foods">
-              <FoodCard :food="food">
-                <template #action>
-                  <div style="height: 50px;" />
-                  <a
-                    class="comment-button"
-                    @click="openFoodComment(food)"
-                  ><el-icon><Comment /></el-icon></a>
-                </template>
-              </FoodCard>
-            </template>
+            <div class="detail-block">
+              <template v-for="(food, key) in foods">
+                <FoodCard :food="food">
+                  <template #action>
+                    <div style="height: 50px;" />
+                    <a
+                      class="comment-button"
+                      @click="openFoodComment(food)"
+                    ><el-icon><Comment /></el-icon></a>
+                  </template>
+                </FoodCard>
+              </template>
+            </div>
 
             <ListPagination
               :page-size="perPage"
@@ -235,12 +237,14 @@ const closeFoodComment = () => {
 }
 
 .foods-block {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.detail-block {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-color: #f9f2e9;
-  padding: 20px;
-  margin-top: 20px;
 }
 
 .food {
