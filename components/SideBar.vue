@@ -49,7 +49,7 @@ const articlesByLatestFive = await queryContent().sort({ updatedAt: -1 }).limit(
 }
 .latest-block .title {
   font-size: 18px;
-  padding: 8px 10px;
+  padding: 10px;
   background-color: #983a2a;
   color: #fff;
 }

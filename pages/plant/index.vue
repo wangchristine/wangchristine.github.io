@@ -44,7 +44,7 @@ const changeSearchText = () => {
   <div class="content-block">
     <div class="main-block">
       <div class="category-block shadow-block">
-        <h2>Category: 花草小徑</h2>
+        <h2>花草小徑</h2>
       </div>
       <div class="search-block shadow-block">
         <div class="description">

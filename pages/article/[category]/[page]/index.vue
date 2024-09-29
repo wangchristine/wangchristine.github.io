@@ -54,7 +54,7 @@ const setCurrentPage = (pageItem) => {
   <div class="content-block">
     <div class="main-block">
       <div class="category-block shadow-block">
-        <h2>Category: {{ category.name }}</h2>
+        <h2>{{ category.name }}</h2>
       </div>
       <div class="articles-block shadow-block">
         <div class="detail-block">

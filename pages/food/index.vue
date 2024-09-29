@@ -84,7 +84,7 @@ const closeFoodComment = () => {
   <div class="content-block">
     <div class="main-block">
       <div class="category-block shadow-block">
-        <h2>Category: 食物</h2>
+        <h2>食物</h2>
       </div>
       <div class="search-block shadow-block">
         <div class="description">
