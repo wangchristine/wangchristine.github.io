@@ -1,5 +1,4 @@
 <script setup>
-
 const props = defineProps({
   pageSize: {
     type: Number,
@@ -15,12 +14,11 @@ const props = defineProps({
   },
 });
 
-const emit = defineEmits(['currentChange']);
+const emit = defineEmits(["currentChange"]);
 
 const currentChange = (pageItem) => {
-  emit('currentChange', pageItem);
+  emit("currentChange", pageItem);
 };
-
 </script>
 
 <template>

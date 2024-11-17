@@ -1,38 +1,22 @@
 <script setup>
 const articlesByLatestFive = await queryContent().sort({ updatedAt: -1 }).limit(5).find();
-
 </script>
 
 <template>
   <div class="side-block">
     <MyProfile />
     <div class="latest-block shadow-block">
-      <div class="title">
-        近期文章
-      </div>
+      <div class="title">近期文章</div>
       <div class="list">
-        <NuxtLink
-          v-for="article in articlesByLatestFive"
-          :key="article.title"
-          class="article"
-          :to="article._path"
-        >
+        <NuxtLink v-for="article in articlesByLatestFive" :key="article.title" class="article" :to="article._path">
           <span>[{{ new Date(article.updatedAt).toLocaleDateString() }}]</span>
           {{ article.title }}
         </NuxtLink>
       </div>
     </div>
     <div class="aquarium">
-      <img
-        class="fish1"
-        src="~/assets/fish.gif"
-        alt="fish"
-      >
-      <img
-        class="fish2"
-        src="~/assets/fish.gif"
-        alt="fish"
-      >
+      <img class="fish1" src="~/assets/fish.gif" alt="fish" />
+      <img class="fish2" src="~/assets/fish.gif" alt="fish" />
     </div>
   </div>
 </template>
@@ -76,7 +60,7 @@ const articlesByLatestFive = await queryContent().sort({ updatedAt: -1 }).limit(
   background-color: #a0bed5;
   margin-top: 20px;
   height: 200px;
-  background-image: url('~/assets/aquarium.jpg');
+  background-image: url("~/assets/aquarium.jpg");
   background-size: cover;
   overflow: hidden;
 }

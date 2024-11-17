@@ -1,6 +1,6 @@
-import { defineStore } from 'pinia';
+import { defineStore } from "pinia";
 
-export const useAppStore = defineStore('app', () => {
+export const useAppStore = defineStore("app", () => {
   const categories = ref([]);
   const foods = ref([]);
   const plants = ref([]);
@@ -17,10 +17,8 @@ export const useAppStore = defineStore('app', () => {
 
   const getFoods = (storeId) => {
     let filterFoods = foods.value;
-    if (storeId !== null && storeId !== 'null') {
-      filterFoods = foods.value.filter(
-        (store) => store.id === parseInt(storeId)
-      );
+    if (storeId !== null && storeId !== "null") {
+      filterFoods = foods.value.filter((store) => store.id === parseInt(storeId));
     }
     return filterFoods
       .map((store) => {
@@ -47,15 +45,12 @@ export const useAppStore = defineStore('app', () => {
 
   const getPlants = (searchText) => {
     let filterPlants = plants.value;
-    if (searchText !== '') {
+    if (searchText !== "") {
       filterPlants = plants.value.filter((plant) => {
         return (
           plant.name.includes(searchText) ||
           plant.properties.filter((property) => {
-            return (
-              property.key.includes(searchText) ||
-              property.value.includes(searchText)
-            );
+            return property.key.includes(searchText) || property.value.includes(searchText);
           }).length !== 0
         );
       });

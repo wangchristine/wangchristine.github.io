@@ -1,48 +1,27 @@
 <script setup>
-
 const notFoundRedirect = () => {
-  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+  throw createError({ statusCode: 404, statusMessage: "Page not found", fatal: true });
 };
-
 </script>
 
 <template>
   <div class="content-block">
-    <ContentDoc :head="false">  
+    <ContentDoc :head="false">
       <template #default="{ doc }">
         <Head>
           <Title>{{ doc.title }} - Chris</Title>
-          <Meta
-            name="description"
-            :content="doc.description"
-          />
-          <Meta
-            property="og:title"
-            :content="doc.title + ' - Chris'"
-          />
-          <Meta
-            property="og:description"
-            :content="doc.description"
-          />
+          <Meta name="description" :content="doc.description" />
+          <Meta property="og:title" :content="doc.title + ' - Chris'" />
+          <Meta property="og:description" :content="doc.description" />
         </Head>
 
-        <div :class="['anchor-block', 'shadow-block', {'anchor-block-hidden': doc.body.toc.links.length === 0}]">
-          <div class="title">
-            目錄
-          </div>
+        <div :class="['anchor-block', 'shadow-block', { 'anchor-block-hidden': doc.body.toc.links.length === 0 }]">
+          <div class="title">目錄</div>
           <ul>
-            <li
-              v-for="toc in doc.body.toc.links"
-              :key="toc.id"
-              :class="'depth-' + toc.depth"
-            >
+            <li v-for="toc in doc.body.toc.links" :key="toc.id" :class="'depth-' + toc.depth">
               <a :href="'#' + toc.id">{{ toc.text }}</a>
               <ul>
-                <li
-                  v-for="childToc in toc.children"
-                  :key="childToc.id"
-                  :class="'depth-' + childToc.depth"
-                >
+                <li v-for="childToc in toc.children" :key="childToc.id" :class="'depth-' + childToc.depth">
                   <a :href="'#' + childToc.id">{{ childToc.text }}</a>
                 </li>
               </ul>
@@ -57,10 +36,7 @@ const notFoundRedirect = () => {
               {{ new Date(doc.updatedAt).toLocaleDateString() }}
             </div>
           </div>
-          <ContentRenderer
-            :value="doc"
-            class="nuxt-content"
-          />        
+          <ContentRenderer :value="doc" class="nuxt-content" />
         </div>
       </template>
       <template #not-found>

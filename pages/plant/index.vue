@@ -1,6 +1,6 @@
 <script setup>
-import { useAppStore } from '@/store/app';
-import plantData from '@/config/plant.json';
+import { useAppStore } from "@/store/app";
+import plantData from "@/config/plant.json";
 
 const isPlantsLoading = ref(true);
 const perPage = ref(6);
@@ -12,19 +12,17 @@ const appStore = useAppStore();
 appStore.setPlants(plantData);
 
 const plants = computed(() => {
-  return appStore.getPlants(searchText.value)
-    .slice(
-      (currentPage.value - 1) * perPage.value,
-      currentPage.value * perPage.value
-    );
+  return appStore
+    .getPlants(searchText.value)
+    .slice((currentPage.value - 1) * perPage.value, currentPage.value * perPage.value);
 });
 const totalCountPlants = computed(() => appStore.getPlants(searchText.value).length);
 
 useSeoMeta({
-  title: () => '花草小徑 - Chris',
-  description: () => '花草特性小筆記',
-  ogTitle: () => '花草小徑 - Chris',
-  ogDescription: () => '花草特性小筆記',
+  title: () => "花草小徑 - Chris",
+  description: () => "花草特性小筆記",
+  ogTitle: () => "花草小徑 - Chris",
+  ogDescription: () => "花草特性小筆記",
 });
 
 onMounted(() => {
@@ -49,12 +47,7 @@ const changeSearchText = () => {
       <div class="search-block shadow-block">
         <div class="description">
           <p>搜尋(包含植物名和其屬性)：</p>
-          <input
-            v-model="searchText"
-            type="text"
-            placeholder="請輸入..."
-            @input="changeSearchText"
-          >
+          <input v-model="searchText" type="text" placeholder="請輸入..." @input="changeSearchText" />
         </div>
       </div>
       <el-skeleton
@@ -62,23 +55,14 @@ const changeSearchText = () => {
         animated
         :count="6"
         class="plants-block shadow-block detail-block"
-        style="width: auto;"
+        style="width: auto"
       >
         <template v-slot:template>
           <div class="plant">
-            <el-skeleton-item
-              variant="image"
-              style="flex-basis: 40%; display: flex; height: 200px"
-            />
+            <el-skeleton-item variant="image" style="flex-basis: 40%; display: flex; height: 200px" />
             <div style="flex-basis: 60%; margin-left: 10px">
-              <el-skeleton-item
-                variant="p"
-                style="width: 40%; height: 24px; margin: 1em 0"
-              />
-              <el-skeleton-item
-                variant="rect"
-                style="width: 100%; height: 100px"
-              />
+              <el-skeleton-item variant="p" style="width: 40%; height: 24px; margin: 1em 0" />
+              <el-skeleton-item variant="rect" style="width: 100%; height: 100px" />
             </div>
           </div>
         </template>
@@ -88,9 +72,7 @@ const changeSearchText = () => {
               <template v-for="(plant, key) in plants">
                 <PlantCard :plant="plant" />
               </template>
-              <h4 v-if="totalCountPlants === 0" class="no-result">
-                查無結果，換個關鍵字吧！
-              </h4>
+              <h4 v-if="totalCountPlants === 0" class="no-result">查無結果，換個關鍵字吧！</h4>
             </div>
 
             <ListPagination

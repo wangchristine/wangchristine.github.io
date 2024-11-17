@@ -1,6 +1,6 @@
 <script setup>
-import { useAppStore } from '@/store/app';
-import foodData from '@/config/food.json';
+import { useAppStore } from "@/store/app";
+import foodData from "@/config/food.json";
 
 const isFoodsLoading = ref(true);
 const perPage = ref(9);
@@ -16,10 +16,9 @@ const appStore = useAppStore();
 appStore.setFoods(foodData);
 
 const foods = computed(() => {
-  return appStore.getFoods(storeId.value).slice(
-    (currentPage.value - 1) * perPage.value,
-    currentPage.value * perPage.value
-  );
+  return appStore
+    .getFoods(storeId.value)
+    .slice((currentPage.value - 1) * perPage.value, currentPage.value * perPage.value);
 });
 const totalCountFoods = computed(() => {
   return appStore.getFoods(storeId.value).length;
@@ -29,10 +28,10 @@ const stores = computed(() => {
 });
 
 useSeoMeta({
-  title: () => '食物 - Chris',
-  description: () => '吃吃喝喝小紀錄',
-  ogTitle: () => '食物 - Chris',
-  ogDescription: () => '吃吃喝喝小紀錄',
+  title: () => "食物 - Chris",
+  description: () => "吃吃喝喝小紀錄",
+  ogTitle: () => "食物 - Chris",
+  ogDescription: () => "吃吃喝喝小紀錄",
 });
 
 onMounted(() => {
@@ -55,14 +54,14 @@ const openFoodComment = (food) => {
   dialogVisible.value = !dialogVisible.value;
   commentLoading.value = true;
 
-  const fbComment = document.createElement('div');
+  const fbComment = document.createElement("div");
   fbComment.id = "comment-detail";
   fbComment.className = "fb-comments";
   fbComment.dataset.href = "https://wangchristine.github.io/food/?" + clickFood.value.id;
   fbComment.dataset.width = "100%";
   fbComment.dataset.num_posts = "5";
   fbComment.dataset.lazy = "true";
-  const commentMain = document.getElementById('comment-main');
+  const commentMain = document.getElementById("comment-main");
   commentMain.appendChild(fbComment);
 
   window.FB.XFBML.parse(commentMain, () => {
@@ -72,8 +71,8 @@ const openFoodComment = (food) => {
 
 const closeFoodComment = () => {
   clickFood.value = {};
-  const commentMain = document.getElementById('comment-main');
-  const commentDetail = document.getElementById('comment-detail');
+  const commentMain = document.getElementById("comment-main");
+  const commentDetail = document.getElementById("comment-detail");
   if (commentDetail !== null) {
     commentMain.removeChild(commentDetail);
   }
@@ -89,24 +88,13 @@ const closeFoodComment = () => {
       <div class="search-block shadow-block">
         <div class="description">
           <p>星等為依據個人喜好跟主觀判斷所評分，僅供參考。</p>
-          <p>
-            1⭐: 不喜歡； 2⭐: 普通，以填飽肚子為主； 3⭐: 還不錯； 4⭐: 超好吃
-          </p>
+          <p>1⭐: 不喜歡； 2⭐: 普通，以填飽肚子為主； 3⭐: 還不錯； 4⭐: 超好吃</p>
         </div>
         <div class="search">
           <span>店家：</span>
-          <select
-            name="store"
-            @change="selectStore($event)"
-          >
-            <option value="null">
-              -- 全部 --
-            </option>
-            <option
-              v-for="store in stores"
-              :key="store.id"
-              :value="store.id"
-            >
+          <select name="store" @change="selectStore($event)">
+            <option value="null">-- 全部 --</option>
+            <option v-for="store in stores" :key="store.id" :value="store.id">
               {{ store.name }}
             </option>
           </select>
@@ -117,30 +105,15 @@ const closeFoodComment = () => {
         animated
         :count="6"
         class="foods-block shadow-block detail-block"
-        style="width: auto;"
+        style="width: auto"
       >
         <template v-slot:template>
           <div class="food">
-            <el-skeleton-item
-              variant="image"
-              style="width: 100%; height: 135px"
-            />
-            <el-skeleton-item
-              variant="h3"
-              style="width: 70%; height: 24px; margin: 1em 0"
-            />
-            <el-skeleton-item
-              variant="text"
-              style="width: 60%; height: 20px"
-            />
-            <el-skeleton-item
-              variant="text"
-              style="width: 60%; height: 20px; margin: 8px 0"
-            />
-            <el-skeleton-item
-              variant="text"
-              style="width: 100%; height: 40px"
-            />
+            <el-skeleton-item variant="image" style="width: 100%; height: 135px" />
+            <el-skeleton-item variant="h3" style="width: 70%; height: 24px; margin: 1em 0" />
+            <el-skeleton-item variant="text" style="width: 60%; height: 20px" />
+            <el-skeleton-item variant="text" style="width: 60%; height: 20px; margin: 8px 0" />
+            <el-skeleton-item variant="text" style="width: 100%; height: 40px" />
           </div>
         </template>
         <template v-slot:default>
@@ -149,11 +122,10 @@ const closeFoodComment = () => {
               <template v-for="(food, key) in foods">
                 <FoodCard :food="food">
                   <template #action>
-                    <div style="height: 50px;" />
-                    <a
-                      class="comment-button"
-                      @click="openFoodComment(food)"
-                    ><el-icon><Comment /></el-icon></a>
+                    <div style="height: 50px" />
+                    <a class="comment-button" @click="openFoodComment(food)">
+                      <el-icon><Comment /></el-icon>
+                    </a>
                   </template>
                 </FoodCard>
               </template>
@@ -177,15 +149,11 @@ const closeFoodComment = () => {
         top="10vh"
         @close="closeFoodComment()"
       >
-        <el-container style="min-height: 50vh;">
+        <el-container style="min-height: 50vh">
           <el-aside>
             <FoodCard :food="clickFood" />
           </el-aside>
-          <el-main
-            id="comment-main"
-            v-loading="commentLoading"
-            element-loading-background="inherit"
-          >
+          <el-main id="comment-main" v-loading="commentLoading" element-loading-background="inherit">
             <!-- prepare for fb -->
           </el-main>
         </el-container>

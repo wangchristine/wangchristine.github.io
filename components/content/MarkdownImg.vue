@@ -18,23 +18,18 @@ const props = defineProps({
   },
 });
 
-const getImageUrl = name => {
-  const assets = import.meta.glob('@/assets/articles/*', { eager: true, import: 'default' });
+const getImageUrl = (name) => {
+  const assets = import.meta.glob("@/assets/articles/*", { eager: true, import: "default" });
   return assets[`/assets/${name}`];
 };
-
 </script>
 
 <template>
   <div class="img-block">
-    <img
-      :src="getImageUrl(src)"
-      :alt="alt"
-    >
-    <span v-if="originLink"><a
-      :href="originLink"
-      target="_blank"
-    >{{ name }}</a></span>
+    <img :src="getImageUrl(src)" :alt="alt" />
+    <span v-if="originLink">
+      <a :href="originLink" target="_blank">{{ name }}</a>
+    </span>
   </div>
 </template>
 
@@ -55,5 +50,4 @@ span {
   text-align: center;
   padding: 8px;
 }
-
 </style>

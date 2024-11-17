@@ -3,9 +3,7 @@
 <template>
   <div class="content-block shadow-block">
     <div class="main-block">
-      <div class="title">
-        圖片來源
-      </div>
+      <div class="title">圖片來源</div>
       <div class="detail">
         有經過工具原圖壓縮圖片檔案大小再放置網頁上。
         <ol>
@@ -17,10 +15,7 @@
             </p>
           </li>
           <li>
-            <p>
-              Website:
-              https://fr.crazypng.com/minions-png-images-a-telecharger-gratuitement.html
-            </p>
+            <p>Website: https://fr.crazypng.com/minions-png-images-a-telecharger-gratuitement.html</p>
             <p>Image: https://pngimg.com/uploads/minions/minions_PNG51.png</p>
           </li>
           <li>
@@ -28,20 +23,11 @@
             <p>Image: https://i.ytimg.com/vi/XWkI1OhCdVs/maxresdefault.jpg</p>
           </li>
           <li>
-            <p>
-              Website:
-              https://giphy.com/stickers/AQUAELRUS-transparent-aquael-aquaelrus-fQCaihpRpsPjFpiXC9
-            </p>
-            <p>
-              Image:
-              https://i.pinimg.com/originals/21/0d/3d/210d3d147e23faeb08fd7d66c9e59b83.gif
-            </p>
+            <p>Website: https://giphy.com/stickers/AQUAELRUS-transparent-aquael-aquaelrus-fQCaihpRpsPjFpiXC9</p>
+            <p>Image: https://i.pinimg.com/originals/21/0d/3d/210d3d147e23faeb08fd7d66c9e59b83.gif</p>
           </li>
           <li>
-            <p>
-              Website:
-              https://www.istockphoto.com/vector/underwater-world-gm537816526-95502895
-            </p>
+            <p>Website: https://www.istockphoto.com/vector/underwater-world-gm537816526-95502895</p>
             <p>
               Image:
               https://media.istockphoto.com/vectors/underwater-world-vector-id537816526?k=20&m=537816526&s=170667a&w=0&h=VZbOp51CJFUr5mvKAsC2bFKbLyYb6RVVVR3oMcpAvdk=
@@ -49,10 +35,7 @@
           </li>
           <li>
             <p>Website: https://www.pinterest.com/pin/475903885626836106/</p>
-            <p>
-              Image:
-              https://i.pinimg.com/736x/6f/d2/e3/6fd2e3da744e8e4c687fad12c2b4efe1.jpg
-            </p>
+            <p>Image: https://i.pinimg.com/736x/6f/d2/e3/6fd2e3da744e8e4c687fad12c2b4efe1.jpg</p>
           </li>
         </ol>
         ※ 若在文章內引用經壓縮後的外部圖片，會在該圖片下方附上原圖網址，不會列在此頁。

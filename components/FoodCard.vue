@@ -6,17 +6,14 @@ const props = defineProps({
   },
 });
 
-const getImageUrl = name => {
-  const assets = import.meta.glob('@/assets/foods/*', { eager: true, import: 'default' });
+const getImageUrl = (name) => {
+  const assets = import.meta.glob("@/assets/foods/*", { eager: true, import: "default" });
   return assets[`/assets/foods/${name}`];
 };
 </script>
 
 <template>
-  <div
-    v-if="Object.keys(food).length !== 0"
-    class="food"
-  >
+  <div v-if="Object.keys(food).length !== 0" class="food">
     <div class="star-number-bg" />
     <div class="star-block">
       <el-rate
@@ -32,19 +29,14 @@ const getImageUrl = name => {
     <el-image
       class="image"
       :src="getImageUrl(food.id + '.' + food.extension)"
-      :preview-src-list="[
-        getImageUrl(food.id + '.' + food.extension),
-      ]"
+      :preview-src-list="[getImageUrl(food.id + '.' + food.extension)]"
       :alt="food.name"
       :preview-teleported="true"
       :hide-on-click-modal="true"
     />
     <h3 class="name">
       {{ food.name }}
-      <span
-        v-if="food.price"
-        class="price"
-      >${{ food.price }}</span>
+      <span v-if="food.price" class="price">${{ food.price }}</span>
     </h3>
     <h4 class="store-name">
       {{ food.storeName }}

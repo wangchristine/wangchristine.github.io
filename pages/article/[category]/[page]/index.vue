@@ -1,16 +1,16 @@
 <script setup>
-import { useAppStore } from '@/store/app';
+import { useAppStore } from "@/store/app";
 
 definePageMeta({
   validate: async (route) => {
     const appStore = useAppStore();
 
-    if(!appStore.categories.map((category) => category.routeName).includes(route.params.category.toLowerCase())) {
+    if (!appStore.categories.map((category) => category.routeName).includes(route.params.category.toLowerCase())) {
       return false;
     }
     return true;
-  }
-})
+  },
+});
 
 const appStore = useAppStore();
 const route = useRoute();
@@ -19,27 +19,27 @@ const router = useRouter();
 const perPage = ref(9);
 const categories = computed(() => appStore.categories);
 const category = computed(() => {
-  return categories.value.find((category) =>
-    category.routeName === route.params.category.toLowerCase()
-  )
+  return categories.value.find((category) => category.routeName === route.params.category.toLowerCase());
 });
 const page = computed(() => parseInt(route.params.page) || 1);
 
-const { data: articlesByCategory } = await useAsyncData('article-' + category.value.routeName, () => 
-  queryContent('article', category.value.routeName).sort({ updatedAt: -1 }).find()
+const { data: articlesByCategory } = await useAsyncData("article-" + category.value.routeName, () =>
+  queryContent("article", category.value.routeName).sort({ updatedAt: -1 }).find(),
 );
-const articles = computed(() => articlesByCategory.value?.slice((page.value - 1) * perPage.value, page.value * perPage.value));
+const articles = computed(() =>
+  articlesByCategory.value?.slice((page.value - 1) * perPage.value, page.value * perPage.value),
+);
 
 useSeoMeta({
-  title: () => (category.value.name ?? 'Blog') + ' - Chris',
-  description: () => (category.value.name ?? 'Blog') + '分類筆記',
-  ogTitle: () => (category.value.name ?? 'Blog') + ' - Chris',
-  ogDescription: () => (category.value.name ?? 'Blog') + '分類筆記',
-})
+  title: () => (category.value.name ?? "Blog") + " - Chris",
+  description: () => (category.value.name ?? "Blog") + "分類筆記",
+  ogTitle: () => (category.value.name ?? "Blog") + " - Chris",
+  ogDescription: () => (category.value.name ?? "Blog") + "分類筆記",
+});
 
 onMounted(() => {
   if (page.value > Math.ceil(articlesByCategory.value.length / perPage.value)) {
-    throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+    throw createError({ statusCode: 404, statusMessage: "Page not found", fatal: true });
   }
 });
 
@@ -59,19 +59,13 @@ const setCurrentPage = (pageItem) => {
       <div class="articles-block shadow-block">
         <div class="detail-block">
           <ContentNavigation>
-            <div
-              v-for="article in articles"
-              :key="article._path"
-              class="article"
-            >
+            <div v-for="article in articles" :key="article._path" class="article">
               <NuxtLink :to="article._path">
                 <div class="title">
                   {{ article.title }}
                   <span class="updated-at">更新於 {{ new Date(article.updatedAt).toLocaleDateString() }}</span>
                 </div>
-                <div class="description">
-                  {{ article.description.slice(0, 80) }} ......
-                </div>
+                <div class="description">{{ article.description.slice(0, 80) }} ......</div>
               </NuxtLink>
             </div>
           </ContentNavigation>
@@ -140,13 +134,13 @@ const setCurrentPage = (pageItem) => {
   letter-spacing: 1px;
 }
 
-.articles-block .article a>.title {
+.articles-block .article a > .title {
   margin-bottom: 20px;
   font-weight: bold;
   color: #943d24;
 }
 
-.articles-block .article a>.title>.updated-at {
+.articles-block .article a > .title > .updated-at {
   float: right;
   font-weight: normal;
   color: #a57269;

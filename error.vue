@@ -5,7 +5,6 @@ const props = defineProps({
     default: () => {},
   },
 });
-
 </script>
 
 <template>
@@ -18,15 +17,10 @@ const props = defineProps({
         {{ error.statusCode === 404 ? error.message : 'Oh, Something went wrong.' }}
       </div>
       <div class="redirect">
-        <NuxtLink :to="{ name: 'index' }">
-          Go to Home page
-        </NuxtLink>
+        <NuxtLink :to="{ name: 'index' }">Go to Home page</NuxtLink>
       </div>
       <div class="image">
-        <img
-          src="~/assets/minion-find-the-way.jpg"
-          alt="FindTheWay"
-        >
+        <img src="~/assets/minion-find-the-way.jpg" alt="FindTheWay" />
       </div>
     </div>
   </NuxtLayout>

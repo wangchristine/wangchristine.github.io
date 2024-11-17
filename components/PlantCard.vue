@@ -6,34 +6,21 @@ const props = defineProps({
   },
 });
 
-const getImageUrl = name => {
-  const assets = import.meta.glob('@/assets/plants/*', { eager: true, import: 'default' });
+const getImageUrl = (name) => {
+  const assets = import.meta.glob("@/assets/plants/*", { eager: true, import: "default" });
   return assets[`/assets/plants/${name}`];
 };
 </script>
 
 <template>
-  <div
-    v-if="Object.keys(plant).length !== 0"
-    class="plant"
-  >
+  <div v-if="Object.keys(plant).length !== 0" class="plant">
     <div class="carousel-block">
-      <el-carousel
-        trigger="click"
-        height="200px"
-        :interval="5000"
-        class="carousel"
-      >
-        <el-carousel-item
-          v-for="image in plant.images"
-          :key="image.id"
-        >
+      <el-carousel trigger="click" height="200px" :interval="5000" class="carousel">
+        <el-carousel-item v-for="image in plant.images" :key="image.id">
           <el-image
             class="image"
             :src="getImageUrl(image.id + '.' + image.extension)"
-            :preview-src-list="[
-              getImageUrl(image.id + '.' + image.extension),
-            ]"
+            :preview-src-list="[getImageUrl(image.id + '.' + image.extension)]"
             :alt="plant.name"
             :preview-teleported="true"
             :hide-on-click-modal="true"
@@ -50,22 +37,15 @@ const getImageUrl = name => {
         <tr
           v-for="(property, key) in plant.properties"
           :key="property.key"
-          :class="[{'last-odd': (plant.properties.length % 2 === 1 && key + 1 === plant.properties.length)}]"
+          :class="[{ 'last-odd': plant.properties.length % 2 === 1 && key + 1 === plant.properties.length }]"
         >
           <th>{{ property.key }}</th>
           <td>{{ property.value }}</td>
         </tr>
       </table>
       <div class="origin-block">
-        <span
-          v-for="(image, key) in plant.images"
-          :key="image.id"
-          class="origin-link"
-        >
-          <a
-            :href="image.origin"
-            target="_blank"
-          >來源{{ key + 1 }}</a>
+        <span v-for="(image, key) in plant.images" :key="image.id" class="origin-link">
+          <a :href="image.origin" target="_blank">來源{{ key + 1 }}</a>
         </span>
       </div>
     </div>
