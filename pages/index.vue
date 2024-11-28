@@ -20,11 +20,17 @@
       <div class="introduction">
         <span>個人 GitHub 🍌</span>
         <br />
-        <a href="https://github.com/wangchristine"><img src="~/assets/github.png" alt="GitHub" /></a>
+        <a href="https://github.com/wangchristine" target="_blank">
+          <img src="~/assets/github.png" alt="GitHub" />
+          <el-icon><ELink /></el-icon>
+        </a>
         <br />
         <span>好用工具 🍌</span>
         <br />
-        <a href="https://wangchristine.github.io/dev-tools">Dev Tools</a>
+        <a href="https://wangchristine.github.io/dev-tools" target="_blank">
+          Dev Tools
+          <el-icon><ELink /></el-icon>
+        </a>
       </div>
 
       <img src="~/assets/minion-sketch.png" class="sketch" alt="Sketch" />
@@ -75,7 +81,8 @@
 .main-block .introduction a {
   text-decoration: none;
   font-weight: bold;
-  color: #5289b5;
+  color: #9f3448;
+  border-bottom: 1px solid;
 }
 
 .main-block .sketch {

@@ -24,7 +24,7 @@ Schema::table('users', function(Blueprint $table) {
 BadMethodCallException: SQLite doesn't support dropping foreign keys (you would need to re-create the table).
 ```
 
-解法參考: [GitHub Laravel Issue](https://github.com/laravel/framework/issues/25475)
+解法參考: [GitHub Laravel Issue](https://github.com/laravel/framework/issues/25475){target="_blank"}
 
 `tests/TestCase.php`:
 ```php

@@ -45,7 +45,10 @@ const getImageUrl = (name) => {
       </table>
       <div class="origin-block">
         <span v-for="(image, key) in plant.images" :key="image.id" class="origin-link">
-          <a :href="image.origin" target="_blank">來源{{ key + 1 }}</a>
+          <a :href="image.origin" target="_blank">
+            來源{{ key + 1 }}
+            <el-icon><ELink /></el-icon>
+          </a>
         </span>
       </div>
     </div>
@@ -124,6 +127,8 @@ const getImageUrl = (name) => {
 }
 .content .origin-link a {
   color: #9f3448;
+  text-decoration: none;
+  border-bottom: 1px solid;
 }
 
 @media all and (max-width: 1024px) {

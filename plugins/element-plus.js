@@ -6,6 +6,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(ElementPlus);
 
   for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
-    nuxtApp.vueApp.component(key, component);
+    const keyName = key == "Link" ? "ELink" : key;
+    nuxtApp.vueApp.component(keyName, component);
   }
 });

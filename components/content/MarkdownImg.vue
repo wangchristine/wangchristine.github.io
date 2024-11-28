@@ -28,7 +28,7 @@ const getImageUrl = (name) => {
   <div class="img-block">
     <img :src="getImageUrl(src)" :alt="alt" />
     <span v-if="originLink">
-      <a :href="originLink" target="_blank">{{ name }}</a>
+      <a :href="originLink" target="_blank">{{ name }}<el-icon><ELink /></el-icon></a>
     </span>
   </div>
 </template>

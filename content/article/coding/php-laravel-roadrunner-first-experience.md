@@ -59,7 +59,7 @@ while ($req = $worker->waitRequest()) {
 }
 ```
 
-再來是 `.rr.yaml` 參數設定檔，[官方文件](https://github.com/roadrunner-server/roadrunner/blob/master/.rr.yaml)有非常多的參數可用，下例陳列部分參數用法:
+再來是 `.rr.yaml` 參數設定檔，[官方文件](https://github.com/roadrunner-server/roadrunner/blob/master/.rr.yaml){target="_blank"}有非常多的參數可用，下例陳列部分參數用法:
 ```yaml
 version: '2.7'
 
@@ -100,6 +100,6 @@ http:
 初體驗 RoadRunner 的確速度上快於 FPM，即便沒有額外調整設定也是快於 FPM，不過 FPM 和 RoadRunner 各有優缺點，要根據專案的需求決定要採用哪個工具。RoadRunner 畢竟社群還不夠廣且對大家的熟悉度不高，而目前業界普遍使用 FPM 偏高，期待 RoadRunner 官方能提供更多功能且更完善的文件方便各位工程師們使用！
 
 ## 參考文件
-* https://roadrunner.dev/docs/intro-install/2.x/en
-* https://github.com/roadrunner-server/roadrunner/blob/master/.rr.yaml
-* https://github.com/spiral/roadrunner-laravel
+* [https://roadrunner.dev/docs/intro-install/2.x/en](https://roadrunner.dev/docs/intro-install/2.x/en){target="_blank"}
+* [https://github.com/roadrunner-server/roadrunner/blob/master/.rr.yaml](https://github.com/roadrunner-server/roadrunner/blob/master/.rr.yaml){target="_blank"}
+* [https://github.com/spiral/roadrunner-laravel](https://github.com/spiral/roadrunner-laravel){target="_blank"}

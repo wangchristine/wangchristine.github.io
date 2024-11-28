@@ -69,7 +69,10 @@ const goUp = () => {
       Copyright © 2022-{{ new Date().getFullYear() }} Chris Wang
       <br />
       本網站為個人使用，參考
-      <a href="https://www.facebook.com/TIPO.gov.tw/posts/1804286156280593/">經濟部智慧財產局</a>
+      <a href="https://www.facebook.com/TIPO.gov.tw/posts/1804286156280593/" target="_blank">
+        經濟部智慧財產局
+        <el-icon><ELink /></el-icon>
+      </a>
       ，有使用到的網路圖片來源在
       <NuxtLink :to="{ name: 'image-origin' }">此連結</NuxtLink>
     </el-footer>
@@ -173,7 +176,8 @@ h2 {
 .el-footer a {
   text-decoration: none;
   font-weight: bold;
-  color: #3e9bed;
+  color: #fffbf0;
+  border-bottom: 1px solid;
 }
 
 .el-main {

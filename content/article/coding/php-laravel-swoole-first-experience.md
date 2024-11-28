@@ -23,7 +23,7 @@ updatedAt: '2022-09-01'
 
 ## 設定
 
-這次我們主要先玩 `swoole_http.php` 設定檔，可以看到這設定檔滿滿的註解，很貼心的跟我們說每一行主要的用途，想了解細部的解釋可以看[官方文件](https://github.com/swooletw/laravel-swoole/wiki/5.-Configuration)。
+這次我們主要先玩 `swoole_http.php` 設定檔，可以看到這設定檔滿滿的註解，很貼心的跟我們說每一行主要的用途，想了解細部的解釋可以看[官方文件](https://github.com/swooletw/laravel-swoole/wiki/5.-Configuration){target="_blank"}。
 
 基本上到這邊就設定完畢了，但因為我要測試所以在 `.env` 做覆蓋設定:
 ```

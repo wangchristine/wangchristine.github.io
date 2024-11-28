@@ -10,7 +10,7 @@ Icon Font 在現今網頁運用廣泛，用來輔助搭配文字等也能增加�
 
 <markdown-img src="articles/what-is-icon-font-1.jpg"></markdown-img>
 
-要產出這樣的圖示也很簡單，可參考[官方網站](https://fontawesome.com/)如何用 NPM 或 Yarn 拉取圖示庫後，在 HTML 貼上如下：
+要產出這樣的圖示也很簡單，可參考[官方網站](https://fontawesome.com/){target="_blank"}如何用 NPM 或 Yarn 拉取圖示庫後，在 HTML 貼上如下：
 
 ```html
 <i class="fa-brands fa-docker"></i>
@@ -24,4 +24,4 @@ Icon Font 在現今網頁運用廣泛，用來輔助搭配文字等也能增加�
 
 <markdown-img src="articles/what-is-icon-font-3.jpg"></markdown-img>
 
-Icon Font 被當作文字一樣所以可以加上 CSS 像是加顏色，但同樣也跟文字一樣只能用單色，其他優點像是在顯示上縮放不會失真，更酷的是它還可以做到動畫效果(animation)，很不可思議吧！有興趣的人可以到[官方網站的範例 Docker Icon](https://fontawesome.com/icons/docker?f=brands&s=solid)看看實際動畫效果吧！
+Icon Font 被當作文字一樣所以可以加上 CSS 像是加顏色，但同樣也跟文字一樣只能用單色，其他優點像是在顯示上縮放不會失真，更酷的是它還可以做到動畫效果(animation)，很不可思議吧！有興趣的人可以到[官方網站的範例 Docker Icon](https://fontawesome.com/icons/docker?f=brands&s=solid){target="_blank"}看看實際動畫效果吧！

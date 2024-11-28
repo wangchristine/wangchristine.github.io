@@ -23,7 +23,7 @@ apk upgrade
 apk search curl
 ```
 2. 或是從官網查找在 Alpine 不同版本下有支援的套件與版本:
-   [https://pkgs.alpinelinux.org/packages](https://pkgs.alpinelinux.org/packages)
+   [https://pkgs.alpinelinux.org/packages](https://pkgs.alpinelinux.org/packages){target="_blank"}
 
 ## 安裝套件
 ```sh
@@ -47,8 +47,8 @@ apk list -I
 1. 先用上面教的使用指令查找版本，以 `alpine3.12` 的版本是到 `curl-7.79.1-r1`，但我們要裝 `7.85.0-r0` 這版
 
 2. 從官網查找所需版本壓縮檔路徑
-   [https://curl.se/download.html](https://curl.se/download.html)
-   這個是我要的版本: https://curl.se/download/curl-7.85.0.tar.gz
+   [https://curl.se/download.html](https://curl.se/download.html){target="_blank"}
+   這個是我要的版本: [https://curl.se/download/curl-7.85.0.tar.gz](https://curl.se/download/curl-7.85.0.tar.gz){target="_blank"}
 
 3. 指令安裝套件
 ```bash
