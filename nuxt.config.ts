@@ -1,5 +1,5 @@
-import { glob } from "glob";
 import path from "path";
+import { glob } from "glob";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({

@@ -1,9 +1,9 @@
 ---
 category: server
 title: 2023 DevOps 學習路線圖
-description: '上個月參加研討會其中一場在介紹 DevOps，看到一張 DevOps Burger 學習路線圖覺得蠻有趣的'
-createdAt: '2023-09-03'
-updatedAt: '2023-09-03'
+description: "上個月參加研討會其中一場在介紹 DevOps，看到一張 DevOps Burger 學習路線圖覺得蠻有趣的"
+createdAt: "2023-09-03"
+updatedAt: "2023-09-03"
 ---
 
 上個月參加研討會其中一場在介紹 DevOps，看到一張 DevOps Burger 學習路線圖覺得蠻有趣的，從漢堡麵包到每個配料我每一層都有至少使用過一種或是接觸過但沒有很專精，勉勵自己還需要針對這些來補強。

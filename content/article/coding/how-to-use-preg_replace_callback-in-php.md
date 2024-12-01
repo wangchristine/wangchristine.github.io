@@ -1,9 +1,9 @@
 ---
 category: coding
 title: php preg_replace_callback 客製替換文字用法
-description: '之前有個需求要將輸入的文字轉成客製想要的文字後回傳，此例也很難用一般的 preg_replace 做到'
-createdAt: '2024-06-30'
-updatedAt: '2024-06-30'
+description: "之前有個需求要將輸入的文字轉成客製想要的文字後回傳，此例也很難用一般的 preg_replace 做到"
+createdAt: "2024-06-30"
+updatedAt: "2024-06-30"
 ---
 
 之前有個需求要將輸入的文字轉成客製想要的文字後回傳，此例也很難用一般的 preg_replace 做到，需求:

@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps({
+defineProps({
   error: {
     type: Object,
     default: () => {},
@@ -14,7 +14,7 @@ const props = defineProps({
         {{ error.statusCode || 500 }}
       </div>
       <div class="error-message">
-        {{ error.statusCode === 404 ? error.message : 'Oh, Something went wrong.' }}
+        {{ error.statusCode === 404 ? error.message : "Oh, Something went wrong." }}
       </div>
       <div class="redirect">
         <NuxtLink :to="{ name: 'index' }">Go to Home page</NuxtLink>

@@ -1,9 +1,9 @@
 ---
 category: coding
 title: 解決在 Laravel 使用 PHPUnit + SQLite 的 RefreshDatabase 失敗問題
-description: '之前在做單元測試需要用到 RefreshDatabase 的時候，專案內部分的 migration 會讓 SQLite 噴錯無法順利執行'
-createdAt: '2024-05-10'
-updatedAt: '2024-05-10'
+description: "之前在做單元測試需要用到 RefreshDatabase 的時候，專案內部分的 migration 會讓 SQLite 噴錯無法順利執行"
+createdAt: "2024-05-10"
+updatedAt: "2024-05-10"
 ---
 
 之前在做單元測試需要用到 RefreshDatabase 的時候，專案內部分的 migration 會讓 SQLite 噴錯無法順利執行，以下紀錄解決方法:

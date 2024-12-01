@@ -1,9 +1,9 @@
 ---
 category: coding
 title: 在 Laravel/Lumen 使用 Service Repository 來分層設計架構
-description: '在 Laravel/Lumen 優雅的框架下，為使程式的耦合度降低、降低維護成本，也為了將程式模組化以方便管理'
-createdAt: '2022-07-14'
-updatedAt: '2022-07-14'
+description: "在 Laravel/Lumen 優雅的框架下，為使程式的耦合度降低、降低維護成本，也為了將程式模組化以方便管理"
+createdAt: "2022-07-14"
+updatedAt: "2022-07-14"
 ---
 
 在 Laravel/Lumen 優雅的框架下，為使程式的耦合度降低、降低維護成本，也為了將程式模組化以方便管理與重複利用，而引進 `Service` 和 `Repository` 這兩個概念，功能分別為：

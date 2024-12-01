@@ -8,14 +8,17 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint": "eslint --ext .ts,.js,.vue .",
+    "lint:fix": "eslint --ext .ts,.js,.vue . --fix"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "^0.3.5",
+    "@nuxt/eslint-config": "^0.3.13",
     "@pinia/nuxt": "^0.5.1",
-    "eslint": "^8.57.0",
-    "eslint-plugin-vue": "^9.24.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-vue": "^9.32.0",
     "nuxt": "^3.10.0",
     "prettier": "3.3.3",
     "vue": "^3.4.15",

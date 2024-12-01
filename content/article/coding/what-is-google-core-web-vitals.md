@@ -1,9 +1,9 @@
 ---
 category: coding
 title: 網站體驗核心指標(Core Web Vitals) 是什麼呢
-description: '網站體驗核心指標(Core Web Vitals) 包含 Google 最在意的幾個核心的網頁性能指標，像是'
-createdAt: '2023-01-04'
-updatedAt: '2023-01-04'
+description: "網站體驗核心指標(Core Web Vitals) 包含 Google 最在意的幾個核心的網頁性能指標，像是"
+createdAt: "2023-01-04"
+updatedAt: "2023-01-04"
 ---
 
 網站體驗核心指標(Core Web Vitals) 包含 Google 最在意的幾個核心的網頁性能指標，像是 LCP、FID、CLS 等，這幾個核心的性能指標對於網站的 SEO 關鍵字排名的影響非常大，也同時反應出使用者的用戶體驗，以下就專門針對這三個指標來說明：

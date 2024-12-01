@@ -1,6 +1,6 @@
 <script setup>
-import { useAppStore } from "@/store/app";
 import plantData from "@/config/plant.json";
+import { useAppStore } from "@/store/app";
 
 const isPlantsLoading = ref(true);
 const perPage = ref(6);
@@ -57,7 +57,7 @@ const changeSearchText = () => {
         class="plants-block shadow-block detail-block"
         style="width: auto"
       >
-        <template v-slot:template>
+        <template #template>
           <div class="plant">
             <el-skeleton-item variant="image" style="flex-basis: 40%; display: flex; height: 200px" />
             <div style="flex-basis: 60%; margin-left: 10px">
@@ -66,12 +66,10 @@ const changeSearchText = () => {
             </div>
           </div>
         </template>
-        <template v-slot:default>
+        <template #default>
           <div class="plants-block shadow-block">
             <div class="detail-block">
-              <template v-for="(plant, key) in plants">
-                <PlantCard :plant="plant" />
-              </template>
+              <PlantCard v-for="(plant, key) in plants" :key="key" :plant="plant" />
               <h4 v-if="totalCountPlants === 0" class="no-result">查無結果，換個關鍵字吧！</h4>
             </div>
 
@@ -80,7 +78,7 @@ const changeSearchText = () => {
               :page-size="perPage"
               :current-page="currentPage"
               :total-count="totalCountPlants"
-              @currentChange="setCurrentPage"
+              @current-change="setCurrentPage"
             />
           </div>
         </template>

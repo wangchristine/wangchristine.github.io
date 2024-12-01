@@ -1,9 +1,9 @@
 ---
 category: coding
 title: 在 Laravel 中下載檔案 api 送出後刪除檔案
-description: '專案有兩隻 API 是去產生 zip 檔後，分別為寄送信件和回傳檔案給前端'
-createdAt: '2024-07-04'
-updatedAt: '2024-07-04'
+description: "專案有兩隻 API 是去產生 zip 檔後，分別為寄送信件和回傳檔案給前端"
+createdAt: "2024-07-04"
+updatedAt: "2024-07-04"
 ---
 
 專案有兩隻 API 是去產生 zip 檔後，分別為寄送信件和回傳檔案給前端，寄送信件 API 有特別定義 Response 格式，因這兩隻產生檔案採共用 function 會產生檔案後放在 `storage/app` 內，但回傳檔案 API 本來我只想就回傳檔案就好不想真的存一份檔案在伺服器上，所以有套件是可以直接做一個串流回傳 zip 檔的，像是:

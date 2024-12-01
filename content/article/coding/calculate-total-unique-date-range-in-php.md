@@ -1,9 +1,9 @@
 ---
 category: coding
-title: '在 PHP 中計算不重複的日期區間加總'
-description: '有一組不固定長度的 array，裡面包含了工作經歷的起訖日期'
-createdAt: '2024-11-03'
-updatedAt: '2024-11-03'
+title: "在 PHP 中計算不重複的日期區間加總"
+description: "有一組不固定長度的 array，裡面包含了工作經歷的起訖日期"
+createdAt: "2024-11-03"
+updatedAt: "2024-11-03"
 ---
 
 有一組不固定長度的 array，裡面包含了工作經歷的起訖日期，例如:

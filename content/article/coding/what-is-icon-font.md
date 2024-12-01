@@ -1,9 +1,9 @@
 ---
 category: coding
 title: Icon Font 是什麼？要怎麼使用呢？
-description: 'Icon Font 在現今網頁運用廣泛，用來輔助搭配文字等也能增加使用者介面的美感，那到底什麼是 Icon Font 呢'
-createdAt: '2023-08-21'
-updatedAt: '2023-08-22'
+description: "Icon Font 在現今網頁運用廣泛，用來輔助搭配文字等也能增加使用者介面的美感，那到底什麼是 Icon Font 呢"
+createdAt: "2023-08-21"
+updatedAt: "2023-08-22"
 ---
 
 Icon Font 在現今網頁運用廣泛，用來輔助搭配文字等也能增加使用者介面的美感，那到底什麼是 Icon Font 呢? 它基本上就是把 icon 當作字體，放入相對應的代碼或指定的名稱，就能夠產生一個小圖示，以下圖 Font Awesome 為例，可以看到利用偽元素來將特定的 Unicode 轉換顯示成好看的圖示：

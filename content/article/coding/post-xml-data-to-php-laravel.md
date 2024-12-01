@@ -1,9 +1,9 @@
 ---
 category: coding
 title: PHP Laravel 讀取 XML 格式資料
-description: '這邊紀錄一下如何用 PHP Laravel 讀取一串 XML 格式的資料，如下圖所示'
-createdAt: '2022-12-07'
-updatedAt: '2022-12-07'
+description: "這邊紀錄一下如何用 PHP Laravel 讀取一串 XML 格式的資料，如下圖所示"
+createdAt: "2022-12-07"
+updatedAt: "2022-12-07"
 ---
 
 這邊紀錄一下如何用 PHP Laravel 讀取一串 XML 格式的資料，如下圖所示:

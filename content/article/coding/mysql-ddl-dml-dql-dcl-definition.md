@@ -1,9 +1,9 @@
 ---
 category: coding
-title: 'MySQL 資料庫四大分類名詞定義: DDL、DML、DQL、DCL'
-description: 'MySQL 基本操作的四大分類：DDL 資料定義語言、DML 資料操作語言、DQL 資料查詢語言、DCL 資料控制語言'
-createdAt: '2022-08-19'
-updatedAt: '2022-08-19'
+title: "MySQL 資料庫四大分類名詞定義: DDL、DML、DQL、DCL"
+description: "MySQL 基本操作的四大分類：DDL 資料定義語言、DML 資料操作語言、DQL 資料查詢語言、DCL 資料控制語言"
+createdAt: "2022-08-19"
+updatedAt: "2022-08-19"
 ---
 
 MySQL 基本操作的四大分類：DDL 資料定義語言、DML 資料操作語言、DQL 資料查詢語言、DCL 資料控制語言。以下各別介紹名詞定義：

@@ -1,3 +1,3 @@
 # blog
 
-Bello, this is my blog. Welcome! 
+Bello, this is my blog. Welcome!

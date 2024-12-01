@@ -1,6 +1,6 @@
-import { useAppStore } from "@/store/app";
 import allCategories from "@/config/category.json";
-export default defineNuxtPlugin((nuxtApp) => {
+import { useAppStore } from "@/store/app";
+export default defineNuxtPlugin(() => {
   const appStore = useAppStore();
   appStore.setCategories(allCategories);
 });

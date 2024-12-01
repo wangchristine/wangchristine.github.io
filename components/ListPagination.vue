@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps({
+defineProps({
   pageSize: {
     type: Number,
     required: true,

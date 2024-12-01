@@ -1,9 +1,9 @@
 ---
 category: coding
 title: PHP-FPM 搭配 Nginx vs Roadrunner vs Swoole 速度實驗
-description: '這次實驗是出於好奇心，想要比較看看 PHP-FPM 搭配 Nginx 和 Roadrunner 和 Swoole 在相同的程式碼、執行環境下'
-createdAt: '2022-09-04'
-updatedAt: '2022-09-04'
+description: "這次實驗是出於好奇心，想要比較看看 PHP-FPM 搭配 Nginx 和 Roadrunner 和 Swoole 在相同的程式碼、執行環境下"
+createdAt: "2022-09-04"
+updatedAt: "2022-09-04"
 ---
 
 這次實驗是出於好奇心，想要比較看看 PHP-FPM 搭配 Nginx 和 Roadrunner 和 Swoole 在相同的程式碼、執行環境下，速度的表現是如何。這邊使用 serialize() 序列化作測試函數一百萬次，然後三種架設的最大連接數都設為 3000，Request 數量分別使用 1、20、100、1000、4000 次去做測試，看下圖:

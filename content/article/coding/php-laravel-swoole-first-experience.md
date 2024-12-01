@@ -1,9 +1,9 @@
 ---
 category: coding
 title: PHP Laravel + Swoole 初體驗
-description: '繼上次的 PHP Laravel + RoadRunner 初體驗初次玩了 RoadRunner 的架設之後，今天就來體驗一下'
-createdAt: '2022-09-01'
-updatedAt: '2022-09-01'
+description: "繼上次的 PHP Laravel + RoadRunner 初體驗初次玩了 RoadRunner 的架設之後，今天就來體驗一下"
+createdAt: "2022-09-01"
+updatedAt: "2022-09-01"
 ---
 
 繼上次的 [PHP Laravel + RoadRunner 初體驗](https://wangchristine.github.io/article/coding/php-laravel-roadrunner-first-experience) 初次玩了 RoadRunner 的架設之後，今天就來體驗一下號稱高性能、加快速度的 Swoole 吧!

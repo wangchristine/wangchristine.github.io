@@ -1,6 +1,6 @@
 <script setup>
-import { useAppStore } from "@/store/app";
 import foodData from "@/config/food.json";
+import { useAppStore } from "@/store/app";
 
 const isFoodsLoading = ref(true);
 const perPage = ref(9);
@@ -107,7 +107,7 @@ const closeFoodComment = () => {
         class="foods-block shadow-block detail-block"
         style="width: auto"
       >
-        <template v-slot:template>
+        <template #template>
           <div class="food">
             <el-skeleton-item variant="image" style="width: 100%; height: 135px" />
             <el-skeleton-item variant="h3" style="width: 70%; height: 24px; margin: 1em 0" />
@@ -116,26 +116,24 @@ const closeFoodComment = () => {
             <el-skeleton-item variant="text" style="width: 100%; height: 40px" />
           </div>
         </template>
-        <template v-slot:default>
+        <template #default>
           <div class="foods-block shadow-block">
             <div class="detail-block">
-              <template v-for="(food, key) in foods">
-                <FoodCard :food="food">
-                  <template #action>
-                    <div style="height: 50px" />
-                    <a class="comment-button" @click="openFoodComment(food)">
-                      <el-icon><Comment /></el-icon>
-                    </a>
-                  </template>
-                </FoodCard>
-              </template>
+              <FoodCard v-for="(food, key) in foods" :key="key" :food="food">
+                <template #action>
+                  <div style="height: 50px" />
+                  <a class="comment-button" @click="openFoodComment(food)">
+                    <el-icon><Comment /></el-icon>
+                  </a>
+                </template>
+              </FoodCard>
             </div>
 
             <ListPagination
               :page-size="perPage"
               :current-page="currentPage"
               :total-count="totalCountFoods"
-              @currentChange="setCurrentPage"
+              @current-change="setCurrentPage"
             />
           </div>
         </template>
