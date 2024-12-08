@@ -13,23 +13,23 @@
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.3.13",
-    "@pinia/nuxt": "^0.5.1",
+    "@pinia/nuxt": "^0.5.5",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-vue": "^9.32.0",
-    "nuxt": "^3.10.0",
+    "nuxt": "^3.14.1592",
     "prettier": "3.3.3",
     "vue": "^3.4.15",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.5.0"
   },
   "dependencies": {
-    "@nuxt/content": "^2.12.0",
-    "element-plus": "^2.5.5",
-    "glob": "^10.3.12",
-    "pinia": "^2.1.7",
-    "sitemap": "^7.1.1",
+    "@nuxt/content": "^2.13.4",
+    "element-plus": "^2.9.0",
+    "glob": "^10.4.5",
+    "pinia": "^2.3.0",
+    "sitemap": "^7.1.2",
     "vue-gtag": "^2.0.1"
   }
 }
