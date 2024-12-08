@@ -9,9 +9,12 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint --ext .ts,.js,.vue .",
-    "lint:fix": "eslint --ext .ts,.js,.vue . --fix"
+    "lint:fix": "eslint --ext .ts,.js,.vue . --fix",
+    "prepare": "husky"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
     "@nuxt/eslint-config": "^0.3.13",
     "@pinia/nuxt": "^0.5.5",
     "eslint": "^8.57.1",
@@ -19,6 +22,8 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-vue": "^9.32.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
     "nuxt": "^3.14.1592",
     "prettier": "3.3.3",
     "vue": "^3.4.15",
