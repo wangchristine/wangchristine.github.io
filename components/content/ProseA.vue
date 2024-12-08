@@ -20,7 +20,7 @@ const props = defineProps({
   </NuxtLink>
 </template>
 
-<style>
+<style scoped>
 a {
   text-decoration: none;
   border-bottom: 1px solid;

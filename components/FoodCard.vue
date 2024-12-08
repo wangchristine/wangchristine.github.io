@@ -1,10 +1,12 @@
 <script setup>
-defineProps({
+const props = defineProps({
   food: {
     type: Object,
     default: () => {},
   },
 });
+
+const star = computed(() => props.food.star);
 
 const getImageUrl = (name) => {
   const assets = import.meta.glob("@/assets/foods/*", { eager: true, import: "default" });
@@ -17,14 +19,14 @@ const getImageUrl = (name) => {
     <div class="star-number-bg" />
     <div class="star-block">
       <el-rate
-        v-model="food.star"
+        v-model="star"
         class="star-rate"
         disabled
         :colors="['#ff8100', '#ff8100', '#ff8100']"
         disabled-void-color="#bfb5b3"
-        :score-template="food.star.toString()"
+        :score-template="star.toString()"
       />
-      <span class="star-number">{{ food.star.toFixed(1) }}</span>
+      <span class="star-number">{{ star.toFixed(1) }}</span>
     </div>
     <el-image
       class="image"
