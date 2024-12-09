@@ -1,28 +1,22 @@
-name: Blog CI/CD
+name: Blog CI
 
 on:
-  push:
-    branches:
-      - master
-  # pull_request:
-  #   branches:
-  #     - master
+  pull_request:
+    branches: [master]
 
 jobs:
-  build:
+  check:
     runs-on: ${{ matrix.os }}
-
     strategy:
       matrix:
         os: [ubuntu-latest]
         node: [20]
-
     steps:
       - name: Checkout 🛎
-        uses: actions/checkout@master
+        uses: actions/checkout@v4
 
-      - name: Setup node env 🏗
-        uses: actions/setup-node@v3
+      - name: Setup Node 🏗
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
           check-latest: true
@@ -35,35 +29,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Install dependencies 👨🏻‍💻
+      - name: NPM Install 👨🏻‍💻
         run: npm ci --prefer-offline --no-audit
 
-      # - name: Run linter 👀
+      # - name: Lint 👀
       #   run: |
-      #     npm run lint:fix
-
-      - name: Generate
-        run: npm run generate
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./.output/public
-  deploy:
-    needs: build
-
-    permissions:
-      pages: write
-      id-token: write
-
-    environment:
-      name: github_pages
-      # 佈署後的 url
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      #     npm run lint
