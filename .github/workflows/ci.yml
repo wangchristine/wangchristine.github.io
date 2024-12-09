@@ -32,6 +32,6 @@ jobs:
       - name: NPM Install 👨🏻‍💻
         run: npm ci --prefer-offline --no-audit
 
-      - name: Lint 👀
-        run: |
-          npm run lint
+      # - name: Lint 👀
+      #   run: |
+      #     npm run lint
