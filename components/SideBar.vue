@@ -52,7 +52,7 @@ const articlesByLatestFive = await queryContent().sort({ updatedAt: -1 }).limit(
 }
 
 .latest-block .article span {
-  color: #a57269;
+  color: #983a2a;
 }
 
 .aquarium {

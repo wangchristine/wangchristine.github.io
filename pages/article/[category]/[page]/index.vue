@@ -65,7 +65,7 @@ const setCurrentPage = (pageItem) => {
                   {{ article.title }}
                   <span class="updated-at">更新於 {{ new Date(article.updatedAt).toLocaleDateString() }}</span>
                 </div>
-                <div class="description">{{ article.description.slice(0, 80) }} ......</div>
+                <div class="description">{{ article.body.children[0].children[0].value.slice(0, 80) }}......</div>
               </NuxtLink>
             </div>
           </ContentNavigation>
@@ -129,7 +129,7 @@ const setCurrentPage = (pageItem) => {
   margin: 15px;
   display: block;
   text-decoration: none;
-  border-bottom: solid 1px #9c362e;
+  border-bottom: solid 1px #983a2a;
   color: #333;
   letter-spacing: 1px;
 }
@@ -137,13 +137,13 @@ const setCurrentPage = (pageItem) => {
 .articles-block .article a > .title {
   margin-bottom: 20px;
   font-weight: bold;
-  color: #943d24;
+  color: #983a2a;
 }
 
 .articles-block .article a > .title > .updated-at {
   float: right;
   font-weight: normal;
-  color: #a57269;
+  color: #983a2a;
 }
 
 @media all and (max-width: 768px) {

@@ -1,7 +1,6 @@
 ---
 category: coding
 title: "Vue Nuxt 內容安全策略 CSP 資安設定"
-description: "被弱掃工具掃出前端專案有資安風險，之前因為知道前端資安這水很深阿，想說要處理起來會很難很麻煩"
 createdAt: "2024-02-04"
 updatedAt: "2024-02-04"
 ---

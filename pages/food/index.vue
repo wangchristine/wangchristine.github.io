@@ -123,7 +123,7 @@ const closeFoodComment = () => {
                 <template #action>
                   <div style="height: 50px" />
                   <a class="comment-button" @click="openFoodComment(food)">
-                    <el-icon><Comment /></el-icon>
+                    <el-icon class="comment-icon"><Comment /></el-icon>
                   </a>
                 </template>
               </FoodCard>
@@ -231,18 +231,25 @@ const closeFoodComment = () => {
   bottom: 20px;
   left: calc(50% - 20px);
   font-size: 32px;
-  color: #ff7d2d;
+  color: #ff8100;
   margin-top: 5px;
   cursor: pointer;
   width: 38px;
   height: 38px;
-  border: #ff7d2d 1px solid;
+  border: #ff8100 2px solid;
   border-radius: 50%;
 }
 
 .comment-button:hover {
   color: #f7eade;
-  background-color: #ff7d2d;
+  background-color: #ff8100;
+}
+
+.comment-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .el-skeleton.is-animated .el-skeleton__item {

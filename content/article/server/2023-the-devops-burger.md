@@ -1,7 +1,6 @@
 ---
 category: server
 title: 2023 DevOps 學習路線圖
-description: "上個月參加研討會其中一場在介紹 DevOps，看到一張 DevOps Burger 學習路線圖覺得蠻有趣的"
 createdAt: "2023-09-03"
 updatedAt: "2023-09-03"
 ---

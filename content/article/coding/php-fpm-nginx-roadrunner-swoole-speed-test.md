@@ -1,7 +1,6 @@
 ---
 category: coding
 title: PHP-FPM 搭配 Nginx vs Roadrunner vs Swoole 速度實驗
-description: "這次實驗是出於好奇心，想要比較看看 PHP-FPM 搭配 Nginx 和 Roadrunner 和 Swoole 在相同的程式碼、執行環境下"
 createdAt: "2022-09-04"
 updatedAt: "2022-09-04"
 ---

@@ -1,7 +1,6 @@
 ---
 category: drama
 title: 陸劇《斛珠夫人》觀後感
-description: "前陣子終於有時間看完在 2021 年推出的大陸古裝劇《斛珠夫人》，覺得還蠻不錯看的壓，不太懂有些"
 createdAt: "2023-01-14"
 updatedAt: "2023-01-14"
 ---

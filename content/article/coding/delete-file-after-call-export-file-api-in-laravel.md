@@ -1,7 +1,6 @@
 ---
 category: coding
 title: 在 Laravel 中下載檔案 api 送出後刪除檔案
-description: "專案有兩隻 API 是去產生 zip 檔後，分別為寄送信件和回傳檔案給前端"
 createdAt: "2024-07-04"
 updatedAt: "2024-07-04"
 ---

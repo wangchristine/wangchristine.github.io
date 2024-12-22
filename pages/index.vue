@@ -75,7 +75,7 @@
 
 .main-block .introduction span {
   font-size: 18px;
-  border-bottom: 1px solid #ff7600;
+  border-bottom: 1px solid #983a2a;
 }
 
 .main-block .introduction a {

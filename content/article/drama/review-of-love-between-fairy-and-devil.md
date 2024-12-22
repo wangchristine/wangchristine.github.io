@@ -1,7 +1,6 @@
 ---
 category: drama
 title: 《蒼蘭訣》觀後感
-description: "這部絕對是 2022 年最爆紅的古裝劇之一啦，整部戲甜的不要不要，跟著劇情各種花式吻戲看了都覺得超甜"
 createdAt: "2023-03-21"
 updatedAt: "2023-03-21"
 ---
