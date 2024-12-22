@@ -1,7 +1,6 @@
 ---
 category: coding
 title: Voyager 升至 1.2 踩坑紀錄
-description: "公司舊專案因資安問題需要做升級，有個專案使用 Voyager 1.1 版本，我需要一路往上升上去"
 createdAt: "2023-03-17"
 updatedAt: "2023-03-17"
 ---

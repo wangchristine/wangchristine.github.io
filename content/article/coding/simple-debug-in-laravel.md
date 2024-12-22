@@ -1,7 +1,6 @@
 ---
 category: coding
 title: "在 Laravel 中簡單快速的 debug 方法"
-description: "簡單記錄一下之前 debug 的方式"
 createdAt: "2024-05-14"
 updatedAt: "2024-05-14"
 ---

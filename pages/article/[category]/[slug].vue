@@ -10,9 +10,9 @@ const notFoundRedirect = () => {
       <template #default="{ doc }">
         <Head>
           <Title>{{ doc.title }} - Chris</Title>
-          <Meta name="description" :content="doc.description" />
+          <Meta name="description" :content="doc.body.children[0].children[0].value" />
           <Meta property="og:title" :content="doc.title + ' - Chris'" />
-          <Meta property="og:description" :content="doc.description" />
+          <Meta property="og:description" :content="doc.body.children[0].children[0].value" />
         </Head>
 
         <div :class="['anchor-block', 'shadow-block', { 'anchor-block-hidden': doc.body.toc.links.length === 0 }]">

@@ -1,7 +1,6 @@
 ---
 category: server
 title: "Linux 處理壓縮檔案"
-description: "在 Linux 中常需要處理壓縮檔案，相關的指令如下"
 createdAt: "2024-07-28"
 updatedAt: "2024-07-28"
 ---

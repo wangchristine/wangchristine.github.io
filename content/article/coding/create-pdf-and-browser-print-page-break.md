@@ -1,7 +1,6 @@
 ---
 category: coding
 title: "程式匯出成 PDF 和瀏覽器列印設定換頁"
-description: "最近有個需求是用程式產出內容有兩大區塊的 PDF，試了使用的程式套件一陣子後發現不是在套件做設定"
 createdAt: "2022-09-26"
 updatedAt: "2022-09-26"
 ---

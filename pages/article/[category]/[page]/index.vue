@@ -65,7 +65,7 @@ const setCurrentPage = (pageItem) => {
                   {{ article.title }}
                   <span class="updated-at">更新於 {{ new Date(article.updatedAt).toLocaleDateString() }}</span>
                 </div>
-                <div class="description">{{ article.description.slice(0, 80) }} ......</div>
+                <div class="description">{{ article.body.children[0].children[0].value.slice(0, 80) }}......</div>
               </NuxtLink>
             </div>
           </ContentNavigation>

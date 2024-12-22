@@ -1,7 +1,6 @@
 ---
 category: coding
 title: 不換行空格處理
-description: "最近爬資料時遇到一個很奇怪的問題，拿到的資料字串前後都有空格，無法直接用 PHP 的"
 createdAt: "2023-04-03"
 updatedAt: "2023-04-03"
 ---

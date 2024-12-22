@@ -1,7 +1,6 @@
 ---
 category: coding
 title: 使用 PHP Docker image 安裝 PHP 擴展
-description: "以下介紹使用 PHP Docker image 安裝 PHP 擴展的方式，以及可以使用此方法安裝的擴展"
 createdAt: "2022-07-05"
 updatedAt: "2022-07-05"
 ---

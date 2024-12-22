@@ -1,7 +1,6 @@
 ---
 category: coding
 title: Icon Font 是什麼？要怎麼使用呢？
-description: "Icon Font 在現今網頁運用廣泛，用來輔助搭配文字等也能增加使用者介面的美感，那到底什麼是 Icon Font 呢"
 createdAt: "2023-08-21"
 updatedAt: "2023-08-22"
 ---
