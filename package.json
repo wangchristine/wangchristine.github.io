@@ -15,7 +15,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
-    "@nuxt/eslint-config": "^0.3.13",
+    "@nuxt/eslint-config": "^0.7.4",
     "@pinia/nuxt": "^0.5.5",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.0",
