@@ -34,7 +34,7 @@
     "element-plus": "^2.9.0",
     "glob": "^10.4.5",
     "pinia": "^2.3.0",
-    "sitemap": "^7.1.2",
+    "sitemap": "^8.0.0",
     "vue-gtag": "^2.0.1"
   }
 }
