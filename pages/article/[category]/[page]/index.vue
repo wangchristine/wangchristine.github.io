@@ -53,10 +53,10 @@ const setCurrentPage = (pageItem) => {
 <template>
   <div class="content-block">
     <div class="main-block">
-      <div class="category-block shadow-block">
-        <h2>{{ category.name }}</h2>
+      <div class="category-block">
+        <h1>{{ category.name }}</h1>
       </div>
-      <div class="articles-block shadow-block">
+      <div class="articles-block">
         <div class="detail-block">
           <ContentNavigation>
             <div v-for="article in articles" :key="article._path" class="article">
@@ -100,11 +100,14 @@ const setCurrentPage = (pageItem) => {
   padding: 20px 40px;
 }
 
+.category-block h1 {
+  color: var(--main-theme);
+}
+
 .search-block {
   display: flex;
   align-items: center;
-  padding: 20px 40px;
-  margin-top: 20px;
+  padding: 0 40px;
 }
 
 .search-block .description {
@@ -113,37 +116,38 @@ const setCurrentPage = (pageItem) => {
 
 .search-block input {
   padding: 8px 10px;
-  border: #b1b0b0 1px solid;
+  border: var(--main-secondary-color) 1px solid;
   border-radius: 4px;
   font-size: 16px;
   width: 100%;
+  background-color: #1e1e1e;
+  color: #a7a7a7;
 }
 
 .articles-block {
-  padding: 20px 40px;
-  margin-top: 20px;
+  padding: 0 40px;
 }
 
 .articles-block .article a {
-  padding: 10px;
-  margin: 15px;
+  padding: 30px 0;
   display: block;
   text-decoration: none;
-  border-bottom: solid 1px #983a2a;
-  color: #333;
+  border-bottom: solid 1px var(--main-theme);
+  color: var(--main-font-color);
   letter-spacing: 1px;
 }
 
 .articles-block .article a > .title {
   margin-bottom: 20px;
   font-weight: bold;
-  color: #983a2a;
+  font-size: 18px;
 }
 
 .articles-block .article a > .title > .updated-at {
   float: right;
+  font-size: 16px;
   font-weight: normal;
-  color: #983a2a;
+  color: var(--main-secondary-color);
 }
 
 @media all and (max-width: 768px) {

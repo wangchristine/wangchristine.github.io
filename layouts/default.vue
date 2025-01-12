@@ -27,7 +27,14 @@ const goUp = () => {
       <div class="container">
         <el-button class="burger" @click="openDrawer = true">☰</el-button>
         <client-only>
-          <el-drawer v-model="openDrawer" title="站內導覽" direction="ltr" size="60%">
+          <el-drawer
+            v-model="openDrawer"
+            class="drawer"
+            header-class="drawer-header"
+            title="站內導覽"
+            direction="ltr"
+            size="60%"
+          >
             <nav class="drawer-navigation-link">
               <NuxtLink
                 v-for="(category, key) in categories"
@@ -94,7 +101,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #464646;
+  color: var(--main-title);
   letter-spacing: 1px;
 }
 
@@ -107,8 +114,9 @@ h2 {
 }
 
 .el-header {
-  background-color: #943d24;
+  background-color: var(--block-background-color);
   line-height: 60px;
+  border-bottom: solid 1px var(--block-border-color);
 }
 
 .el-header .container {
@@ -120,12 +128,25 @@ h2 {
 .el-header .container .burger {
   display: none;
   position: absolute;
-  top: 10px;
+  top: 14px;
   left: 0;
   margin-right: 30px;
-  background-color: #f9f2ea;
-  color: #884731;
+  background-color: var(--block-border-color);
+  color: var(--block-font-color);
   font-weight: bold;
+  border: solid 1px var(--block-border-color);
+  box-shadow:
+    rgb(21, 21, 21, 0.72) 0 6px 18px 0,
+    rgb(137, 135, 135, 0.24) 0 0 0 1px;
+}
+
+.drawer {
+  background-color: var(--block-background-color);
+  color: var(--block-font-color);
+}
+
+.drawer-header {
+  color: var(--block-font-color);
 }
 
 .drawer-navigation-link {
@@ -136,8 +157,8 @@ h2 {
   display: block;
   text-decoration: none;
   font-weight: bold;
-  color: #943d24;
-  border-bottom: 1px #d5a47c solid;
+  color: var(--block-font-color);
+  border-bottom: 1px var(--main-theme) solid;
   line-height: 50px;
   margin-bottom: 10px;
 }
@@ -147,8 +168,8 @@ h2 {
   padding: 8px;
   font-weight: bold;
   letter-spacing: 1px;
-  color: #fffbf0;
-  font-size: 18px;
+  color: var(--block-title);
+  font-size: 20px;
   text-decoration: none;
 }
 
@@ -160,29 +181,30 @@ h2 {
   margin-left: 30px;
   text-decoration: none;
   font-weight: bold;
-  color: #fffbf0;
+  color: var(--block-font-color);
   font-size: 18px;
-  border-bottom: 2px #d5a47c solid;
+  border-bottom: 2px var(--main-theme) solid;
 }
 
 .el-footer {
-  background-color: #943d24;
-  color: #fffbf0;
+  background-color: var(--block-background-color);
+  color: var(--block-font-color);
   text-align: center;
   line-height: 20px;
   padding: 10px;
+  border-top: solid 1px var(--block-border-color);
 }
 
 .el-footer a {
   text-decoration: none;
   font-weight: bold;
-  color: #fffbf0;
-  border-bottom: 1px solid;
+  color: var(--block-font-color);
+  border-bottom: 1px var(--main-theme) solid;
 }
 
 .el-main {
-  background-color: #fffbf0;
-  color: #333;
+  background-color: var(--main-background-color);
+  color: var(--main-font-color);
   letter-spacing: 1px;
   overflow: initial;
 }
@@ -193,23 +215,25 @@ h2 {
   bottom: 20px;
   right: 10px;
   border-radius: 50%;
-  border: #c99d54 5px solid;
+  border: var(--main-theme) 5px solid;
   padding: 0;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   z-index: 999;
 }
 
 .go-up img {
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
 }
 
 .shadow-block {
-  background-color: #f9f2e9;
+  background-color: var(--block-background-color);
   overflow-x: hidden;
-  box-shadow: 0 0.5rem 1rem rgb(83 88 93 / 25%);
+  box-shadow:
+    rgb(21, 21, 21, 0.72) 0 6px 18px 0,
+    rgb(137, 135, 135, 0.24) 0 0 0 1px;
 }
 
 @media all and (max-width: 768px) {

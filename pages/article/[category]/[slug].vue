@@ -28,7 +28,7 @@ const notFoundRedirect = () => {
             </li>
           </ul>
         </div>
-        <div class="article-block shadow-block">
+        <div class="article-block">
           <div class="article-header">
             <h1>{{ doc.title }}</h1>
             <div class="timeAt">
@@ -68,6 +68,7 @@ const notFoundRedirect = () => {
 }
 
 .anchor-block .title {
+  color: var(--block-title);
   font-weight: bold;
 }
 
@@ -87,7 +88,7 @@ const notFoundRedirect = () => {
 
 .anchor-block ul li a {
   text-decoration: none;
-  color: #464646;
+  color: var(--block-font-color);
   cursor: pointer;
   word-break: break-word;
 }
@@ -98,23 +99,22 @@ const notFoundRedirect = () => {
 
 .article-block {
   padding: 20px 40px 40px 40px;
-  margin: 0 20px;
   width: 840px;
 }
 
 .article-header {
-  border-bottom: 1px solid #d7d7d7;
+  border-bottom: 1px solid var(--main-secondary-color);
   margin-bottom: 20px;
   padding-bottom: 15px;
 }
 
 .timeAt {
-  color: #6e7780;
+  color: var(--main-secondary-color);
   font-size: 14px;
 }
 
 .side-block {
-  width: 240px;
+  width: 280px;
   text-align: center;
 }
 

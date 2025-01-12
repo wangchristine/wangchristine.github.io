@@ -33,26 +33,31 @@ const articlesByLatestFive = await queryContent().sort({ updatedAt: -1 }).limit(
 }
 .latest-block .title {
   font-size: 18px;
+  font-weight: bold;
   padding: 10px;
-  background-color: #983a2a;
-  color: #fff;
+  background-color: var(--main-theme);
+  color: var(--block-title);
 }
 
 .latest-block .list {
-  padding: 12px 20px 20px 20px;
+  padding: 16px 20px;
 }
 
 .latest-block .article {
   display: block;
   text-decoration: none;
   padding: 8px;
-  color: #333;
-  border-bottom: solid 1px #943d24;
+  color: var(--block-title);
+  border-bottom: solid 1px var(--block-border-color);
   text-align: left;
 }
 
+.latest-block .article:is(:last-child) {
+  border-bottom: none;
+}
+
 .latest-block .article span {
-  color: #983a2a;
+  color: var(--block-font-color);
 }
 
 .aquarium {

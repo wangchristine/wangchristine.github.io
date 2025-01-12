@@ -56,7 +56,7 @@ defineProps({
 }
 
 .redirect a {
-  color: #983a2a;
+  color: var(--main-theme);
   font-weight: bold;
   text-decoration: underline;
 }

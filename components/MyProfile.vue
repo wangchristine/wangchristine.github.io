@@ -18,9 +18,18 @@
   padding: 20px;
 }
 
+.profile h1 {
+  color: var(--block-title);
+}
+
+.profile p {
+  color: var(--block-font-color);
+}
+
 .introduction {
   padding: 20px;
   margin-top: 20px;
+  color: var(--block-font-color);
 }
 
 .avatar {

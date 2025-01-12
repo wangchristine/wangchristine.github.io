@@ -39,7 +39,6 @@ const currentChange = (pageItem) => {
 .paginate {
   text-align: center;
   padding: 25px;
-  background-color: #f9f2e9;
 }
 
 .list-pagination {
@@ -49,7 +48,7 @@ const currentChange = (pageItem) => {
 :deep(.list-pagination button) {
   padding: 10px;
   margin: 5px;
-  color: #9f3448 !important;
+  color: var(--block-font-color) !important;
   background-color: transparent !important;
   height: 40px;
 }
@@ -57,7 +56,7 @@ const currentChange = (pageItem) => {
 :deep(.list-pagination li) {
   padding: 10px;
   margin: 5px;
-  color: #9f3448 !important;
+  color: var(--block-font-color) !important;
   font-size: 16px;
   background-color: transparent !important;
   font-weight: initial;
@@ -66,6 +65,11 @@ const currentChange = (pageItem) => {
 }
 
 :deep(.list-pagination li.is-active) {
-  background-color: #e7ccba !important;
+  color: var(--main-theme) !important;
+  font-weight: bold;
+  background-color: var(--block-background-color) !important;
+  box-shadow:
+    rgb(21, 21, 21, 0.72) 0 6px 18px 0,
+    rgb(137, 135, 135, 0.24) 0 0 0 1px;
 }
 </style>

@@ -41,33 +41,27 @@ const changeSearchText = () => {
 <template>
   <div class="content-block">
     <div class="main-block">
-      <div class="category-block shadow-block">
-        <h2>花草小徑</h2>
+      <div class="category-block">
+        <h1>花草小徑</h1>
       </div>
-      <div class="search-block shadow-block">
+      <div class="search-block">
         <div class="description">
           <p>搜尋(包含植物名和其屬性)：</p>
           <input v-model="searchText" type="text" placeholder="請輸入..." @input="changeSearchText" />
         </div>
       </div>
-      <el-skeleton
-        :loading="isPlantsLoading"
-        animated
-        :count="6"
-        class="plants-block shadow-block detail-block"
-        style="width: auto"
-      >
-        <template #template>
-          <div class="plant">
-            <el-skeleton-item variant="image" style="flex-basis: 40%; display: flex; height: 200px" />
-            <div style="flex-basis: 60%; margin-left: 10px">
-              <el-skeleton-item variant="p" style="width: 40%; height: 24px; margin: 1em 0" />
-              <el-skeleton-item variant="rect" style="width: 100%; height: 100px" />
+      <div class="plants-block">
+        <el-skeleton :loading="isPlantsLoading" animated :count="6" class="detail-block" style="width: auto">
+          <template #template>
+            <div class="plant">
+              <el-skeleton-item variant="image" style="flex-basis: 40%; display: flex; height: 200px" />
+              <div style="flex-basis: 60%; margin-left: 10px">
+                <el-skeleton-item variant="p" style="width: 40%; height: 24px; margin: 1em 0" />
+                <el-skeleton-item variant="rect" style="width: 100%; height: 100px" />
+              </div>
             </div>
-          </div>
-        </template>
-        <template #default>
-          <div class="plants-block shadow-block">
+          </template>
+          <template #default>
             <div class="detail-block">
               <PlantCard v-for="(plant, key) in plants" :key="key" :plant="plant" />
               <h4 v-if="totalCountPlants === 0" class="no-result">查無結果，換個關鍵字吧！</h4>
@@ -80,9 +74,9 @@ const changeSearchText = () => {
               :total-count="totalCountPlants"
               @current-change="setCurrentPage"
             />
-          </div>
-        </template>
-      </el-skeleton>
+          </template>
+        </el-skeleton>
+      </div>
     </div>
 
     <side-bar />
@@ -101,37 +95,42 @@ const changeSearchText = () => {
 }
 
 .category-block {
-  background-color: #f9f2e9;
   padding: 20px 40px;
+}
+
+.category-block h1 {
+  color: var(--main-theme);
 }
 
 .search-block {
   display: flex;
   align-items: center;
-  background-color: #f9f2e9;
-  padding: 20px 40px;
-  margin-top: 20px;
+  padding: 0 40px;
 }
 
 .search-block .description {
-  margin-right: 10px;
+  margin-bottom: 16px;
 }
 
 .search-block input {
   padding: 8px 10px;
-  border: #b1b0b0 1px solid;
+  border: var(--main-secondary-color) 1px solid;
   border-radius: 4px;
   font-size: 16px;
   width: 100%;
+  background-color: #1e1e1e;
+  color: #a7a7a7;
 }
 
 .plants-block {
-  margin-top: 20px;
+  padding: 0 40px;
 }
 
 .detail-block {
   display: flex;
   flex-direction: column;
+  padding: 30px 0;
+  border-top: 1px solid var(--main-secondary-color);
 }
 
 .plants-block .no-result {
@@ -141,13 +140,13 @@ const changeSearchText = () => {
 .plant {
   position: relative;
   display: flex;
-  padding: 20px;
   min-width: 180px;
-  border-bottom: 1px solid rgb(0 0 0 / 30%);
+  border-bottom: 1px solid var(--block-border-color);
+  padding-bottom: 20px;
 }
 
 .el-skeleton.is-animated .el-skeleton__item {
-  background: linear-gradient(90deg, #ddc3b5 25%, #e7d0c2 37%, #ddc3b5 63%);
+  background: linear-gradient(90deg, #a7a7a7 25%, #868686 37%, #a7a7a7 63%);
   background-size: 400% 100%;
   -webkit-animation: el-skeleton-loading 1.4s ease infinite;
   animation: el-skeleton-loading 1.4s ease infinite;

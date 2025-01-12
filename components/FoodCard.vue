@@ -15,14 +15,14 @@ const getImageUrl = (name) => {
 </script>
 
 <template>
-  <div v-if="Object.keys(food).length !== 0" class="food">
+  <div v-if="Object.keys(food).length !== 0" class="food shadow-block">
     <div class="star-number-bg" />
     <div class="star-block">
       <el-rate
         v-model="star"
         class="star-rate"
         disabled
-        :colors="['#ff8100', '#ff8100', '#ff8100']"
+        :colors="['#e98e32', '#e98e32', '#e98e32']"
         disabled-void-color="#bfb5b3"
         :score-template="star.toString()"
       />
@@ -70,6 +70,7 @@ const getImageUrl = (name) => {
 
 .food .name {
   line-break: anywhere;
+  color: var(--block-title);
 }
 
 .food .price {
@@ -78,16 +79,18 @@ const getImageUrl = (name) => {
 
 .food .store-name {
   margin: 0;
+  color: var(--block-title);
 }
 
 .food .created-at {
   margin: 8px 0;
-  color: #b1908b;
+  color: var(--block-font-color);
 }
 
 .food .description {
   margin: 0;
   line-break: anywhere;
+  color: var(--block-font-color);
 }
 
 .star-number-bg {
@@ -96,9 +99,10 @@ const getImageUrl = (name) => {
   right: 0;
   width: 55px;
   height: 40px;
-  background-color: #fffcf5;
+  background-color: #e7e7e7;
   z-index: 1;
   border-radius: 0 0 0 100%;
+  box-shadow: 0px 2px 12px 0px rgb(0 0 0 / 50%);
 }
 
 .star-block {
@@ -114,7 +118,7 @@ const getImageUrl = (name) => {
 }
 
 .star-number {
-  color: #ff8100;
+  color: #e98e32;
   font-size: 22px;
   font-style: italic;
   font-weight: bold;
