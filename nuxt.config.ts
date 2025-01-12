@@ -48,7 +48,7 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   modules: ["@pinia/nuxt", "@nuxt/content"],
-  css: ["~/assets/app.css"],
+  css: ["~/assets/variable.css", "~/assets/app.css"],
   content: {
     markdown: {
       anchorLinks: {

@@ -5,7 +5,7 @@
     <div class="side-block">
       <MyProfile />
     </div>
-    <div class="main-block shadow-block">
+    <div class="main-block">
       <div class="title">作者介紹</div>
       <div class="introduction">
         多年後端工程師實務經驗和前端程式開發，熟悉各項前後端周邊生態圈工具，目前也正在廣度的學習各項領域的知識。
@@ -21,7 +21,7 @@
         <span>個人 GitHub 🍌</span>
         <br />
         <a href="https://github.com/wangchristine" target="_blank">
-          <img src="~/assets/github.png" alt="GitHub" />
+          <img src="~/assets/github-mark-white.svg" alt="GitHub" />
           <el-icon><ELink /></el-icon>
         </a>
         <br />
@@ -60,7 +60,7 @@
 .main-block .title {
   font-size: 22px;
   font-weight: bold;
-  color: #464646;
+  color: var(--main-theme);
   letter-spacing: 8px;
   margin: 10px 0;
 }
@@ -75,14 +75,18 @@
 
 .main-block .introduction span {
   font-size: 18px;
-  border-bottom: 1px solid #983a2a;
 }
 
 .main-block .introduction a {
   text-decoration: none;
   font-weight: bold;
-  color: #9f3448;
+  color: var(--main-theme);
   border-bottom: 1px solid;
+}
+
+.main-block .introduction a img {
+  width: 32px;
+  height: 32px;
 }
 
 .main-block .sketch {

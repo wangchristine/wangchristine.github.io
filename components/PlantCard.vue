@@ -33,7 +33,7 @@ const getImageUrl = (name) => {
       <h2 class="name">
         {{ plant.name }}
       </h2>
-      <table class="property">
+      <table class="property shadow-block">
         <tr
           v-for="(property, key) in plant.properties"
           :key="property.key"
@@ -96,7 +96,6 @@ const getImageUrl = (name) => {
   width: 100%;
   padding: 10px;
   text-align: left;
-  background-color: #fffbf0;
 }
 
 .property tr {
@@ -109,13 +108,14 @@ const getImageUrl = (name) => {
 
 .property th {
   font-size: 18px;
-  background-color: #f8eadf;
+  background-color: var(--block-border-color);
   width: 60px;
   padding: 5px;
 }
 
 .property td {
   padding: 5px;
+  color: var(--block-title);
 }
 
 .content .origin-block {
@@ -126,9 +126,9 @@ const getImageUrl = (name) => {
   margin: 5px;
 }
 .content .origin-link a {
-  color: #9f3448;
+  color: var(--main-theme);
   text-decoration: none;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid var(--main-theme);
 }
 
 @media all and (max-width: 1024px) {

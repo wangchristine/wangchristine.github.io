@@ -15,11 +15,15 @@
 
 .nuxt-content :not(pre) > code {
   font-size: 16px;
-  background: #ecd9cc;
+  font-weight: bold;
+  color: var(--block-title);
+  background-color: var(--block-background-color);
   letter-spacing: 0;
   padding: 4px 6px;
   border-radius: 6px;
-  color: #943d24;
+  box-shadow:
+    rgb(21, 21, 21, 0.72) 0 6px 18px 0,
+    rgb(137, 135, 135, 0.24) 0 0 0 2px;
 }
 
 .nuxt-content pre {
@@ -29,8 +33,8 @@
   padding: 1em;
   border-radius: 8px;
   font-size: 16px;
-  background-color: #1e293b;
-  color: #fff;
+  background-color: #292d3e;
+  color: #babed8;
 }
 
 .nuxt-content table {
@@ -42,31 +46,55 @@
 .nuxt-content table th,
 .nuxt-content table td {
   padding: 6px 13px;
-  border: 1px solid #943d24;
+  border: 1px solid var(--main-secondary-color);
 }
 
 .nuxt-content b {
-  background-color: #c89fa1;
+  background-color: var(--main-theme);
+  color: var(--block-title);
 }
 
-.nuxt-content .token.operator {
+/* .nuxt-content .token.operator {
   background-color: transparent;
 }
 
 .nuxt-content .token.variable {
   color: #d98b00;
-}
+} */
 
 .nuxt-content :is(h1, h2, h3, h4, h5, h6) > a {
-  color: #464646;
+  color: var(--main-title);
   text-decoration: none;
   word-break: break-word;
 }
 
 .nuxt-content :not(h1, h2, h3, h4, h5, h6) a {
-  color: #943d24;
+  color: var(--main-theme);
 }
 
 .nuxt-content p a {
   margin: 0 3px;
+}
+
+/* scrollbar */
+.nuxt-content ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.nuxt-content ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.nuxt-content ::-webkit-scrollbar-thumb {
+  background: rgba(103, 110, 149, 0.6);
+  border-radius: 6px;
+}
+
+.nuxt-content ::-webkit-scrollbar-thumb:hover {
+  background: rgba(103, 110, 149, 0.8);
+}
+
+.nuxt-content ::-webkit-scrollbar-thumb:active {
+  background: rgba(149, 157, 203, 0.9);
 }

@@ -1,0 +1,13 @@
+:root {
+  --main-theme: #ad703d;
+
+  --block-background-color: #1e1e1e;
+  --block-border-color: #292929;
+  --block-title: #cccccc;
+  --block-font-color: #a7a7a7;
+
+  --main-background-color: #1b1b1e;
+  --main-title: #cccccc;
+  --main-font-color: #afb0b1;
+  --main-secondary-color: #868686;
+}

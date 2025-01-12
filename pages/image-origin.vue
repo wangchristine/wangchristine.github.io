@@ -54,7 +54,6 @@
 .main-block {
   position: relative;
   width: 100%;
-  background-color: #f9f2e9;
   padding: 20px 30px;
 }
 
@@ -67,12 +66,6 @@
 
 .main-block .detail {
   line-height: 2.5rem;
-}
-
-.main-block .detail a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #5289b5;
 }
 
 .main-block .detail p {
