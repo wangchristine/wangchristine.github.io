@@ -21,8 +21,8 @@ const props = defineProps({
 </template>
 
 <style scoped>
-a {
+/* a {
   text-decoration: none;
-  border-bottom: 1px solid;
-}
+  border-bottom: 1px solid var(--main-theme);
+} */
 </style>

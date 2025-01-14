@@ -126,7 +126,7 @@ const getImageUrl = (name) => {
   margin: 5px;
 }
 .content .origin-link a {
-  color: var(--main-theme);
+  color: var(--main-font-color);
   text-decoration: none;
   border-bottom: 1px solid var(--main-theme);
 }
