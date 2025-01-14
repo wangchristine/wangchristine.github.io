@@ -19,7 +19,8 @@
   color: var(--block-title);
   background-color: var(--block-background-color);
   letter-spacing: 0;
-  padding: 4px 6px;
+  padding: 4px 5px;
+  margin: 0 3px;
   border-radius: 6px;
   box-shadow:
     rgb(21, 21, 21, 0.72) 0 6px 18px 0,
@@ -69,7 +70,9 @@
 }
 
 .nuxt-content :not(h1, h2, h3, h4, h5, h6) a {
-  color: var(--main-theme);
+  color: var(--main-font-color);
+  border-bottom: 1px solid var(--main-theme);
+  text-decoration: none;
 }
 
 .nuxt-content p a {

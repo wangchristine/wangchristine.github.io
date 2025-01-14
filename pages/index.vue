@@ -75,13 +75,13 @@
 
 .main-block .introduction span {
   font-size: 18px;
+  font-weight: bold;
 }
 
 .main-block .introduction a {
   text-decoration: none;
-  font-weight: bold;
-  color: var(--main-theme);
-  border-bottom: 1px solid;
+  color: var(--main-font-color);
+  border-bottom: 1px solid var(--main-theme);
 }
 
 .main-block .introduction a img {

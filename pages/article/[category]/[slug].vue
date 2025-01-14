@@ -130,7 +130,7 @@ const notFoundRedirect = () => {
   }
 
   .article-block {
-    padding: 20px;
+    padding: 10px;
     margin: 0;
     width: auto;
   }

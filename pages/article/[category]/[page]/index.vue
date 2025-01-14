@@ -159,8 +159,16 @@ const setCurrentPage = (pageItem) => {
     width: 100%;
   }
 
+  .category-block {
+    padding: 10px;
+  }
+
   .articles-block {
     padding: 10px 10px;
+  }
+
+  .articles-block .article a {
+    padding: 20px 0;
   }
 }
 </style>
