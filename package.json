@@ -32,7 +32,7 @@
   "dependencies": {
     "@nuxt/content": "^2.13.4",
     "element-plus": "^2.9.3",
-    "glob": "^10.4.5",
+    "glob": "^11.0.1",
     "pinia": "^2.3.0",
     "sitemap": "^7.1.2",
     "vue-gtag": "^2.0.1"
