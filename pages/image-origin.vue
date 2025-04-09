@@ -15,10 +15,6 @@
             </p>
           </li>
           <li>
-            <p>Website: https://fr.crazypng.com/minions-png-images-a-telecharger-gratuitement.html</p>
-            <p>Image: https://pngimg.com/uploads/minions/minions_PNG51.png</p>
-          </li>
-          <li>
             <p>Website: https://www.youtube.com/watch?v=XWkI1OhCdVs</p>
             <p>Image: https://i.ytimg.com/vi/XWkI1OhCdVs/maxresdefault.jpg</p>
           </li>
