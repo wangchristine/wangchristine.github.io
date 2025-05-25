@@ -30,9 +30,9 @@ const getImageUrl = (name) => {
     </div>
 
     <div class="content">
-      <h2 class="name">
+      <p class="name">
         {{ plant.name }}
-      </h2>
+      </p>
       <table class="property shadow-block">
         <tr
           v-for="(property, key) in plant.properties"
@@ -88,6 +88,8 @@ const getImageUrl = (name) => {
 
 .content .name {
   line-break: anywhere;
+  color: var(--main-theme);
+  font-size: 20px;
 }
 
 .content .property {

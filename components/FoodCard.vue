@@ -70,7 +70,7 @@ const getImageUrl = (name) => {
 
 .food .name {
   line-break: anywhere;
-  color: var(--block-title);
+  color: var(--main-theme);
 }
 
 .food .price {
@@ -99,7 +99,7 @@ const getImageUrl = (name) => {
   right: 0;
   width: 55px;
   height: 40px;
-  background-color: #e7e7e7;
+  background-color: var(--main-theme);
   z-index: 1;
   border-radius: 0 0 0 100%;
   box-shadow: 0px 2px 12px 0px rgb(0 0 0 / 50%);
@@ -118,7 +118,7 @@ const getImageUrl = (name) => {
 }
 
 .star-number {
-  color: #e98e32;
+  color: var(--block-title);
   font-size: 22px;
   font-style: italic;
   font-weight: bold;

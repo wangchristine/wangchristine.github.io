@@ -101,7 +101,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--main-title);
+  color: var(--main-theme);
   letter-spacing: 1px;
 }
 
@@ -168,7 +168,7 @@ h2 {
   padding: 8px;
   font-weight: bold;
   letter-spacing: 1px;
-  color: var(--block-title);
+  color: var(--main-theme);
   font-size: 20px;
   text-decoration: none;
 }
