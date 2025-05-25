@@ -88,7 +88,20 @@ const closeFoodComment = () => {
       <div class="search-block">
         <div class="description">
           <p>星等為依據個人喜好跟主觀判斷所評分，僅供參考。</p>
-          <p>1⭐: 不喜歡； 2⭐: 普通，以填飽肚子為主； 3⭐: 還不錯； 4⭐: 超好吃</p>
+          <p>
+            <span>1</span>
+            <el-icon class="star" color="#e98e32" size="18"><StarFilled /></el-icon>
+            : 不喜歡；
+            <span>2</span>
+            <el-icon class="star" color="#e98e32" size="18"><StarFilled /></el-icon>
+            : 普通，以填飽肚子為主；
+            <span>3</span>
+            <el-icon class="star" color="#e98e32" size="18"><StarFilled /></el-icon>
+            : 還不錯；
+            <span>4</span>
+            <el-icon class="star" color="#e98e32" size="18"><StarFilled /></el-icon>
+            : 超好吃
+          </p>
         </div>
         <div class="search">
           <span>店家：</span>
@@ -185,6 +198,10 @@ const closeFoodComment = () => {
   margin-right: 10px;
 }
 
+.search-block .star {
+  vertical-align: middle;
+}
+
 .search-block .search {
   margin: auto;
 }
@@ -227,18 +244,18 @@ const closeFoodComment = () => {
   bottom: 20px;
   left: calc(50% - 20px);
   font-size: 32px;
-  color: #e98e32;
+  color: var(--main-theme);
   margin-top: 5px;
   cursor: pointer;
   width: 38px;
   height: 38px;
-  border: #e98e32 2px solid;
+  border: var(--main-theme) 2px solid;
   border-radius: 50%;
 }
 
 .comment-button:hover {
   color: var(--block-background-color);
-  background-color: #e98e32;
+  background-color: var(--main-theme);
 }
 
 .comment-icon {

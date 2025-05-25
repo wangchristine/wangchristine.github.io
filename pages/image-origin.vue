@@ -56,6 +56,7 @@
 .main-block .title {
   font-size: 22px;
   font-weight: bold;
+  color: var(--main-theme);
   letter-spacing: 8px;
   margin: 10px 0;
 }

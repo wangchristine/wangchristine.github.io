@@ -139,7 +139,7 @@ const setCurrentPage = (pageItem) => {
 
 .articles-block .article a > .title {
   margin-bottom: 20px;
-  font-weight: bold;
+  color: var(--main-theme);
   font-size: 18px;
 }
 
