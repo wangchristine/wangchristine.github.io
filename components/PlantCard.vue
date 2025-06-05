@@ -46,7 +46,7 @@ const getImageUrl = (name) => {
       <div class="origin-block">
         <span v-for="(image, key) in plant.images" :key="image.id" class="origin-link">
           <a :href="image.origin" target="_blank">
-            來源{{ key + 1 }}
+            <span>來源{{ key + 1 }}</span>
             <el-icon><ELink /></el-icon>
           </a>
         </span>

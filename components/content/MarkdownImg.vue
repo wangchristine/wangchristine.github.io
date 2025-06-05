@@ -27,12 +27,12 @@ const getImageUrl = (name) => {
 <template>
   <div class="img-block">
     <img :src="getImageUrl(src)" :alt="alt" />
-    <span v-if="originLink">
+    <div v-if="originLink" class="origin-link">
       <a :href="originLink" target="_blank">
-        {{ name }}
+        <span>{{ name }}</span>
         <el-icon><ELink /></el-icon>
       </a>
-    </span>
+    </div>
   </div>
 </template>
 
@@ -48,8 +48,7 @@ img {
   margin: 5px 0;
 }
 
-span {
-  display: block;
+.origin-link {
   text-align: center;
   padding: 8px;
 }

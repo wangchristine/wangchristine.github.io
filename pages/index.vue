@@ -30,7 +30,7 @@
             <span>好用工具 🍌</span>
             <br />
             <a href="https://wangchristine.github.io/dev-tools" target="_blank">
-              Dev Tools
+              <span>Dev Tools</span>
               <el-icon><ELink /></el-icon>
             </a>
           </div>
