@@ -39,7 +39,7 @@ export const useAppStore = defineStore("app", () => {
 
   const getStores = () => {
     return foods.value.map((store) => {
-      return { id: store.id, name: store.name };
+      return { id: store.id, name: store.name, count: store.foods.length };
     });
   };
 

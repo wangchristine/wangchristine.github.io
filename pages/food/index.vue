@@ -44,9 +44,9 @@ const setCurrentPage = (pageItem) => {
   currentPage.value = pageItem;
 };
 
-const selectStore = (event) => {
+const selectStore = (selectId) => {
   currentPage.value = 1;
-  storeId.value = event.target.value;
+  storeId.value = selectId;
 };
 
 const openFoodComment = (food) => {
@@ -105,12 +105,18 @@ const closeFoodComment = () => {
         </div>
         <div class="search">
           <span>店家：</span>
-          <select name="store" @change="selectStore($event)">
-            <option value="null">-- 全部 --</option>
-            <option v-for="store in stores" :key="store.id" :value="store.id">
-              {{ store.name }}
-            </option>
-          </select>
+          <div class="search-store">
+            <el-check-tag :checked="storeId == null" type="success" @change="selectStore(null)">- 全部 -</el-check-tag>
+            <el-check-tag
+              v-for="store in stores"
+              :key="store.id"
+              :checked="storeId == store.id"
+              type="success"
+              @change="selectStore(store.id)"
+            >
+              {{ store.name }} ({{ store.count }})
+            </el-check-tag>
+          </div>
         </div>
       </div>
       <div class="foods-block">
@@ -189,8 +195,6 @@ const closeFoodComment = () => {
 }
 
 .search-block {
-  display: flex;
-  align-items: center;
   padding: 0 40px;
 }
 
@@ -203,17 +207,37 @@ const closeFoodComment = () => {
 }
 
 .search-block .search {
-  margin: auto;
+  margin: 10px 0;
 }
 
-.search-block select {
-  padding: 8px 10px;
-  border: var(--main-secondary-color) 1px solid;
+.search-block .search .search-store {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.search-block .search .search-store .el-check-tag {
+  padding: 8px 12px;
   border-radius: 4px;
-  font-size: 16px;
-  width: 100%;
-  background-color: #1e1e1e;
-  color: #a7a7a7;
+  border: 1px solid var(--main-theme);
+  background-color: var(--block-background-color);
+  color: var(--main-theme);
+  font-weight: normal;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.search-block .search .search-store .el-check-tag:hover {
+  background-color: var(--main-theme);
+  color: #fff;
+}
+
+.search-block .search .search-store .el-check-tag.is-checked {
+  background-color: var(--main-theme);
+  color: #fff;
 }
 
 .foods-block {

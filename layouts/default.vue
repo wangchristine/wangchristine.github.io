@@ -77,7 +77,7 @@ const goUp = () => {
       <br />
       本網站為個人使用，參考
       <a href="https://www.facebook.com/TIPO.gov.tw/posts/1804286156280593/" target="_blank">
-        經濟部智慧財產局
+        <span>經濟部智慧財產局</span>
         <el-icon><ELink /></el-icon>
       </a>
       ，有使用到的網路圖片來源在
