@@ -13,21 +13,22 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.0",
-    "@commitlint/config-conventional": "^19.8.0",
-    "@nuxt/eslint-config": "^0.3.13",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/js": "^9.22.0",
+    "@nuxt/eslint-config": "^1.5.2",
     "@pinia/nuxt": "^0.9.0",
-    "eslint": "^8.57.1",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-prettier": "^5.2.3",
-    "eslint-plugin-vue": "^9.33.0",
+    "eslint-plugin-prettier": "^5.4.1",
+    "eslint-plugin-vue": "~10.0.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.4.3",
+    "lint-staged": "^16.1.0",
     "nuxt": "^3.16.0",
-    "prettier": "3.4.2",
+    "prettier": "^3.5.3",
     "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "vue-router": "^4.5.1"
   },
   "dependencies": {
     "@nuxt/content": "^2.13.4",
