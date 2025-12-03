@@ -31,11 +31,11 @@
     "vue-router": "^4.6.3"
   },
   "dependencies": {
-    "@nuxt/content": "^2.13.4",
+    "@nuxt/content": "^3.9.0",
     "element-plus": "^2.11.8",
     "glob": "^11.1.0",
-    "pinia": "^2.3.1",
+    "pinia": "^3.0.4",
     "sitemap": "^8.0.2",
-    "vue-gtag": "2.0.1"
+    "vue-gtag": "3.6.3"
   }
 }
